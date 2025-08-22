@@ -52,6 +52,7 @@ TARGET_SCREEN_DENSITY := 320
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32S1,32S1
+BOARD_KERNEL_CMDLINE += androidboot.serialconsole=0
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += printk.devkmsg=on
 BOARD_KERNEL_CMDLINE += kasan=off
