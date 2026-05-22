@@ -10,8 +10,14 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Build hacks
+PRODUCT_ENFORCE_VINTF_MANIFEST := false
+
 # Virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
+# vendor
+$(call inherit-product, vendor/xiaomi/ice/ice-vendor.mk)
 
 AB_OTA_UPDATER := true
 
@@ -42,3 +48,8 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 31
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.mt6761
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.product.first_api_level=31
