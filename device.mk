@@ -16,6 +16,7 @@ PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 # Virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression.mk)
 
 # vendor
 $(call inherit-product, vendor/xiaomi/ice/ice-vendor.mk)
@@ -55,7 +56,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.product.first_api_level=31
 
-# Build hacks
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/init.recovery.mt6761.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6761.rc \
+    $(LOCAL_PATH)/recovery/init.recovery.usb.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.usb.rc \
+    $(LOCAL_PATH)/recovery/ueventd.mt6761.rc:$(TARGET_COPY_OUT_RECOVERY)/root/ueventd.mt6761.rc \
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.mt6761
 
-DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/vintf/manifest.xml
-DEVICE_MATRIX_FILE := $(LOCAL_PATH)/vintf/compatibility_matrix.xml
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/root/system/vendor/focaltech_ts_fw_helitai.bin:$(TARGET_COPY_OUT_RECOVERY)/root/system/vendor/focaltech_ts_fw_helitai.bin \
+    $(LOCAL_PATH)/recovery/root/system/vendor/novatek_ts_truly_fw.bin:$(TARGET_COPY_OUT_RECOVERY)/root/system/vendor/novatek_ts_truly_fw.bin \
+    $(LOCAL_PATH)/recovery/root/system/vendor/novatek_ts_truly_mp.bin:$(TARGET_COPY_OUT_RECOVERY)/root/system/vendor/novatek_ts_truly_mp.bin
+
