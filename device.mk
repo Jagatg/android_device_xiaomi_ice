@@ -56,6 +56,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.product.first_api_level=31
 
+# Recovery
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/init.recovery.mt6761.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6761.rc \
     $(LOCAL_PATH)/recovery/init.recovery.usb.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.usb.rc \
@@ -66,4 +67,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/system/vendor/focaltech_ts_fw_helitai.bin:$(TARGET_COPY_OUT_RECOVERY)/root/system/vendor/focaltech_ts_fw_helitai.bin \
     $(LOCAL_PATH)/recovery/root/system/vendor/novatek_ts_truly_fw.bin:$(TARGET_COPY_OUT_RECOVERY)/root/system/vendor/novatek_ts_truly_fw.bin \
     $(LOCAL_PATH)/recovery/root/system/vendor/novatek_ts_truly_mp.bin:$(TARGET_COPY_OUT_RECOVERY)/root/system/vendor/novatek_ts_truly_mp.bin
+
+# Recovery first stage ramdisk
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/recovery/first_stage_ramdisk/fstab.mt6761:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.mt6761
+
 
