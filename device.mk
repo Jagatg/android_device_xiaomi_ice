@@ -12,6 +12,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Build hacks
 PRODUCT_ENFORCE_VINTF_MANIFEST := false
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 # Virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
@@ -53,3 +54,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.product.first_api_level=31
+
+# Build hacks
+
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/vintf/manifest.xml
+DEVICE_MATRIX_FILE := $(LOCAL_PATH)/vintf/compatibility_matrix.xml
