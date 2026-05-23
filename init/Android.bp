@@ -113,3 +113,9 @@ prebuilt_etc {
     sub_dir: "init/hw",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "ueventd.mt6761.rc",
+    src: "ueventd.mt6761.rc",
+    vendor: true,
+}

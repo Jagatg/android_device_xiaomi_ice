@@ -172,7 +172,8 @@ PRODUCT_PACKAGES += \
     init_connectivity.rc \
     init.insmod.sh \
     init.ago.rc \
-    init_connectivity.rc
+    init_connectivity.rc \
+    ueventd.mt6761.rc
 
 PRODUCT_PROPERTY_OVERRIDES += fw.max_users=1
 
