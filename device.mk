@@ -73,3 +73,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/first_stage_ramdisk/fstab.mt6761:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.mt6761
 
 
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-mtkimpl
+
+PRODUCT_PACKAGES += \
+    mtk_plpath_utils
