@@ -1,7 +1,6 @@
 import /microtrust.rc
 
 on fs
-    install_keyring
 
 on early-init
     start adbd
