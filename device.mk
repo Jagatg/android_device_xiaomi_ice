@@ -1,3 +1,7 @@
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH)
+
 LOCAL_PATH := device/xiaomi/ice
 
 # Boot animation
@@ -61,7 +65,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/init.recovery.mt6761.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mt6761.rc \
     $(LOCAL_PATH)/recovery/init.recovery.usb.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.usb.rc \
     $(LOCAL_PATH)/recovery/ueventd.mt6761.rc:$(TARGET_COPY_OUT_RECOVERY)/root/ueventd.mt6761.rc \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.mt6761
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/root/system/vendor/focaltech_ts_fw_helitai.bin:$(TARGET_COPY_OUT_RECOVERY)/root/system/vendor/focaltech_ts_fw_helitai.bin \
@@ -74,7 +77,45 @@ PRODUCT_COPY_FILES += \
 
 
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-mtkimpl
 
 PRODUCT_PACKAGES += \
-    mtk_plpath_utils
+
+# Soong namespaces
+# Boot control HAL
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-impl \
+    android.hardware.boot@1.2-impl.recovery \
+    android.hardware.boot@1.2-service \
+    android.hardware.boot@1.2-mtkimpl.recovery \
+    libmtk_bsg.recovery
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl
+
+# MTK Preloader Utils
+PRODUCT_PACKAGES += \
+    mtk_plpath_utils.recovery
+
+# Fastbootd
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock \
+    fastbootd
+
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-service \
+    android.hardware.gatekeeper@1.0-impl
+
+PRODUCT_COPY_FILES += \
+    $(OUT_DIR)/target/product/ice/vendor/bin/hw/android.hardware.gatekeeper@1.0-service:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/android.hardware.gatekeeper@1.0-service \
+    $(OUT_DIR)/target/product/ice/vendor/lib/hw/android.hardware.gatekeeper@1.0-impl.so:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/lib/hw/android.hardware.gatekeeper@1.0-impl.so
+
+# Additional Libraries
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libkeymaster41 \
+    libpuresoftkeymasterdevice
+
+RECOVERY_LIBRARY_SOURCE_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
+
