@@ -80,7 +80,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
 
-# Soong namespaces
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl \
@@ -119,7 +118,6 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
 
+# Manifest
 DEVICE_MANIFEST_FILE := device/xiaomi/ice/vintf/manifest.xml
-
-
-
+DEVICE_MATRIX_FILE := device/xiaomi/ice/vintf/compatibility_matrix.xml
