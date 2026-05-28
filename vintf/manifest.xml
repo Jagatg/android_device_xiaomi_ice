@@ -1,0 +1,30 @@
+<!--
+    Input:
+        manifest_sensor_hidl_v2.xml
+        manifest_audio.xml
+        manifest_dsds.xml
+        manifest_radioconfig.xml
+        manifest_em.xml
+        manifest_videotelephony.xml
+        manifest_km41.xml
+        manifest_tee.xml
+        manifest.microtrust.isee400.xml
+        manifest_log.xml
+        manifest_mdmonitor.xml
+        manifest_aee.xml
+        manifest_boot.xml
+        manifest_netdagent.xml
+        manifest_pq.xml
+        manifest_mmservice.xml
+        manifest_mmagent.xml
+        manifest_dmc.xml
+        manifest_apmonitor.xml
+        manifest_composer.xml
+        manifest_target_level_r.xml
+        manifest.xml
+-->
+<manifest version="4.0" type="device" target-level="6">
+    
+
+    <kernel target-level="6"/>
+</manifest>

@@ -1,0 +1,51 @@
+<compatibility-matrix version="1.0" type="framework" level="5">
+
+    <hal format="hidl" optional="true">
+        <name>vendor.mediatek.hardware.dmc</name>
+        <version>1.2</version>
+        <interface>
+            <name>IDmcService</name>
+            <instance>dmc_hidl_service</instance>
+        </interface>
+    </hal>
+
+    <hal format="hidl" optional="true">
+        <name>vendor.mediatek.hardware.engineermode</name>
+        <version>1.3</version>
+        <interface>
+            <name>IEmd</name>
+            <instance>EmHidlServer</instance>
+        </interface>
+    </hal>
+
+    <hal format="hidl" optional="true">
+        <name>vendor.mediatek.hardware.mtkpower</name>
+        <version>1.2</version>
+        <interface>
+            <name>IMtkPerf</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IMtkPower</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+
+    <hal format="hidl" optional="true">
+        <name>vendor.mediatek.hardware.mtkradioex</name>
+        <version>3.0</version>
+        <interface>
+            <name>IMtkRadioEx</name>
+            <instance>imsSlot1</instance>
+            <instance>imsSlot2</instance>
+            <instance>mtkRsu1</instance>
+            <instance>mtkRsu2</instance>
+            <instance>mtkSe1</instance>
+            <instance>mtkSe2</instance>
+            <instance>mtkSlot1</instance>
+            <instance>mtkSlot2</instance>
+        </interface>
+    </hal>
+
+</compatibility-matrix>
+</compatibility-matrix>

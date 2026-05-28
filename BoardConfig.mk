@@ -142,3 +142,4 @@ include vendor/xiaomi/ice/BoardConfigVendor.mk
 TARGET_NO_KERNEL_OVERRIDE := true
 TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_KERNEL_HEADERS :=
+

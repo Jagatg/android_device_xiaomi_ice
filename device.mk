@@ -119,3 +119,7 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
 
+DEVICE_MANIFEST_FILE := device/xiaomi/ice/vintf/manifest.xml
+
+
+
