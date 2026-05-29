@@ -120,4 +120,4 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
 
 # Manifest
 DEVICE_MANIFEST_FILE := device/xiaomi/ice/vintf/manifest.xml
-DEVICE_MATRIX_FILE := device/xiaomi/ice/vintf/compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(LOCAL_PATH)/vintf/compatibility_matrix.xml

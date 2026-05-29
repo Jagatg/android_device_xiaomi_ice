@@ -143,3 +143,6 @@ TARGET_NO_KERNEL_OVERRIDE := true
 TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_KERNEL_HEADERS :=
 
+# Disable Lineage auto kernel source detection
+TARGET_AUTO_KDIR :=
+TARGET_KERNEL_SOURCE := kernel/xiaomi/ice
