@@ -65,6 +65,8 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 
+TARGET_KERNEL_SOURCE := kernel/xiaomi/ice
+TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_HEADER_ARCH := arm
 
@@ -150,4 +152,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6761
 
 # Inherit from the proprietary version
 include vendor/xiaomi/ice/BoardConfigVendor.mk
+
+# Sepolicy
+include device/mediatek/sepolicy_vndr/SEPolicy.mk
 
