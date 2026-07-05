@@ -148,3 +148,6 @@ endif
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6761
 
+# Inherit from the proprietary version
+include vendor/xiaomi/ice/BoardConfigVendor.mk
+
