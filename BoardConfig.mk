@@ -130,3 +130,13 @@ VENDOR_SECURITY_PATCH := 2022-06-05
 # Treble
 BOARD_VNDK_VERSION := current
 
+# Dexpreopt
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+      WITH_DEXPREOPT := true
+      DONT_DEXPREOPT_PREBUILTS := true
+      USE_DEX2OAT_DEBUG := false
+      WITH_DEXPREOPT_DEBUG_INFO := false
+  endif
+endif
+
