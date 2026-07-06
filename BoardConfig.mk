@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+DEVICE_PATH := device/xiaomi/ice
+
 # build-hacks
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_PREBUILT_ELF_FILES := true
@@ -17,6 +19,7 @@ BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 # A/B
 AB_OTA_UPDATER := true
 BOARD_USES_RECOVERY_AS_BOOT := true
+TARGET_USES_64_BIT_BINDER := true
 AB_OTA_PARTITIONS := \
     boot \
     dtbo \
@@ -65,7 +68,9 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 
-TARGET_KERNEL_SOURCE := kernel/xiaomi/ice
+# Using prebuilt kernel - disable kernel source compilation
+# TARGET_KERNEL_SOURCE := kernel/xiaomi/ice
+TARGET_KERNEL_CONFIG := ice_defconfig
 TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_HEADER_ARCH := arm
@@ -154,5 +159,5 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6761
 include vendor/xiaomi/ice/BoardConfigVendor.mk
 
 # Sepolicy
-include device/mediatek/sepolicy_vndr/SEPolicy.mk
+# include device/mediatek/sepolicy_vndr/SEPolicy.mk
 

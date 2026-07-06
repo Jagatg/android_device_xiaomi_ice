@@ -1,10 +1,4 @@
-#
-# Copyright (C) 2023-2024 The LineageOS Project
-#
-# SPDX-License-Identifier: Apache-2.0
-#
-
-Inherit from those products. Most specific first.
+# Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
@@ -34,3 +28,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="missi-user 12 SP1A.210812.016 V13.0.18.0.SGMEUXM release-keys"
 
 BUILD_FINGERPRINT := "Redmi/ice_eea/ice:12/SP1A.210812.016/V13.0.18.0.SGMEUXM:user/release-keys"
+
+
