@@ -152,6 +152,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/display_port_0.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/displayconfig/display_port_0.xml
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
 PRODUCT_PACKAGES += \
     Dialer
 
