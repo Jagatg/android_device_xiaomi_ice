@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Display cutout for Redmi A1 - from stock MIUI -->
+    <string name="config_mainBuiltInDisplayCutout" translatable="false">
+        M 0,0 H -45 V 50 H 45 V 0 H 0 Z
+    </string>
+    <string name="config_mainBuiltInDisplayCutoutRectApproximation" translatable="false">
+        M -45,0 H 45 V 50 H -45 Z
+    </string>
+
+    <!-- Disable swipe-up gesture setting (no gesture nav support assumed) -->
+    <bool name="config_swipe_up_gesture_setting_available">false</bool>
+
+    <!-- Disable multi-window support (split-screen/freeform/PiP) for 2GB RAM Go device -->
+    <bool name="config_supportsMultiWindow">false</bool>
+
+    <!-- Whether UI for multi user should be shown -->
+    <bool name="config_enableMultiUserUI">false</bool>
+
+    <!-- Maximum number of supported users -->
+    <integer name="config_multiuserMaximumUsers">1</integer>
+
+    <!-- Maximum number of users we allow to be running at a time -->
+    <integer name="config_multiuserMaxRunningUsers">1</integer>
+
+    <!-- Memory-efficient task snapshots for recents on low-RAM devices -->
+    <bool name="config_lowRamTaskSnapshotsAndRecents">true</bool>
+    <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.8</item>
+    <item name="config_lowResTaskSnapshotScale" format="float" type="dimen">0.3</item>
+    <bool name="config_use16BitTaskSnapshotPixelFormat">true</bool>
+
+    <!-- Limit visible recent tasks to save memory -->
+    <integer name="config_minNumVisibleRecentTasks_lowRam">-1</integer>
+    <integer name="config_maxNumVisibleRecentTasks_lowRam">4</integer>
+
+    <!-- Disable WiFi firmware debug logging to save memory -->
+    <bool translatable="false" name="config_wifi_enable_wifi_firmware_debugging">false</bool>
+    <integer translatable="false" name="config_wifi_logger_ring_buffer_verbose_size_limit_kb">64</integer>
+
+    <!-- Pin Home app in memory to reduce cold launch latency -->
+    <bool name="config_pinnerHomeApp">true</bool>
+
+    <!-- Default list of files pinned by the Pinner Service -->
+    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <item>/system/framework/framework.jar</item>
+        <item>/system/framework/services.jar</item>
+        <item>/apex/com.android.art/javalib/core-oj.jar</item>
+        <item>/apex/com.android.art/javalib/core-libart.jar</item>
+    </string-array>
+</resources>

@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "IceFrameworksResOverlay",
+    sdk_version: "current",
+}
