@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<displayConfiguration>
+    <screenBrightnessMap>
+        <point>
+            <value>0.0</value>
+            <nits>2.0</nits>
+        </point>
+        <point>
+            <value>0.25</value>
+            <nits>100.0</nits>
+        </point>
+        <point>
+            <value>0.5</value>
+            <nits>200.0</nits>
+        </point>
+        <point>
+            <value>0.75</value>
+            <nits>300.0</nits>
+        </point>
+        <point>
+            <value>1.0</value>
+            <nits>400.0</nits>
+        </point>
+    </screenBrightnessMap>
+</displayConfiguration>
