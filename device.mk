@@ -140,6 +140,7 @@ PRODUCT_PACKAGES += \
     meta_init.vendor.rc \
     multi_init.rc
 
+# overlay
 PRODUCT_PACKAGES += \
     IceFrameworksResOverlay \
     IceLineageSdkOverlay \
@@ -156,8 +157,8 @@ PRODUCT_PACKAGES += \
 
 # enable BesLoudness audio support
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/AudioParamOptions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions.xml \
-    $(LOCAL_PATH)/audio/AudioParamOptions_vext.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions_vext.xml
+    $(LOCAL_PATH)/configs/audio/AudioParamOptions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions.xml \
+    $(LOCAL_PATH)/configs/audio/AudioParamOptions_vext.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions_vext.xml
 
 PRODUCT_PACKAGES += \
     Launcher3QuickStepGo \
