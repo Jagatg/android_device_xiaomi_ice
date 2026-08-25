@@ -138,7 +138,8 @@ PRODUCT_PACKAGES += \
     meta_init.project.rc \
     meta_init.rc \
     meta_init.vendor.rc \
-    multi_init.rc
+    multi_init.rc \
+    init.target.rc
 
 # overlay
 PRODUCT_PACKAGES += \
