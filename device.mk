@@ -249,4 +249,5 @@ PRODUCT_PACKAGES += \
     libperfctl_vendor
 
 PRODUCT_PACKAGES += \
-    WifiHotspotOverlayice
+    WifiHotspotOverlayice \
+    DialerOverlayIce
