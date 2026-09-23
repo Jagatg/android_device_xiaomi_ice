@@ -47,6 +47,8 @@ PRODUCT_PACKAGES += \
     create_pl_dev \
     create_pl_dev.recovery
 
+include $(LOCAL_PATH)/vendor_logtag.mk
+
 PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
@@ -161,8 +163,8 @@ PRODUCT_PACKAGES += \
 
 # enable BesLoudness audio support
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/AudioParamOptions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions.xml \
-    $(LOCAL_PATH)/configs/audio/AudioParamOptions_vext.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions_vext.xml
+    $(LOCAL_PATH)/audio/AudioParamOptions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions.xml \
+    $(LOCAL_PATH)/audio/AudioParamOptions_vext.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions_vext.xml
 
 PRODUCT_PACKAGES += \
     Launcher3QuickStepGo \
@@ -225,3 +227,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6761
+
+# Device-specific utilities
+PRODUCT_PACKAGES += \
+    chipinfo \
+    wlan_assistant
