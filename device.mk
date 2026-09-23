@@ -251,3 +251,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     WifiHotspotOverlayice \
     DialerOverlayIce
+
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.ice
