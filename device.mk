@@ -247,3 +247,6 @@ PRODUCT_PACKAGES += \
     libmtkperf_client_vendor \
     libpowerhalwrap_vendor \
     libperfctl_vendor
+
+PRODUCT_PACKAGES += \
+    WifiHotspotOverlayice
