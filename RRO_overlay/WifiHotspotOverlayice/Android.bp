@@ -1,0 +1,5 @@
+runtime_resource_overlay {
+    name: "WifiHotspotOverlayice",
+    manifest: "AndroidManifest.xml",
+    resource_dirs: ["res"],
+}
