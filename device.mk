@@ -265,4 +265,5 @@ PRODUCT_PACKAGES += \
     vndservicemanager \
     vndservice
 
-
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.mediatek
