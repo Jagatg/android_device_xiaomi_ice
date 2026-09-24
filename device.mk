@@ -267,3 +267,16 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
+
+PRODUCT_PACKAGES += \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio.effect@7.0-impl \
+    android.hardware.bluetooth.audio@2.0-impl.so \
+    android.hardware.bluetooth.audio@2.1-impl.so \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.renderscript@1.0-impl \
+    android.hardware.soundtrigger@2.3-impl \
+    android.hardware.thermal@1.0-impl \
+    audio.r_submix.default \
+    audio.usb.default \
+    audio_policy.stub
