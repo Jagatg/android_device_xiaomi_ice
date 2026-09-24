@@ -256,4 +256,7 @@ PRODUCT_PACKAGES += \
     android.hardware.light-service.ice
 
 PRODUCT_PACKAGES += \
-    dmabuf_dump
+    dmabuf_dump \
+    android.hardware.biometrics.fingerprint@2.1-service \
+    android.hardware.cas@1.2-service-lazy \
+    android.hardware.drm@1.4-service-lazy.clearkey
