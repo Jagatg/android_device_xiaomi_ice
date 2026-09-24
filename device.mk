@@ -254,3 +254,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.light-service.ice
+
+PRODUCT_PACKAGES += \
+    dmabuf_dump
