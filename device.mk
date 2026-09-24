@@ -282,5 +282,19 @@ PRODUCT_PACKAGES += \
     audio_policy.stub
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/modules:$(TARGET_COPY_OUT_VENDOR)/lib/modules
-
+    $(LOCAL_PATH)/prebuilts/modules/bt_drv_connac1x.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/bt_drv_connac1x.ko \
+    $(LOCAL_PATH)/prebuilts/modules/connfem.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/connfem.ko \
+    $(LOCAL_PATH)/prebuilts/modules/fmradio_drv_mt6631.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/fmradio_drv_mt6631.ko \
+    $(LOCAL_PATH)/prebuilts/modules/fpsgo.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/fpsgo.ko \
+    $(LOCAL_PATH)/prebuilts/modules/gps_drv.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/gps_drv.ko \
+    $(LOCAL_PATH)/prebuilts/modules/met.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/met.ko \
+    $(LOCAL_PATH)/prebuilts/modules/mi_memory.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/mi_memory.ko \
+    $(LOCAL_PATH)/prebuilts/modules/modules.alias:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.alias \
+    $(LOCAL_PATH)/prebuilts/modules/modules.dep:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.dep \
+    $(LOCAL_PATH)/prebuilts/modules/modules.load:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.load \
+    $(LOCAL_PATH)/prebuilts/modules/modules.softdep:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.softdep \
+    $(LOCAL_PATH)/prebuilts/modules/mt6357-accdet.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/mt6357-accdet.ko \
+    $(LOCAL_PATH)/prebuilts/modules/trace_mmstat.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/trace_mmstat.ko \
+    $(LOCAL_PATH)/prebuilts/modules/wlan_drv_gen4m.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/wlan_drv_gen4m.ko \
+    $(LOCAL_PATH)/prebuilts/modules/wmt_chrdev_wifi.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/wmt_chrdev_wifi.ko \
+    $(LOCAL_PATH)/prebuilts/modules/wmt_drv.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/wmt_drv.ko
