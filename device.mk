@@ -280,3 +280,7 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default \
     audio_policy.stub
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/modules:$(TARGET_COPY_OUT_VENDOR)/lib/modules
+
