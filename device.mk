@@ -259,4 +259,10 @@ PRODUCT_PACKAGES += \
     dmabuf_dump \
     android.hardware.biometrics.fingerprint@2.1-service \
     android.hardware.cas@1.2-service-lazy \
-    android.hardware.drm@1.4-service-lazy.clearkey
+    android.hardware.drm@1.4-service-lazy.clearkey \
+    android.hardware.graphics.composer@2.0-service \
+    android.hardware.wifi@1.0-service-lazy \
+    vndservicemanager \
+    vndservice
+
+
