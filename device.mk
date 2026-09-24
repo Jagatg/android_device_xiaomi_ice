@@ -380,6 +380,21 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant@1.3.vendor \
     android.hardware.wifi.supplicant@1.4.vendor
 
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@6.0.vendor \
+    android.hardware.audio@7.0-util.vendor \
+    android.hardware.audio@7.0.vendor
+
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.0-ScopedWakelock.vendor \
+    android.hardware.sensors@2.0.vendor \
+    android.hardware.sensors@2.1.vendor
+
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0.vendor
+
 PRODUCT_PACKAGES += \
     android.hidl.memory.block@1.0.vendor
-
