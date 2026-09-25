@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2023 The LineageOS Project
+# Copyright (C) 2026 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -15,6 +15,20 @@ SELINUX_IGNORE_NEVERALLOWS := true
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 ALLOW_MISSING_DEPENDENCIES := true
 BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
+
+# A/B
+AB_OTA_UPDATER := true
+BOARD_USES_RECOVERY_AS_BOOT := true
+TARGET_USES_64_BIT_BINDER := true
+AB_OTA_PARTITIONS := \
+    boot \
+    dtbo \
+    system \
+    product \
+    vendor \
+    vbmeta \
+    vbmeta_system \
+    vbmeta_vendor
 
 # Architecture
 TARGET_ARCH := arm
@@ -34,6 +48,7 @@ DISABLE_APEX_TEST_MODULE := true
 # Display
 TARGET_SCREEN_DENSITY := 320
 
+# Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32S1,32S1
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
@@ -144,5 +159,5 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6761
 include vendor/xiaomi/ice/BoardConfigVendor.mk
 
 # Sepolicy
-include device/mediatek/sepolicy_vndr/SEPolicy.mk
+# include device/mediatek/sepolicy_vndr/SEPolicy.mk
 
