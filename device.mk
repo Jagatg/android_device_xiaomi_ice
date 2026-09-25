@@ -62,4 +62,5 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.product.first_api_level=31
 
-
+PRODUCT_PACKAGES += \
+    init.recovery.mt6761.rc
