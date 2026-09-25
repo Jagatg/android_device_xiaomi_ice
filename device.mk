@@ -84,3 +84,8 @@ PRODUCT_PACKAGES += \
 # Manifest
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/vintf/manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(LOCAL_PATH)/vintf/compatibility_matrix.xml
+
+# Properties
+TARGET_SYSTEM_PROP += device/xiaomi/ice/config/prop/system.prop
+TARGET_VENDOR_PROP += device/xiaomi/ice/config/prop/vendor.prop
+TARGET_PRODUCT_PROP += device/xiaomi/ice/config/prop/product.prop
