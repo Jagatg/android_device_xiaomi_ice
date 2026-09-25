@@ -119,3 +119,19 @@ BOARD_AVB_RECOVERY_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
 BOARD_AVB_RECOVERY_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
+
+# Security patch level
+VENDOR_SECURITY_PATCH := 2022-06-05
+
+# Treble
+BOARD_VNDK_VERSION := current
+
+# Dexpreopt
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+      WITH_DEXPREOPT := true
+      DONT_DEXPREOPT_PREBUILTS := true
+      USE_DEX2OAT_DEBUG := false
+      WITH_DEXPREOPT_DEBUG_INFO := false
+  endif
+endif
