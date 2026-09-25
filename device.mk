@@ -62,5 +62,12 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.product.first_api_level=31
 
+#Recovery
 PRODUCT_PACKAGES += \
     init.recovery.mt6761.rc
+
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/ice/proprietary/vendor/firmware/focaltech_ts_fw_helitai.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/focaltech_ts_fw_helitai.bin \
+    vendor/xiaomi/ice/proprietary/vendor/firmware/novatek_ts_truly_fw.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/novatek_ts_truly_fw.bin \
+    vendor/xiaomi/ice/proprietary/vendor/firmware/novatek_ts_truly_mp.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/novatek_ts_truly_mp.bin
+
