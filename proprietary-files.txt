@@ -9,9 +9,6 @@ vendor/lib/hw/audio.primary.mt6761.so
 vendor/lib/hw/audio.r_submix.default.so
 vendor/lib/hw/audio.r_submix.mt6761.so
 vendor/lib/hw/audio.usb.default.so
-vendor/lib/audio_common-aidl-cpp.so
-vendor/lib/audioclient-types-aidl-cpp.so
-vendor/lib/framework-permission-aidl-cpp.so
 vendor/lib/libaedv.so
 vendor/lib/libalsautils.so
 vendor/lib/libaudioclient_aidl_conversion.so
@@ -189,11 +186,6 @@ vendor/lib/libbluetooth_audio_session.so
 vendor/lib/libbluetooth_audio_session_mediatek.so
 vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so
-
-# Boot
-vendor/bin/hw/android.hardware.boot@1.2-service
-vendor/etc/init/android.hardware.boot@1.2-service.rc
-vendor/etc/vintf/manifest/android.hardware.boot@1.2.xml
 
 # Camera
 system_ext/lib/vendor.mediatek.hardware.camera.atms@1.0.so
@@ -377,10 +369,6 @@ vendor/lib/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib/vendor.mediatek.hardware.camera.security@1.0.so
 vendor/lib/vendor.mediatek.hardware.power@2.0.so
 
-# CAS
-vendor/bin/hw/android.hardware.cas@1.2-service-lazy
-vendor/etc/init/android.hardware.cas@1.2-service-lazy.rc
-vendor/etc/vintf/manifest/android.hardware.cas@1.2-service-lazy.xml
 
 # Display
 lib/vendor.mediatek.hardware.mms@1.0.so
@@ -404,11 +392,9 @@ system_ext/lib/vendor.mediatek.hardware.pq@2.6.so
 system_ext/lib/vendor.mediatek.hardware.pq@2.7.so
 system_ext/lib/vendor.mediatek.hardware.pq@2.9.so
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
-vendor/bin/hw/android.hardware.graphics.composer@2.1-service
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
-vendor/etc/init/android.hardware.graphics.composer@2.1-service.rc
 vendor/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
 vendor/lib/egl/egl.cfg
@@ -470,9 +456,7 @@ vendor/lib/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib/vendor.mediatek.hardware.pq@2.9.so
 
 # DRM
-vendor/bin/hw/android.hardware.drm@1.4-service-lazy.clearkey
 vendor/bin/hw/android.hardware.drm@1.4-service-lazy.widevine
-vendor/etc/init/android.hardware.drm@1.4-service-lazy.clearkey.rc
 vendor/etc/init/android.hardware.drm@1.4-service-lazy.widevine.rc
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.clearkey.xml
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
@@ -486,8 +470,6 @@ vendor/etc/init/android.hardware.dumpstate@1.1-service.xiaomi.rc
 vendor/etc/vintf/manifest/android.hardware.dumpstate@1.1-service.xiaomi.xml
 
 # Fingerprint
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
-vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service.rc
 vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml
 vendor/lib/hw/fingerprint.fpc.default.so
 vendor/lib/hw/fingerprint.goodix.default.so
@@ -500,9 +482,7 @@ vendor/lib/libsl_fp_impl.so
 vendor/lib/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so
 
 # Gatekeeper
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service
 vendor/bin/teei_daemon
-vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
 vendor/etc/init/microtrust.bp_kmsetkey_ca.rc
 vendor/etc/init/microtrust.rc
 vendor/lib/hw/android.hardware.gatekeeper@1.0-impl.so
@@ -759,7 +739,6 @@ vendor/bin/hw/android.hardware.vibrator-service.mediatek
 vendor/lib/hw/vibrator.mt6761.so
 
 # Wi-Fi
-vendor/bin/hw/android.hardware.wifi@1.0-service-lazy
 vendor/bin/hw/hostapd
 vendor/bin/hw/wpa_supplicant
 vendor/bin/hostapd_cli
@@ -768,7 +747,6 @@ vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
 vendor/bin/wpa_cli
 vendor/etc/init/android.hardware.wifi.supplicant-service.rc
-vendor/etc/init/android.hardware.wifi@1.0-service-lazy.rc
 vendor/etc/init/init.wlan_drv.rc
 vendor/etc/init/wlan_assistant.rc
 vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
