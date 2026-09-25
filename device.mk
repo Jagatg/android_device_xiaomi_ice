@@ -51,3 +51,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     otapreopt_script
 
+# Preloader Utility
+PRODUCT_PACKAGES += \
+    create_pl_dev \
+    create_pl_dev.recovery
