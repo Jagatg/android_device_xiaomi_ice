@@ -55,3 +55,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     create_pl_dev \
     create_pl_dev.recovery
+
+# API levels
+PRODUCT_SHIPPING_API_LEVEL := 31
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.product.first_api_level=31
+
+
