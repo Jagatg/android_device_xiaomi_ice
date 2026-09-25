@@ -10,6 +10,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
 
+# inherit vendor tree
+$(call inherit-product, vendor/xiaomi/ice/ice-vendor.mk)
+
 # Inherit from ice device
 $(call inherit-product, device/xiaomi/ice/device.mk)
 

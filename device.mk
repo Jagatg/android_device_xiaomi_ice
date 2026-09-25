@@ -10,6 +10,9 @@ LOCAL_PATH := device/xiaomi/ice
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/xiaomi/ice
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1600
 TARGET_SCREEN_WIDTH := 720
