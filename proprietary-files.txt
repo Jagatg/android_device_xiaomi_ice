@@ -576,14 +576,8 @@ vendor/lib/hw/lights.mt6761.so
 
 # Media
 etc/seccomp_policy/mediacodec.policy
-lib/libdatasource.so
 lib/libged_sys.so
 lib/libgralloc_extra_sys.so
-lib/libmedia_codeclist.so
-lib/libstagefright_bufferpool@2.0.1.so
-lib/libstagefright_bufferqueue_helper_novndk.so
-lib/libstagefright_codecbase.so
-lib/libstagefright_framecapture_utils.so
 lib/libstagefright_wfd_mtk.so
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc
@@ -802,23 +796,19 @@ vendor/bin/SoterProvisioningTool
 vendor/bin/aee_aedv
 vendor/bin/aee_dumpstatev
 vendor/bin/aeev
-vendor/bin/applypatch
 vendor/bin/atci_service
 vendor/bin/atcid
 vendor/bin/audiocmdservice_atci
 vendor/bin/autobt
-vendor/bin/boringssl_self_test32
 vendor/bin/cal_tool
 vendor/bin/charge_logger
 vendor/bin/chipinfo
 vendor/bin/dconfig
 vendor/bin/dexecutor
-vendor/bin/dmabuf_dump
 vendor/bin/dmc_core
 vendor/bin/doeapp-memtester
 vendor/bin/doeapp-sat
 vendor/bin/dtc_vendor
-vendor/bin/dumpsys
 vendor/bin/em_hidl
 vendor/bin/factory
 vendor/bin/jpegtool
