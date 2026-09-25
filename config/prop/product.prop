@@ -1,0 +1,12 @@
+# Miscellaneous
+dalvik.vm.systemservercompilerfilter=speed-profile
+persist.miui.extm.enable=0
+ro.carrier=unknown
+ro.com.google.gmsversion=12_202204.go
+ro.facebook.parterid=xiaomi:d3120e97-318f-0810-4666-a1b0610476f4
+ro.miui.build.region=in
+ro.miui.customized_clientid=2
+ro.opa.eligible_device=true
+ro.product.mod_device=ice_in_global
+ro.setupwizard.rotation_locked=true
+
