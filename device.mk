@@ -80,3 +80,7 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-mtkimpl \
     android.hardware.boot@1.2-mtkimpl.recovery \
     libmtk_bsg.recovery
+
+# Manifest
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/vintf/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(LOCAL_PATH)/vintf/compatibility_matrix.xml
