@@ -5,7 +5,6 @@ vendor/bin/hw/android.hardware.audio.service.mediatek
 vendor/etc/init/android.hardware.audio.service.mediatek.rc
 vendor/lib/hw/android.hardware.audio.effect@6.0-impl.so
 vendor/lib/hw/android.hardware.audio.effect@7.0-impl.so
-vendor/lib/hw/audio.primary.default.so
 vendor/lib/hw/audio.primary.mt6761.so
 vendor/lib/hw/audio.r_submix.default.so
 vendor/lib/hw/audio.r_submix.mt6761.so
@@ -28,9 +27,6 @@ vendor/lib/vendor.mediatek.hardware.audio@7.1.so
 
 # Audio (FX modules)
 vendor/lib/soundfx/libaudiopreprocessing_mtk.so
-vendor/lib/soundfx/libdynproc.so
-vendor/lib/soundfx/libhapticgenerator.so
-vendor/lib/libvibrator.so
 
 # Audio configs
 etc/audio_effects.conf
@@ -424,7 +420,6 @@ vendor/lib/egl/libMEOW_gift.so
 vendor/lib/egl/libMEOW_qt.so
 vendor/lib/egl/libMEOW_trace.so
 vendor/lib/hw/android.hardware.memtrack@1.0-impl.so
-vendor/lib/hw/gralloc.default.so
 vendor/lib/hw/gralloc.rogue.so
 vendor/lib/hw/hwcomposer.mt6761.so
 vendor/lib/hw/memtrack.default.so
@@ -481,8 +476,6 @@ vendor/etc/init/android.hardware.drm@1.4-service-lazy.clearkey.rc
 vendor/etc/init/android.hardware.drm@1.4-service-lazy.widevine.rc
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.clearkey.xml
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
-vendor/lib/mediacas/libclearkeycasplugin.so
-vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libmockdrmcryptoplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/libwvhidl.so
@@ -581,9 +574,6 @@ vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 vendor/bin/hw/android.hardware.lights-service.mediatek
 vendor/lib/hw/lights.mt6761.so
 
-# Local time
-vendor/lib/hw/local_time.default.so
-
 # Media
 etc/seccomp_policy/mediacodec.policy
 lib/libdatasource.so
@@ -596,9 +586,7 @@ lib/libstagefright_codecbase.so
 lib/libstagefright_framecapture_utils.so
 lib/libstagefright_wfd_mtk.so
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek
-vendor/bin/hw/android.hardware.media.omx@1.0-service
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc
-vendor/etc/init/android.hardware.media.omx@1.0-service.rc
 vendor/etc/seccomp_policy/mediacodec.policy
 vendor/lib/libMtkOmxCore.so
 vendor/lib/libMtkOmxGsmDec.so
@@ -668,7 +656,6 @@ system_ext/lib/vendor.mediatek.hardware.mtkpower@1.2.so
 vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
-vendor/lib/hw/power.default.so
 vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.2-impl.so
 vendor/lib/libpower_timer.so
 vendor/lib/vendor.mediatek.hardware.mtkpower@1.0.so
@@ -775,7 +762,6 @@ vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml
 
 # Vibrator
 vendor/bin/hw/android.hardware.vibrator-service.mediatek
-vendor/lib/hw/vibrator.default.so
 vendor/lib/hw/vibrator.mt6761.so
 
 # Wi-Fi
@@ -1133,7 +1119,6 @@ vendor/etc/factory.ini
 vendor/etc/fstab.enableswap
 vendor/etc/fstab.mt6761
 vendor/etc/fstb.cfg
-vendor/etc/mkshrc
 vendor/etc/mtk_omx_core.cfg
 vendor/etc/mtk_platform_codecs_config.xml
 vendor/etc/partition_permission.sh
@@ -1222,7 +1207,6 @@ vendor/lib/libaudioloudc.so
 vendor/lib/libaudioprimarydevicehalifclient.so
 vendor/lib/libaurisysdemo.so
 vendor/lib/libbessound_hd_mtk_vendor.so
-vendor/lib/libbinderdebug.so
 vendor/lib/libblisrc32_vendor.so
 vendor/lib/libbluetooth_hw_test.so
 vendor/lib/libbluetooth_mtk_pure.so
@@ -1266,7 +1250,6 @@ vendor/lib/libmsbc_mtk.so
 vendor/lib/libmtcloader.so
 vendor/lib/libmtk-fusion-ril-prop-vsim.so
 vendor/lib/libmtk-ril.so
-vendor/lib/libmtk_bsg.so
 vendor/lib/libmtkares.so
 vendor/lib/libmtklimiter_vendor.so
 vendor/lib/libmtkmipc-ril.so
@@ -1312,13 +1295,11 @@ vendor/lib/libviamipc-ril.so
 vendor/lib/libvp8dec_sa.ca7.so
 vendor/lib/libvp9dec_sa.ca7.so
 vendor/lib/libvpu5.so
-vendor/lib/libvpx.so
 vendor/lib/libvt_custom.so
 vendor/lib/libwapi.so
 vendor/lib/libwifitest.so
 vendor/lib/libwpa_client.so
 vendor/lib/libwpfa.so
-vendor/lib/libz_stable.so
 vendor/lib/meta_wifi_data.so
 vendor/lib/mibokeh_mt6768_opencl.bin
 vendor/lib/mibokeh_mt6768_parameter.bin
