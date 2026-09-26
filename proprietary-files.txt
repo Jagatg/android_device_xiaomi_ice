@@ -2,6 +2,8 @@
 
 # Audio
 vendor/bin/hw/android.hardware.audio.service.mediatek
+vendor/lib/hw/android.hardware.audio@6.0-impl-mediatek.so
+vendor/lib/hw/android.hardware.audio@7.0-impl-mediatek.so
 vendor/etc/init/android.hardware.audio.service.mediatek.rc
 vendor/lib/hw/audio.primary.mt6761.so
 vendor/lib/hw/audio.r_submix.mt6761.so
@@ -164,6 +166,7 @@ vendor/etc/audio_param/Volume_ParamUnitDesc.xml
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
+vendor/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
 vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek-lazy.rc
 vendor/lib/libbluetooth_mtk.so
 vendor/lib/libbt-vendor.so
@@ -183,6 +186,7 @@ vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Camera
 system_ext/lib/vendor.mediatek.hardware.camera.atms@1.0.so
+vendor/lib/hw/android.hardware.camera.provider@2.6-impl-mediatek.so
 vendor/bin/hw/camerahalserver
 vendor/etc/init/camerahalserver.rc
 vendor/lib/hw/vendor.mediatek.hardware.camera.atms@1.0-impl.so
@@ -386,6 +390,7 @@ system_ext/lib/vendor.mediatek.hardware.pq@2.6.so
 system_ext/lib/vendor.mediatek.hardware.pq@2.7.so
 system_ext/lib/vendor.mediatek.hardware.pq@2.9.so
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
+vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
@@ -462,7 +467,6 @@ vendor/etc/init/android.hardware.dumpstate@1.1-service.xiaomi.rc
 vendor/etc/vintf/manifest/android.hardware.dumpstate@1.1-service.xiaomi.xml
 
 # Fingerprint
-vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.xml
 vendor/lib/hw/fingerprint.fpc.default.so
 vendor/lib/hw/fingerprint.goodix.default.so
 vendor/lib/hw/fingerprint.silead.default.so
@@ -498,6 +502,8 @@ vendor/thh/ta/d91f322ad5a441d5955110eda3272fc0.ta
 
 # GNSS
 vendor/bin/mnld
+vendor/lib/hw/android.hardware.gnss-impl-mediatek.so
+vendor/lib/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/bin/mtk_agpsd
 vendor/etc/init/mtk_agpsd_p.rc
 vendor/lib/hw/gps.default.so
@@ -522,6 +528,7 @@ vendor/etc/gnss/agps_profiles_conf2.xml
 
 # Health
 vendor/bin/hw/android.hardware.health@2.1-service
+vendor/lib/hw/android.hardware.health@2.0-impl-2.1.so
 vendor/bin/fuelgauged
 vendor/etc/init/android.hardware.health@2.1-service.rc
 vendor/etc/init/fuelgauged_init.rc
@@ -1362,3 +1369,6 @@ system_ext/lib/libfmjni.so
 
 # GBA
 priv-app/MtkGbaService/MtkGbaService.apk
+
+# Sensors
+vendor/lib/hw/android.hardware.sensors@2.X-subhal-mediatek.so
