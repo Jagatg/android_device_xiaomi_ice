@@ -7,7 +7,6 @@ vendor/lib/hw/android.hardware.audio@7.0-impl-mediatek.so
 vendor/etc/init/android.hardware.audio.service.mediatek.rc
 vendor/lib/hw/audio.primary.mt6761.so
 vendor/lib/hw/audio.r_submix.mt6761.so
-vendor/lib/libaedv.so
 vendor/lib/libaudiotoolkit_vendor.so
 vendor/lib/libbwc.so
 vendor/lib/libladder.so
@@ -738,7 +737,6 @@ vendor/bin/audiocmdservice_atci
 vendor/bin/autobt
 vendor/bin/cal_tool
 vendor/bin/charge_logger
-vendor/bin/chipinfo
 vendor/bin/dconfig
 vendor/bin/dexecutor
 vendor/bin/dmc_core
