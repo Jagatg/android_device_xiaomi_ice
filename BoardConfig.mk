@@ -161,3 +161,4 @@ include vendor/xiaomi/ice/BoardConfigVendor.mk
 # Sepolicy
 # include device/mediatek/sepolicy_vndr/SEPolicy.mk
 
+include device/xiaomi/ice/config/vendor_logtag.mk
