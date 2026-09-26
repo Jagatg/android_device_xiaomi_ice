@@ -251,3 +251,7 @@ PRODUCT_PACKAGES += \
 # libaedv
 PRODUCT_PACKAGES += \
     libaedv
+
+# walan_assistant
+PRODUCT_PACKAGES += \
+    wlan_assistant
