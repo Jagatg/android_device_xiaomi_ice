@@ -10,9 +10,6 @@ LOCAL_PATH := device/xiaomi/ice
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-PRODUCT_SOONG_NAMESPACES += \
-    vendor/xiaomi/ice
-
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1600
 TARGET_SCREEN_WIDTH := 720
@@ -246,3 +243,11 @@ PRODUCT_PACKAGES += \
     libdrm.vendor \
     libhidltransport.vendor \
     libhwbinder.vendor \
+
+# Chipinfo
+PRODUCT_PACKAGES += \
+    chipinfo
+
+# libaedv
+PRODUCT_PACKAGES += \
+    libaedv
