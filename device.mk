@@ -97,8 +97,7 @@ TARGET_PRODUCT_PROP += device/xiaomi/ice/config/prop/product.prop
 PRODUCT_PACKAGES += \
     SystemUIGo
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6761
+
 
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1.so \
@@ -128,3 +127,122 @@ PRODUCT_PACKAGES += \
     libaudioutils \
     audio_policy.stub \
     android.hardware.drm@1.4-service-lazy.clearkey
+
+PRODUCT_PACKAGES += \
+    libcamera2ndk_vendor.vendor \
+    libcodec2_hidl@1.1.vendor \
+    libcodec2_hidl@1.2.vendor \
+    libcodec2_hidl_plugin.vendor \
+    libcodec2_soft_common.vendor \
+    libcppbor_external.vendor \
+    libcppcose_rkp.vendor \
+    libkeymaster4.vendor \
+    libkeymaster41.vendor \
+    libkeymaster4_1support.vendor \
+    libkeystore-engine-wifi-hidl.vendor \
+    libkeystore-wifi-hidl.vendor \
+    libsensorndkbridge.vendor \
+    libsfplugin_ccodec_utils.vendor \
+    libsoft_attestation_cert.vendor \
+    libstagefright_bufferpool@2.0.1.vendor \
+
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@6.0.vendor \
+    android.hardware.audio@7.0.vendor \
+    android.hardware.audio@7.0-util.vendor
+
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth@1.1.vendor
+
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.common@1.0.vendor \
+    android.hardware.camera.device@1.0.vendor \
+    android.hardware.camera.device@3.2.vendor \
+    android.hardware.camera.device@3.3.vendor \
+    android.hardware.camera.device@3.4.vendor \
+    android.hardware.camera.device@3.5.vendor \
+    android.hardware.camera.device@3.6.vendor \
+    android.hardware.camera.provider@2.4.vendor \
+    android.hardware.camera.provider@2.5.vendor \
+    android.hardware.camera.provider@2.6.vendor
+
+# Dumpstate
+PRODUCT_PACKAGES += \
+    android.hardware.dumpstate@1.0.vendor \
+    android.hardware.dumpstate@1.1.vendor
+
+# GNSS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss.measurement_corrections@1.0.vendor \
+    android.hardware.gnss.measurement_corrections@1.1.vendor \
+    android.hardware.gnss.visibility_control@1.0.vendor \
+    android.hardware.gnss@1.0.vendor \
+    android.hardware.gnss@1.1.vendor \
+    android.hardware.gnss@2.0.vendor \
+    android.hardware.gnss@2.1.vendor
+
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0.vendor
+
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.0.vendor \
+    android.hardware.power@1.1.vendor \
+    android.hardware.power@1.2.vendor
+
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.0.vendor \
+    android.hardware.radio.config@1.1.vendor \
+    android.hardware.radio.config@1.2.vendor \
+    android.hardware.radio.config@1.3.vendor \
+    android.hardware.radio@1.2.vendor \
+    android.hardware.radio@1.3.vendor \
+    android.hardware.radio@1.4.vendor \
+    android.hardware.radio@1.5.vendor \
+    android.hardware.radio@1.6.vendor
+
+# Sensor
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.0-ScopedWakelock.vendor \
+    android.hardware.sensors@2.0.vendor \
+    android.hardware.sensors@2.1.vendor
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb.gadget@1.0.vendor \
+    android.hardware.usb.gadget@1.1.vendor \
+    android.hardware.usb@1.0.vendor \
+    android.hardware.usb@1.1.vendor \
+    android.hardware.usb@1.2.vendor \
+    android.hardware.usb@1.3.vendor
+
+# Wifi
+PRODUCT_PACKAGES += \
+    android.hardware.wifi.hostapd@1.0.vendor \
+    android.hardware.wifi.hostapd@1.1.vendor \
+    android.hardware.wifi.hostapd@1.2.vendor \
+    android.hardware.wifi.hostapd@1.3.vendor \
+    android.hardware.wifi.supplicant@1.0.vendor \
+    android.hardware.wifi.supplicant@1.1.vendor \
+    android.hardware.wifi.supplicant@1.2.vendor \
+    android.hardware.wifi.supplicant@1.3.vendor \
+    android.hardware.wifi.supplicant@1.4.vendor
+
+# Memory
+PRODUCT_PACKAGES += \
+    android.hidl.memory.block@1.0.vendor
+
+PRODUCT_PACKAGES += \
+    libavservices_minijail_vendor \
+    libtinycompress
+
+PRODUCT_PACKAGES += \
+    libdrm.vendor \
+    libhidltransport.vendor \
+    libhwbinder.vendor \
