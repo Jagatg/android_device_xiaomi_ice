@@ -104,101 +104,27 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1.so \
     android.hardware.boot@1.2-service \
     android.hardware.cas@1.2-service-lazy \
-    android.hardware.cas@1.2-service-lazy \
     android.hardware.gatekeeper@1.0-service \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.wifi@1.0-service-lazy \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.audio.effect@7.0-impl \
     dmabuf_dump.vendor \
     vndservicemanager \
-    vndservice
-
-# Audio
-PRODUCT_PACKAGES += \
-    android.hardware.audio@6.0.vendor \
-    android.hardware.audio@7.0-util.vendor \
-    android.hardware.audio@7.0.vendor
-
-# Bluetooth
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0.vendor \
-    android.hardware.bluetooth@1.1.vendor
-
-# Camera
-PRODUCT_PACKAGES += \
-    android.hardware.camera.common@1.0.vendor \
-    android.hardware.camera.device@1.0.vendor \
-    android.hardware.camera.device@3.2.vendor \
-    android.hardware.camera.device@3.3.vendor \
-    android.hardware.camera.device@3.4.vendor \
-    android.hardware.camera.device@3.5.vendor \
-    android.hardware.camera.device@3.6.vendor \
-    android.hardware.camera.provider@2.4.vendor \
-    android.hardware.camera.provider@2.5.vendor \
-    android.hardware.camera.provider@2.6.vendor
-
-# Gnss
-PRODUCT_PACKAGES += \
-    android.hardware.gnss.measurement_corrections@1.0.vendor \
-    android.hardware.gnss.measurement_corrections@1.1.vendor \
-    android.hardware.gnss.visibility_control@1.0.vendor \
-    android.hardware.gnss@1.0.vendor \
-    android.hardware.gnss@1.1.vendor \
-    android.hardware.gnss@2.0.vendor \
-    android.hardware.gnss@2.1.vendor
-
-# Light
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0.vendor
-
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.0.vendor \
-    android.hardware.power@1.1.vendor \
-    android.hardware.power@1.2.vendor
-
-# Radio
-PRODUCT_PACKAGES += \
-    android.hardware.radio.config@1.0.vendor \
-    android.hardware.radio.config@1.1.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.config@1.3.vendor \
-    android.hardware.radio@1.2.vendor \
-    android.hardware.radio@1.3.vendor \
-    android.hardware.radio@1.4.vendor \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio@1.6.vendor
-
-# Sensor
-PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-ScopedWakelock.vendor \
-    android.hardware.sensors@2.1.vendor \
-    android.hardware.sensors@2.0.vendor
-
-# Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0.vendor
-
-# USB
-PRODUCT_PACKAGES += \
-    android.hardware.usb.gadget@1.0.vendor \
-    android.hardware.usb.gadget@1.1.vendor \
-    android.hardware.usb@1.0.vendor \
-    android.hardware.usb@1.1.vendor \
-    android.hardware.usb@1.2.vendor \
-    android.hardware.usb@1.3.vendor
-
-# Wifi
-PRODUCT_PACKAGES += \
-    android.hardware.wifi.hostapd@1.0.vendor \
-    android.hardware.wifi.hostapd@1.1.vendor \
-    android.hardware.wifi.hostapd@1.2.vendor \
-    android.hardware.wifi.hostapd@1.3.vendor \
-    android.hardware.wifi.supplicant@1.0.vendor \
-    android.hardware.wifi.supplicant@1.1.vendor \
-    android.hardware.wifi.supplicant@1.2.vendor \
-    android.hardware.wifi.supplicant@1.3.vendor \
-    android.hardware.wifi.supplicant@1.4.vendor
-
-# Memory
-PRODUCT_PACKAGES += \
-    android.hidl.memory.block@1.0.vendor
+    vndservice \
+    android.hardware.bluetooth.audio@2.1-impl \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.renderscript@1.0-impl \
+    android.hardware.soundtrigger@2.3-impl \
+    android.hardware.soundtrigger@2.3-impl \
+    android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@2.0-impl \
+    android.hardware.thermal@2.0.vendor \
+    audio.r_submix.default \
+    audio.usb.default \
+    libtinyalsa \
+    libaudioutils \
+    audio_policy.stub \
+    android.hardware.drm@1.4-service-lazy.clearkey
