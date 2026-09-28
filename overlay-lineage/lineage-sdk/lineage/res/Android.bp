@@ -1,4 +1,0 @@
-runtime_resource_overlay {
-    name: "IceLineageSdkOverlay",
-    sdk_version: "current",
-}

@@ -148,7 +148,6 @@ PRODUCT_PACKAGES += \
     TrebuchetGoOverlay
 
 # Display device config - fixes DisplayDeviceConfig nits spam causing watchdog kill
-PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
@@ -178,69 +177,13 @@ PRODUCT_PACKAGES += \
 
 DONT_UNCOMPRESS_PRIV_APPS_DEXS := true
 
-# Audio policy configuration
-PRODUCT_COPY_FILES += \
-    frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_in_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
-    frameworks/av/services/audiopolicy/config/primary_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/primary_audio_policy_configuration.xml \
-    frameworks/av/services/audiopolicy/enginedefault/config/example/phone/audio_policy_engine_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_engine_configuration.xml \
-    frameworks/av/services/audiopolicy/enginedefault/config/example/phone/audio_policy_engine_default_stream_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_engine_default_stream_volumes.xml \
-    frameworks/av/services/audiopolicy/enginedefault/config/example/phone/audio_policy_engine_product_strategies.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_engine_product_strategies.xml \
-    frameworks/av/services/audiopolicy/enginedefault/config/example/phone/audio_policy_engine_stream_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_engine_stream_volumes.xml \
-    frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
-    frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
-    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
-    frameworks/native/data/etc/android.hardware.camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.xml \
-    frameworks/native/data/etc/android.hardware.faketouch.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.faketouch.xml \
-    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml \
-    frameworks/native/data/etc/android.hardware.microphone.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.microphone.xml \
-    frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
-    frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
-    frameworks/native/data/etc/android.hardware.sensor.light.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.light.xml \
-    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.proximity.xml \
-    frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
-    frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
-    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
-    frameworks/native/data/etc/android.hardware.touchscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.xml \
-    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.xml \
-    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml \
-    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
-    frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
-    frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml \
-    frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
-    frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
-    frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
-    frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml \
-    frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
-    frameworks/native/data/etc/android.software.opengles.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml \
-    frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6761
 
 # Device-specific utilities
 PRODUCT_PACKAGES += \
     chipinfo \
-    wlan_assistant
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
-    $(LOCAL_PATH)/seccomp_policy/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy \
-    $(LOCAL_PATH)/seccomp_policy/mediaswcodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaswcodec.policy \
-    $(LOCAL_PATH)/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy \
-    $(LOCAL_PATH)/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
-    $(LOCAL_PATH)/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf \
-    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
-
-PRODUCT_PACKAGES += \
+    wlan_assistant \
     libaedv
 
 PRODUCT_PACKAGES += \
@@ -248,38 +191,13 @@ PRODUCT_PACKAGES += \
     libpowerhalwrap_vendor \
     libperfctl_vendor
 
+# RRO
 PRODUCT_PACKAGES += \
-    WifiHotspotOverlayice \
+    IceFrameworkOverlay \
+    IceFrameworkTelephonyOverlay \
+    IceNetworkStackOverlay \
+    IceWifiHotsportOverlay \
     DialerOverlayIce
-
-PRODUCT_PACKAGES += \
-    android.hardware.light-service.ice
-
-PRODUCT_PACKAGES += \
-    dmabuf_dump \
-    android.hardware.biometrics.fingerprint@2.1-service \
-    android.hardware.cas@1.2-service-lazy \
-    android.hardware.drm@1.4-service-lazy.clearkey \
-    android.hardware.graphics.composer@2.0-service \
-    android.hardware.wifi@1.0-service-lazy \
-    vndservicemanager \
-    vndservice
-
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.mediatek
-
-PRODUCT_PACKAGES += \
-    android.hardware.audio.effect@6.0-impl \
-    android.hardware.audio.effect@7.0-impl \
-    android.hardware.bluetooth.audio@2.0-impl.so \
-    android.hardware.bluetooth.audio@2.1-impl.so \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.renderscript@1.0-impl \
-    android.hardware.soundtrigger@2.3-impl \
-    android.hardware.thermal@1.0-impl \
-    audio.r_submix.default \
-    audio.usb.default \
-    audio_policy.stub
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/modules/bt_drv_connac1x.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/bt_drv_connac1x.ko \
@@ -298,6 +216,59 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/modules/wlan_drv_gen4m.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/wlan_drv_gen4m.ko \
     $(LOCAL_PATH)/prebuilts/modules/wmt_chrdev_wifi.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/wmt_chrdev_wifi.ko \
     $(LOCAL_PATH)/prebuilts/modules/wmt_drv.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/wmt_drv.ko
+
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1.so \
+    android.hardware.boot@1.2-service \
+    android.hardware.cas@1.2-service-lazy \
+    android.hardware.gatekeeper@1.0-service \
+    android.hardware.graphics.composer@2.1-service \
+    android.hardware.wifi@1.0-service-lazy \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.audio.effect@7.0-impl \
+    dmabuf_dump.vendor \
+    vndservicemanager \
+    vndservice \
+    android.hardware.bluetooth.audio@2.1-impl \
+    android.hardware.gatekeeper@1.0-impl \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.renderscript@1.0-impl \
+    android.hardware.soundtrigger@2.3-impl \
+    android.hardware.soundtrigger@2.3-impl \
+    android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@2.0-impl \
+    android.hardware.thermal@2.0.vendor \
+    audio.r_submix.default \
+    audio.usb.default \
+    libtinyalsa \
+    libaudioutils \
+    audio_policy.stub \
+    android.hardware.drm@1.4-service-lazy.clearkey
+
+PRODUCT_PACKAGES += \
+    libcamera2ndk_vendor.vendor \
+    libcodec2_hidl@1.1.vendor \
+    libcodec2_hidl@1.2.vendor \
+    libcodec2_hidl_plugin.vendor \
+    libcodec2_soft_common.vendor \
+    libcppbor_external.vendor \
+    libcppcose_rkp.vendor \
+    libkeymaster4.vendor \
+    libkeymaster41.vendor \
+    libkeymaster4_1support.vendor \
+    libkeystore-engine-wifi-hidl.vendor \
+    libkeystore-wifi-hidl.vendor \
+    libsensorndkbridge.vendor \
+    libsfplugin_ccodec_utils.vendor \
+    libsoft_attestation_cert.vendor \
+    libstagefright_bufferpool@2.0.1.vendor
+
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@6.0.vendor \
+    android.hardware.audio@7.0.vendor \
+    android.hardware.audio@7.0-util.vendor
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -332,12 +303,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.0.vendor \
     android.hardware.gnss@2.1.vendor
 
-# Graphics
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.1-resources.vendor \
-    android.hardware.graphics.composer@2.1.vendor
-
-# Lights
+# Light
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0.vendor
 
@@ -359,6 +325,12 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.5.vendor \
     android.hardware.radio@1.6.vendor
 
+# Sensor
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.0-ScopedWakelock.vendor \
+    android.hardware.sensors@2.0.vendor \
+    android.hardware.sensors@2.1.vendor
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb.gadget@1.0.vendor \
@@ -379,22 +351,3 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant@1.2.vendor \
     android.hardware.wifi.supplicant@1.3.vendor \
     android.hardware.wifi.supplicant@1.4.vendor
-
-# Audio
-PRODUCT_PACKAGES += \
-    android.hardware.audio@6.0.vendor \
-    android.hardware.audio@7.0-util.vendor \
-    android.hardware.audio@7.0.vendor
-
-# Sensors
-PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-ScopedWakelock.vendor \
-    android.hardware.sensors@2.0.vendor \
-    android.hardware.sensors@2.1.vendor
-
-# Thermal
-PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0.vendor
-
-PRODUCT_PACKAGES += \
-    android.hidl.memory.block@1.0.vendor
