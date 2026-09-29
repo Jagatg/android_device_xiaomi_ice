@@ -847,8 +847,6 @@ vendor/etc/ecc_list_OP20.xml
 vendor/etc/ecc_list_OP236.xml
 vendor/etc/ecc_list_preference.xml
 vendor/etc/factory.ini
-vendor/etc/fstab.mt6761
-vendor/etc/fstab.enableswap
 vendor/etc/fstb.cfg
 vendor/etc/mtk_omx_core.cfg
 vendor/etc/mtk_platform_codecs_config.xml
