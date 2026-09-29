@@ -39,12 +39,9 @@ vendor/etc/audio_policy_volumes.xml
 vendor/etc/bluetooth_audio_policy_configuration.xml
 vendor/etc/bluetooth_offload_audio_policy_configuration.xml
 vendor/etc/default_volume_tables.xml
-vendor/etc/r_submix_audio_policy_configuration.xml
 vendor/etc/usb_audio_policy_configuration.xml
 
 # Audio calibration
-vendor/etc/audio_param/AudioParamOptions.xml
-vendor/etc/audio_param/AudioParamOptions_vext.xml
 vendor/etc/audio_param/BtInfo_AudioParam.xml
 vendor/etc/audio_param/BtInfo_ParamUnitDesc.xml
 vendor/etc/audio_param/HpImpedance_AudioParam.xml
