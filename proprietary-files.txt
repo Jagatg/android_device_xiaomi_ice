@@ -710,16 +710,12 @@ vendor/lib/hw/android.hardware.thermal@2.0-impl.so
 
 # Miscellaneous
 vendor/bin/hw/merged_hal_service
-vendor/bin/hw/vendor.mediatek.hardware.aee@1.1-service
 vendor/bin/hw/vendor.silead.hardware.fingerprintext@1.0-service
 vendor/bin/hw/vendor.xiaomi.hardware.misys@1.0-service
 vendor/bin/hw/vendor.xiaomi.hardware.misys@2.0-service
 vendor/bin/hw/vendor.xiaomi.hardware.misys@3.0-service
 vendor/bin/AgentTest
 vendor/bin/SoterProvisioningTool
-vendor/bin/aee_aedv
-vendor/bin/aee_dumpstatev
-vendor/bin/aeev
 vendor/bin/atci_service
 vendor/bin/atcid
 vendor/bin/audiocmdservice_atci
@@ -774,7 +770,6 @@ vendor/etc/.tp/thermal.conf
 vendor/etc/.tp/thermal.off.conf
 vendor/etc/apdb/APDB_MT6761_S01__W2222
 vendor/etc/apdb/APDB_MT6761_S01__W2222_ENUM
-vendor/etc/init/aee_aedv.rc
 vendor/etc/init/atci_service.rc
 vendor/etc/init/atcid.rc
 vendor/etc/init/audiocmdservice_atci.rc
@@ -802,7 +797,6 @@ vendor/etc/init/mtklog.rc
 vendor/etc/init/muxreport.rc
 vendor/etc/init/netdagent.rc
 vendor/etc/init/networksetting.rc
-vendor/etc/init/vendor.mediatek.hardware.aee@1.1-service.rc
 vendor/etc/init/vendor.silead.hardware.fingerprintext@1.0-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.misys@1.0-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.misys@2.0-service.rc
@@ -837,8 +831,6 @@ vendor/etc/AbnormalDisplayLog_dynamic.xml
 vendor/etc/AudioLog_dynamic.xml
 vendor/etc/MNL_Config.xml
 vendor/etc/VideoLog_dynamic.xml
-vendor/etc/aee-commit
-vendor/etc/aee-config
 vendor/etc/audio_device.xml
 vendor/etc/audio_em.xml
 vendor/etc/audio_policy.conf
@@ -1048,8 +1040,6 @@ vendor/lib/sams_s5k5e9_i_tuning.so
 vendor/lib/sams_s5k5e9_iii_tuning.so
 vendor/lib/sc_sc500cs_ii_tuning.so
 vendor/lib/sc_sc800cs_ii_tuning.so
-vendor/lib/vendor.mediatek.hardware.aee@1.0.so
-vendor/lib/vendor.mediatek.hardware.aee@1.1.so
 vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so
 vendor/lib/vendor.mediatek.hardware.atci@1.0.so
 vendor/lib/vendor.mediatek.hardware.camera.ccap@1.0.so
@@ -1068,17 +1058,6 @@ vendor/lib/vendor.silead.hardware.fingerprintext@1.0.so
 vendor/lib/vendor.xiaomi.hardware.misys@1.0.so
 vendor/lib/vendor.xiaomi.hardware.misys@2.0.so
 vendor/lib/vendor.xiaomi.hardware.misys@3.0.so
-
-# AEE
-system_ext/bin/aee
-system_ext/etc/aee-commit
-system_ext/etc/aee-config
-system_ext/etc/init/hw/init.aee.rc
-system_ext/bin/aee_aed
-system_ext/etc/init/aee_aed.rc
-system_ext/bin/aee_core_forwarder
-system_ext/bin/aee_dumpstate
-system_ext/bin/aeedb
 
 # emdlogger
 system_ext/bin/emdlogger1
@@ -1211,4 +1190,7 @@ vendor/etc/permissions/com.fingerprints.extension.xml \
 vendor/etc/vintf/manifest/gnss-default.xml
 vendor/etc/vintf/manifest/gnss@2.1-service.xml
 vendor/etc/vintf/manifest/power-default.xml
-vendor/etc/vintf/manifest/android.hardware.health@2.1.xml
+vendor/lib/android.hidl.memory.block@1.0.so
+system/lib/libccci_util_sys.so
+system/lib/libhidltransport.so
+vendor/lib/hw/android.hardware.health@2.0-impl-2.1.so
