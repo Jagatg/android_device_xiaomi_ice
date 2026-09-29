@@ -6,7 +6,8 @@
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    $(LOCAL_PATH)/utils/audio
 
 LOCAL_PATH := device/xiaomi/ice
 
@@ -351,3 +352,6 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant@1.2.vendor \
     android.hardware.wifi.supplicant@1.3.vendor \
     android.hardware.wifi.supplicant@1.4.vendor
+
+PRODUCT_PACKAGES += \
+    android.hardware.audio.service.mediatek
