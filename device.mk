@@ -7,7 +7,7 @@
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    $(LOCAL_PATH)/utils/audio
+    $(LOCAL_PATH)/hidl/audio
 
 LOCAL_PATH := device/xiaomi/ice
 
@@ -219,6 +219,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/modules/wmt_drv.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/wmt_drv.ko
 
 PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-service \
     android.hardware.biometrics.fingerprint@2.1.so \
     android.hardware.boot@1.2-service \
     android.hardware.cas@1.2-service-lazy \
@@ -354,4 +355,9 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant@1.4.vendor
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio.service.mediatek
+    android.hardware.audio.service.mediatek \
+    libaudiofoundation.vendor \
+    libhidltransport.vendor \
+    libhwbinder.vendor \
+    libavservices_minijail_vendor.vendor \
+    libdrm.vendor
