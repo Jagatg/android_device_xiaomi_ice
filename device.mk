@@ -69,9 +69,6 @@ PRODUCT_PACKAGES += \
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 31
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.mt6761
-
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.product.first_api_level=31
 
@@ -179,7 +176,6 @@ PRODUCT_PACKAGES += \
 DONT_UNCOMPRESS_PRIV_APPS_DEXS := true
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6761
 
 # Device-specific utilities
 PRODUCT_PACKAGES += \
