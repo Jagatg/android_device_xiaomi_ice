@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="config_enableAppWidgetService">true</bool>
+
+    <bool name="config_swipe_up_gesture_setting_available">true</bool>
+
+    <bool name="config_supportsMultiWindow">false</bool>
+
+    <bool name="config_enableMultiUserUI">false</bool>
+
+    <integer name="config_multiuserMaximumUsers">1</integer>
+
+    <integer name="config_multiuserMaxRunningUsers">1</integer>
+</resources>
