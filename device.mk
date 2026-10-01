@@ -142,6 +142,7 @@ PRODUCT_PACKAGES += \
 
 # overlay
 PRODUCT_PACKAGES += \
+    ApertureOverlayIce \
     IceFrameworksResOverlay \
     IceLineageSdkOverlay \
     IceSettingsProviderOverlay \
