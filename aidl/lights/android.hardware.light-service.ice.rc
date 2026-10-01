@@ -1,6 +1,6 @@
-service vendor.light-default /vendor/bin/hw/android.hardware.light-service.blossom
+service vendor.light-default /vendor/bin/hw/android.hardware.light-service.ice
+    interface aidl android.hardware.light.ILights/default
     class hal
     user system
     group system
-    # shutting off lights while powering-off
     shutdown critical
