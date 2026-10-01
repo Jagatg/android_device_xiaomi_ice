@@ -140,15 +140,6 @@ PRODUCT_PACKAGES += \
     multi_init.rc \
     init.target.rc
 
-# overlay
-PRODUCT_PACKAGES += \
-    ApertureOverlayIce \
-    IceFrameworksResOverlay \
-    IceLineageSdkOverlay \
-    IceSettingsProviderOverlay \
-    IceSystemUIOverlay \
-    TrebuchetGoOverlay
-
 PRODUCT_PROPERTY_OVERRIDES += fw.max_users=1
 
 # Display device config - fixes DisplayDeviceConfig nits spam causing watchdog kill
@@ -200,7 +191,9 @@ PRODUCT_PACKAGES += \
     IceFrameworkTelephonyOverlay \
     IceNetworkStackOverlay \
     IceWifiHotsportOverlay \
-    DialerOverlayIce
+    DialerOverlayIce \
+    ApertureOverlayIce \
+    IceFrameworkResOverlay
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/modules/bt_drv_connac1x.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/bt_drv_connac1x.ko \
