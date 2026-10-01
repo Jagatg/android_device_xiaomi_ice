@@ -524,7 +524,6 @@ vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 
 # Light
-vendor/bin/hw/android.hardware.lights-service.mediatek
 vendor/lib/hw/lights.mt6761.so
 
 # Media
@@ -785,7 +784,6 @@ vendor/etc/init/init.thermal_manager.rc
 vendor/etc/init/init.thermalloadalgod.rc
 vendor/etc/init/init.wfca.rc
 vendor/etc/init/init.wmt_drv.rc
-vendor/etc/init/lights-mtk-lazy.rc
 vendor/etc/init/loghidlvendorservice.rc
 vendor/etc/init/md_monitor.rc
 vendor/etc/init/merged_hal_service.rc
@@ -817,7 +815,6 @@ vendor/etc/touchpad/NoiseTest.csv
 vendor/etc/touchpad/OpenTest.csv
 vendor/etc/touchpad/ShortTest.csv
 vendor/etc/vintf/manifest/lbs_hidl_service@1.0.xml
-vendor/etc/vintf/manifest/lights-mtk-default.xml
 vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@1.0.xml

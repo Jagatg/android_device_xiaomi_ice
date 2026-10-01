@@ -398,3 +398,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.has_wide_color_display=false \
     ro.surface_flinger.start_graphics_allocator_service=true \
     ro.surface_flinger.use_context_priority=true
+
+# lights
+
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.ice
