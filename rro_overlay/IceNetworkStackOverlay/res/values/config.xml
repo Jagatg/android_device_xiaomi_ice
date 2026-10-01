@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Set to true if NetworkMonitor needs to load the resource by neighbor mcc when device
+         doesn't have a SIM card inserted. -->
+    <bool name="config_no_sim_card_uses_neighbor_mcc">true</bool>
+</resources>
