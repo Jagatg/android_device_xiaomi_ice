@@ -301,10 +301,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.0.vendor \
     android.hardware.gnss@2.1.vendor
 
-# Light
-PRODUCT_PACKAGES += \
-    android.hardware.light@2.0.vendor
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0.vendor \
@@ -400,6 +396,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.use_context_priority=true
 
 # lights
-
 PRODUCT_PACKAGES += \
     android.hardware.light-service.ice
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
