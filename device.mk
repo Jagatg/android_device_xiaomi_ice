@@ -7,7 +7,8 @@
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    $(LOCAL_PATH)/hidl/audio
+    $(LOCAL_PATH)/hidl/audio \
+    $(LOCAL_PATH)/utils/libmtkperf_client
 
 LOCAL_PATH := device/xiaomi/ice
 

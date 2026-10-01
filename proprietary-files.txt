@@ -978,17 +978,14 @@ vendor/lib/libmtklimiter_vendor.so
 vendor/lib/libmtkmipc-ril.so
 vendor/lib/libmtknetcap.so
 vendor/lib/libmtknetutils.so
-vendor/lib/libmtkperf_client_vendor.so
 vendor/lib/libmtkshifter_vendor.so
 vendor/lib/libmtkspparser.so
 vendor/lib/libmtksysutils.so
 vendor/lib/libmtktinyxml.so
 vendor/lib/libneuropilot_hal_utils.so
 vendor/lib/libnxp_extamp_intf.so
-vendor/lib/libperfctl_vendor.so
 vendor/lib/libpkm.so
 vendor/lib/libpowerhal.so
-vendor/lib/libpowerhalwrap_vendor.so
 vendor/lib/libpq_cust_base.so
 vendor/lib/libpqpconfig.so
 vendor/lib/librcs_interface.so
