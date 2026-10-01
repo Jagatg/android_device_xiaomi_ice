@@ -194,7 +194,9 @@ PRODUCT_PACKAGES += \
     DialerOverlayIce \
     ApertureOverlayIce \
     IceFrameworkResOverlay \
-    IceFrameworkResOverlayExt
+    IceFrameworkResOverlayExt \
+    IceWifiMainlineOverlay \
+    IceWifiResOverlay
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/modules/bt_drv_connac1x.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/bt_drv_connac1x.ko \
