@@ -8,7 +8,8 @@
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     $(LOCAL_PATH)/hidl/audio \
-    $(LOCAL_PATH)/utils/libmtkperf_client
+    $(LOCAL_PATH)/utils/libmtkperf_client \
+    $(LOCAL_PATH)/aidl/vibrator
 
 LOCAL_PATH := device/xiaomi/ice
 
@@ -402,3 +403,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.mediatek
