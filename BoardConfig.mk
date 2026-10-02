@@ -26,6 +26,7 @@ AB_OTA_PARTITIONS := \
     system \
     product \
     vendor \
+    system_ext \
     vbmeta \
     vbmeta_system \
     vbmeta_vendor
@@ -94,6 +95,7 @@ endif
 BOARD_SYSTEMIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_SYSTEM_EXTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 
 TARGET_USERIMAGES_USE_F2FS := true
@@ -107,12 +109,13 @@ BOARD_SUPER_PARTITION_GROUPS := xiaomi_dynamic_partitions
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_PARTITION_LIST := \
     system \
     vendor \
+    system_ext \
     product
 BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 3755999232
 
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_VENDOR := vendor
-TARGET_COPY_OUT_SYSTEM_EXT := system/system_ext
+TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 
 # Android Verified Boot
 BOARD_AVB_ENABLE := true
