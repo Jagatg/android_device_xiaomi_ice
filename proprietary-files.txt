@@ -680,7 +680,6 @@ vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
 vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml
 
 # Vibrator
-vendor/bin/hw/android.hardware.vibrator-service.mediatek
 vendor/lib/hw/vibrator.mt6761.so
 
 # Wi-Fi
@@ -796,7 +795,6 @@ vendor/etc/init/vendor.silead.hardware.fingerprintext@1.0-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.misys@1.0-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.misys@2.0-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.misys@3.0-service.rc
-vendor/etc/init/vibrator-mtk-lazy.rc
 vendor/etc/rsc/PRC/ro.prop
 vendor/etc/rsc/PRC/rw.prop
 vendor/etc/rsc/ROW/ro.prop
@@ -820,7 +818,6 @@ vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@1.0.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@2.0.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@3.0.xml
-vendor/etc/vintf/manifest/vibrator-mtk-default.xml
 vendor/etc/AbnormalDisplayLog_dynamic.xml
 vendor/etc/AudioLog_dynamic.xml
 vendor/etc/MNL_Config.xml
