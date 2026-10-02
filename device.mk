@@ -407,3 +407,11 @@ PRODUCT_COPY_FILES += \
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
+
+# fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1.vendor \
+    libavservices_minijail_vendor \
+    libmemunreachable.vendor \
+    libpcap.vendor \
+    libtinycompress
