@@ -417,8 +417,10 @@ PRODUCT_PACKAGES += \
     libpcap.vendor \
     libtinycompress
 
-
-
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-mediatek
+    android.hardware.power-service-mediatek \
+
+PRODUCT_COPY_FILES += \
+    out/target/product/ice/system/lib/android.hardware.power-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.power-V2-ndk.so
+
