@@ -9,7 +9,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     $(LOCAL_PATH)/hidl/audio \
     $(LOCAL_PATH)/utils/libmtkperf_client \
-    $(LOCAL_PATH)/aidl/vibrator
+    $(LOCAL_PATH)/aidl/vibrator \
 
 LOCAL_PATH := device/xiaomi/ice
 
@@ -152,7 +152,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Dialer
 
-# enable BesLoudness audio support
+PRODUCT_PACKAGES += \
+    BesLoudness
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/AudioParamOptions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions.xml \
     $(LOCAL_PATH)/configs/audio/AudioParamOptions_vext.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions_vext.xml
