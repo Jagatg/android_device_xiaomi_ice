@@ -1158,7 +1158,7 @@ system_ext/lib/libneuronusdk_adapter.mtk.so
 system_ext/lib/libnir_neon_driver_ndk.mtk.so
 system_ext/lib/libpcap_bak.so
 system_ext/lib/libtflite_mtk.mtk.so
-system/etc/public.libraries-mtk.txt
+etc/public.libraries-mtk.txt
 system_ext/lib/vendor.mediatek.hardware.apuware.apusys@1.0.so
 system_ext/lib/vendor.mediatek.hardware.apuware.apusys@2.0.so
 system_ext/lib/vendor.mediatek.hardware.apuware.apusys@2.1.so
@@ -1173,7 +1173,9 @@ vendor/etc/permissions/com.fingerprints.extension.xml \
 vendor/etc/vintf/manifest/gnss-default.xml
 vendor/etc/vintf/manifest/gnss@2.1-service.xml
 vendor/lib/android.hidl.memory.block@1.0.so
-system/lib/libccci_util_sys.so
-system/lib/libhidltransport.so
+lib/libccci_util_sys.so
+lib/libhidltransport.so
 vendor/lib/hw/android.hardware.health@2.0-impl-2.1.so
 vendor/etc/sensors/hals.conf
+lib/libem_support_jni.so
+lib/libshowlogo.so
