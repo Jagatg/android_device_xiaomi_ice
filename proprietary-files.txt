@@ -1118,9 +1118,6 @@ priv-app/MtkGbaService/MtkGbaService.apk
 # Sensors
 vendor/lib/hw/android.hardware.sensors@2.X-subhal-mediatek.so
 
-# Power
-vendor/lib/android.hardware.power-service-mediatek.so
-
 # Camera
 vendor/lib/libcamera2ndk_vendor.so
 
@@ -1175,7 +1172,6 @@ vendor/etc/permissions/android.software.opengles.deqp.level.xml
 vendor/etc/permissions/com.fingerprints.extension.xml \
 vendor/etc/vintf/manifest/gnss-default.xml
 vendor/etc/vintf/manifest/gnss@2.1-service.xml
-vendor/etc/vintf/manifest/power-default.xml
 vendor/lib/android.hidl.memory.block@1.0.so
 system/lib/libccci_util_sys.so
 system/lib/libhidltransport.so
