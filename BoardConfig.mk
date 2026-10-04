@@ -165,5 +165,5 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.mt6761
 include vendor/xiaomi/ice/BoardConfigVendor.mk
 
 # Sepolicy
-include device/mediatek/sepolicy_vndr/SEPolicy.mk
+-include device/mediatek/sepolicy_vndr/SEPolicy.mk
 
