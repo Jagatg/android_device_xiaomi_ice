@@ -29,8 +29,7 @@ GMS_MAKEFILE=gms_minimal.mk
 endif
 
 # Build hacks
-PRODUCT_ENFORCE_VINTF_MANIFEST := false
-PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+PRODUCT_ENFORCE_VINTF_MANIFEST := falsePRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 # Virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
@@ -219,13 +218,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/modules/wmt_drv.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/wmt_drv.ko
 
 PRODUCT_PACKAGES += \
-    android.hardware.health@2.1-service \
     android.hardware.biometrics.fingerprint@2.1.so \
-    android.hardware.boot@1.2-service \
     android.hardware.cas@1.2-service-lazy \
     android.hardware.gatekeeper@1.0-service \
     android.hardware.graphics.composer@2.1-service \
-    android.hardware.wifi@1.0-service-lazy \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.audio.effect@7.0-impl \
@@ -238,9 +234,6 @@ PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl \
     android.hardware.soundtrigger@2.3-impl \
     android.hardware.soundtrigger@2.3-impl \
-    android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@2.0-impl \
-    android.hardware.thermal@2.0.vendor \
     audio.r_submix.default \
     audio.usb.default \
     libtinyalsa \
@@ -429,7 +422,23 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.gnss-V1-ndk.vendor \
-    android.hardware.power-V2-ndk.vendor
+    android.hardware.power-V2-ndk.vendor \
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v31/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v31.so
+
+PRODUCT_PACKAGES += \
+    libdumpstateutil.vendor \
+    android.hardware.thermal@1.0.vendor \
+    android.hardware.thermal@2.0.vendor \
+    android.frameworks.sensorservice@1.0.vendor \
+    libcurl.vendor \
+    libssl.vendor \
+    android.hardware.gnss-V1-ndk_platform.vendor
+
+PRODUCT_PACKAGES += \
+    libui_shim \
+    libaudioclient_shim
+
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v34/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v34.so

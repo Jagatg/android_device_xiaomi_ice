@@ -480,7 +480,7 @@
         <fqname>@1.0::IVideoTelephony/default</fqname>
     </hal>
     <sepolicy>
-        <version>33.0</version>
+        <version>202404</version>
     </sepolicy>
     <kernel target-level="5"/>
 </manifest>
