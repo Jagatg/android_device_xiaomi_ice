@@ -1,0 +1,20 @@
+diff --git a/netbpfload/NetBpfLoad.cpp b/netbpfload/NetBpfLoad.cpp
+index 8af4dd4..faacf74 100644
+--- a/netbpfload/NetBpfLoad.cpp
++++ b/netbpfload/NetBpfLoad.cpp
+@@ -389,15 +389,6 @@ int main(int argc, char** argv, char * const envp[]) {
+         }
+     }
+ 
+-    int key = 1;
+-    int value = 123;
+-    android::base::unique_fd map(
+-            android::bpf::createMap(BPF_MAP_TYPE_ARRAY, sizeof(key), sizeof(value), 2, 0));
+-    if (android::bpf::writeToMapEntry(map, &key, &value, BPF_ANY)) {
+-        ALOGE("Critical kernel bug - failure to write into index 1 of 2 element bpf map array.");
+-        return 1;
+-    }
+-
+     ALOGI("done, transferring control to platform bpfloader.");
+ 
+     const char * args[] = { platformBpfLoader, NULL, };
