@@ -1185,3 +1185,7 @@ vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
 vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
 vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
 vendor/etc/vintf/manifest/gnss-default.xml
+vendor/bin/hw/android.hardware.health@2.1-service
+vendor/etc/init/android.hardware.health@2.1-service.rc
+vendor/etc/vintf/manifest/android.hardware.health@2.1.xml
+
