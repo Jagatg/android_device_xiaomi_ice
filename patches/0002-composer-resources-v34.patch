@@ -1,0 +1,32 @@
+diff --git a/graphics/composer/2.1/default/Android.bp b/graphics/composer/2.1/default/Android.bp
+index 91d9b0d..4e38e0d 100644
+--- a/graphics/composer/2.1/default/Android.bp
++++ b/graphics/composer/2.1/default/Android.bp
+@@ -20,7 +20,7 @@ cc_binary {
+     ],
+     shared_libs: [
+         "android.hardware.graphics.composer@2.1",
+-        "android.hardware.graphics.composer@2.1-resources",
++        "android.hardware.graphics.composer@2.1-resources-v34",
+         "libbase",
+         "libbinder",
+         "libcutils",
+diff --git a/graphics/composer/2.1/utils/hal/Android.bp b/graphics/composer/2.1/utils/hal/Android.bp
+index 9622c58..c453f53 100644
+--- a/graphics/composer/2.1/utils/hal/Android.bp
++++ b/graphics/composer/2.1/utils/hal/Android.bp
+@@ -29,12 +29,12 @@ cc_library_headers {
+     vendor_available: true,
+     shared_libs: [
+         "android.hardware.graphics.composer@2.1",
+-        "android.hardware.graphics.composer@2.1-resources",
++        "android.hardware.graphics.composer@2.1-resources-v34",
+         "libhardware", // TODO remove hwcomposer2.h dependency
+     ],
+     export_shared_lib_headers: [
+         "android.hardware.graphics.composer@2.1",
+-        "android.hardware.graphics.composer@2.1-resources",
++        "android.hardware.graphics.composer@2.1-resources-v34",
+         "libhardware",
+     ],
+     header_libs: [
