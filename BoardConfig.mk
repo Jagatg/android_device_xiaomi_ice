@@ -154,9 +154,6 @@ ifeq ($(HOST_OS),linux)
   endif
 endif
 
-# Power
-TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/aidl/power-mediatek/power/power-mode.cpp
-
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.mt6761
@@ -166,4 +163,3 @@ include vendor/xiaomi/ice/BoardConfigVendor.mk
 
 # Sepolicy
 -include device/mediatek/sepolicy_vndr/SEPolicy.mk
-
