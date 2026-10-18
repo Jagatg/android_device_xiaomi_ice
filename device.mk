@@ -193,7 +193,6 @@ PRODUCT_PACKAGES += \
     IceFrameworkTelephonyOverlay \
     IceNetworkStackOverlay \
     IceWifiHotsportOverlay \
-    DialerOverlayIce \
     ApertureOverlayIce \
     IceFrameworkResOverlay \
     IceFrameworkResOverlayExt
