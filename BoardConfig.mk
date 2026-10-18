@@ -155,7 +155,7 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # Recovery
-TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
+TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.mt6761
 
 # Inherit from the proprietary version
