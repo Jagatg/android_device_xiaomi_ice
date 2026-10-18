@@ -443,7 +443,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v34/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v34.so
 
-# Disable system security restrictions and run ADB as root by default
 PRODUCT_PROPERTY_OVERRIDES += ro.secure=0
 PRODUCT_PROPERTY_OVERRIDES += ro.adb.secure=0
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.usb.config=adb
+
+PRODUCT_PACKAGES += \
+    android.hardware.power-V2-ndk_platform.vendor \
+    android.hardware.health@2.1.vendor
