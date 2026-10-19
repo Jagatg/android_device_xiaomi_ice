@@ -22,3 +22,27 @@
         echo "[ice-patches] Check for conflicting changes in Composer Android.bp files."
     fi
 )
+
+# Automatically apply the GNSS AIDL default Android.bp patch for Xiaomi ice.
+(
+    TOP="$(gettop)"
+    PATCH="$TOP/device/xiaomi/ice/patches/0002-GNSS-aidl-Remove-default-Android.bp.patch"
+    TARGET="$TOP/hardware/interfaces"
+
+    if [ ! -f "$PATCH" ]; then
+        echo "[ice-patches] ERROR: GNSS patch not found."
+    elif [ ! -d "$TARGET/.git" ] && [ ! -f "$TARGET/.git" ]; then
+        echo "[ice-patches] ERROR: hardware/interfaces repository not found."
+    elif git -C "$TARGET" apply --reverse --check "$PATCH" >/dev/null 2>&1; then
+        echo "[ice-patches] GNSS AIDL patch already applied."
+    elif git -C "$TARGET" apply --check "$PATCH" >/dev/null 2>&1; then
+        if git -C "$TARGET" apply "$PATCH"; then
+            echo "[ice-patches] Successfully applied GNSS AIDL patch."
+        else
+            echo "[ice-patches] ERROR: Failed to apply GNSS AIDL patch."
+        fi
+    else
+        echo "[ice-patches] ERROR: Cannot apply GNSS AIDL patch."
+        echo "[ice-patches] Check for conflicting changes in GNSS AIDL Android.bp."
+    fi
+)
