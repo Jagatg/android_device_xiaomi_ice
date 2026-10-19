@@ -46,3 +46,27 @@
         echo "[ice-patches] Check for conflicting changes in GNSS AIDL Android.bp."
     fi
 )
+
+# Automatically apply the Wi-Fi VINTF duplicate definitions patch for Xiaomi ice.
+(
+    TOP="$(gettop)"
+    PATCH="$TOP/device/xiaomi/ice/patches/0003-wpa_supplicant-Remove-duplicate-WiFi-VINTF-fragments.patch"
+    TARGET="$TOP/external/wpa_supplicant_8"
+
+    if [ ! -f "$PATCH" ]; then
+        echo "[ice-patches] ERROR: Wi-Fi VINTF patch not found."
+    elif [ ! -d "$TARGET/.git" ] && [ ! -f "$TARGET/.git" ]; then
+        echo "[ice-patches] ERROR: wpa_supplicant_8 repository not found."
+    elif git -C "$TARGET" apply --reverse --check "$PATCH" >/dev/null 2>&1; then
+        echo "[ice-patches] Wi-Fi VINTF patch already applied."
+    elif git -C "$TARGET" apply --check "$PATCH" >/dev/null 2>&1; then
+        if git -C "$TARGET" apply "$PATCH"; then
+            echo "[ice-patches] Successfully applied Wi-Fi VINTF patch."
+        else
+            echo "[ice-patches] ERROR: Failed to apply Wi-Fi VINTF patch."
+        fi
+    else
+        echo "[ice-patches] ERROR: Cannot apply Wi-Fi VINTF patch."
+        echo "[ice-patches] Check for conflicting Android.bp changes."
+    fi
+)
