@@ -168,10 +168,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.foreground-heap-growth-multiplier=2.0
 
-# Use Go-optimized SystemUI for low-RAM device
-PRODUCT_PACKAGES += \
-    SystemUIGo
-
 DONT_UNCOMPRESS_PRIV_APPS_DEXS := true
 
 PRODUCT_COPY_FILES += \
@@ -446,7 +442,19 @@ PRODUCT_PACKAGES += \
     android.hardware.power-V2-ndk_platform.vendor \
     android.hardware.health@2.1.vendor \
     libnl.vendor \
-    android.hardware.vibrator-V2-ndk_platform.vendor
+    android.hardware.vibrator-V2-ndk_platform.vendor \
+    libwifi-hal \
+    libwifi-system-iface.vendr \
+    android.hardware.wifi@1.1.vendor
 
 PRODUCT_COPY_FILES += \
     out/target/product/ice/system_ext/lib/libui_shim.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libui_shim.so
+
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v33/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v33.so
+
+PRODUCT_COPY_FILES += \
+    device/xiaomi/ice/prebuilts/lib/libhidlbase-v34.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v34.so
+
+PRODUCT_COPY_FILES += \
+    out/target/product/ice/system/lib/libwifi-system-iface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwifi-system-iface.so
