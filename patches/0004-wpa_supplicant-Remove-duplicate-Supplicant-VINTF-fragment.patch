@@ -1,0 +1,16 @@
+diff --git a/wpa_supplicant/aidl/vendor/Android.bp b/wpa_supplicant/aidl/vendor/Android.bp
+index a972dd6c..b92cee03 100644
+--- a/wpa_supplicant/aidl/vendor/Android.bp
++++ b/wpa_supplicant/aidl/vendor/Android.bp
+@@ -60,11 +60,6 @@ cc_library_static {
+     ],
+ }
+ 
+-vintf_fragment {
+-    name: "android.hardware.wifi.supplicant.xml",
+-    src: "android.hardware.wifi.supplicant.xml",
+-    soc_specific: true,
+-}
+ 
+ soong_config_module_type {
+     name: "libwpa_aidl_cflags_cc_defaults",
