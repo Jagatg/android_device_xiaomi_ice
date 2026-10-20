@@ -445,7 +445,8 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator-V2-ndk_platform.vendor \
     libwifi-hal \
     libwifi-system-iface.vendr \
-    android.hardware.wifi@1.1.vendor
+    android.hardware.wifi@1.1.vendor \
+    libprocessgroup.vendor
 
 PRODUCT_COPY_FILES += \
     out/target/product/ice/system_ext/lib/libui_shim.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libui_shim.so
