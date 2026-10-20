@@ -407,9 +407,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     out/target/product/ice/system/lib/android.hardware.power-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.power-V2-ndk.so
 
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v31/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v31.so
-
 PRODUCT_PACKAGES += \
     android.hardware.gnss-V1-ndk.vendor \
     android.hardware.power-V2-ndk.vendor \
@@ -429,7 +426,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libui_shim \
     libaudioclient_shim \
-    libui_shim
+    libui_shim \
+    libbase_shim \
+    libprocessgroup_shim
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v34/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v34.so
@@ -459,3 +458,10 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     out/target/product/ice/system/lib/libwifi-system-iface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwifi-system-iface.so
+
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v31/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v31.so
+
+PRODUCT_COPY_FILES += \
+    device/xiaomi/ice/prebuilts/lib/libutils-v31.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v31.so
+
