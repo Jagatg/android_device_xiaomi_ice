@@ -1,0 +1,12 @@
+diff --git a/tools/clean_headers.sh b/tools/clean_headers.sh
+index 44053a3..f2df724 100755
+--- a/tools/clean_headers.sh
++++ b/tools/clean_headers.sh
+@@ -6,3 +6,7 @@ export ANDROID_BUILD_TOP="$PWD"
+ ./bionic/libc/kernel/tools/clean_header.py -u \
+     "$1/usr/include/asm/signal.h" \
+     "$1/usr/include/asm-generic/signal.h"
++
++if [ -f "$1/usr/include/linux/sched/types.h" ]; then
++    sed -i '/^struct sched_param {/,/^};/d' "$1/usr/include/linux/sched/types.h"
++fi

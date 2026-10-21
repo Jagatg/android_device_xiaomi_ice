@@ -94,3 +94,27 @@
         echo "[ice-patches] Check for conflicting wpa_supplicant/aidl/vendor/Android.bp changes."
     fi
 )
+
+# Automatically apply the clean_headers sched_param patch for Xiaomi ice.
+(
+    TOP="$(gettop)"
+    PATCH="$TOP/device/xiaomi/ice/patches/0005-clean-headers-sched-types.patch"
+    TARGET="$TOP/vendor/lineage"
+
+    if [ ! -f "$PATCH" ]; then
+        echo "[ice-patches] ERROR: Clean headers patch not found."
+    elif [ ! -d "$TARGET/.git" ] && [ ! -f "$TARGET/.git" ]; then
+        echo "[ice-patches] ERROR: vendor/lineage repository not found."
+    elif git -C "$TARGET" apply --reverse --check "$PATCH" >/dev/null 2>&1; then
+        echo "[ice-patches] Clean headers patch already applied."
+    elif git -C "$TARGET" apply --check "$PATCH" >/dev/null 2>&1; then
+        if git -C "$TARGET" apply "$PATCH"; then
+            echo "[ice-patches] Successfully applied clean headers patch."
+        else
+            echo "[ice-patches] ERROR: Failed to apply clean headers patch."
+        fi
+    else
+        echo "[ice-patches] ERROR: Cannot apply clean headers patch."
+        echo "[ice-patches] Check for conflicting tools/clean_headers.sh changes."
+    fi
+)
