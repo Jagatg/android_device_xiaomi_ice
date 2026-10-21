@@ -28,7 +28,8 @@ GMS_MAKEFILE=gms_minimal.mk
 endif
 
 # Build hacks
-PRODUCT_ENFORCE_VINTF_MANIFEST := falsePRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+PRODUCT_ENFORCE_VINTF_MANIFEST := false
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 # Virtual A/B OTA
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
@@ -100,8 +101,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl
 
 # Manifest
-DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/vintf/manifest.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(LOCAL_PATH)/vintf/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/configs/vintf/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(LOCAL_PATH)/configs/vintf/compatibility_matrix.xml
 
 # Properties
 TARGET_SYSTEM_PROP += device/xiaomi/ice/configs/prop/system.prop
@@ -465,3 +466,5 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/xiaomi/ice/prebuilts/lib/libutils-v31.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v31.so
 
+PRODUCT_PACKAGES += \
+    libion_mtk
