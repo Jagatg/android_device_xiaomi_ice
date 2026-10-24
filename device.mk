@@ -204,7 +204,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/modules/mi_memory.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/mi_memory.ko \
     $(LOCAL_PATH)/prebuilts/modules/modules.alias:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.alias \
     $(LOCAL_PATH)/prebuilts/modules/modules.dep:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.dep \
-    $(LOCAL_PATH)/prebuilts/modules/modules.load:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.load \
     $(LOCAL_PATH)/prebuilts/modules/modules.softdep:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.softdep \
     $(LOCAL_PATH)/prebuilts/modules/mt6357-accdet.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/mt6357-accdet.ko \
     $(LOCAL_PATH)/prebuilts/modules/trace_mmstat.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/trace_mmstat.ko \
@@ -455,16 +454,12 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v33/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v33.so
 
 PRODUCT_COPY_FILES += \
-    device/xiaomi/ice/prebuilts/lib/libhidlbase-v34.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v34.so
-
-PRODUCT_COPY_FILES += \
     out/target/product/ice/system/lib/libwifi-system-iface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwifi-system-iface.so
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v31/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v31.so
 
-PRODUCT_COPY_FILES += \
-    device/xiaomi/ice/prebuilts/lib/libutils-v31.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v31.so
-
 PRODUCT_PACKAGES += \
-    libion_mtk
+    libion_mtk \
+    libhidlbase-v34 \
+    libutils-v31

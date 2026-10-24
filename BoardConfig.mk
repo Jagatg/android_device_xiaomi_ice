@@ -60,22 +60,41 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x07880000
 BOARD_RAMDISK_OFFSET := 0x11b00000
 BOARD_KERNEL_IMAGE_NAME := zImage
+TARGET_NEEDS_DTBOIMAGE := true
 
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilts/mt6761.dtb
 
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 
-# Using prebuilt kernel - disable kernel source compilation
-# TARGET_KERNEL_SOURCE := kernel/xiaomi/ice
+TARGET_KERNEL_SOURCE := kernel/xiaomi/ice
 TARGET_KERNEL_CONFIG := ice_defconfig
-TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_HEADER_ARCH := arm
+BOARD_VENDOR_KERNEL_MODULES_LOAD := \
+    $(DEVICE_PATH)/prebuilts/modules/mi_memory.ko \
+    $(DEVICE_PATH)/prebuilts/modules/mt6357-accdet.ko \
+    $(DEVICE_PATH)/prebuilts/modules/trace_mmstat.ko \
+    $(DEVICE_PATH)/prebuilts/modules/bt_drv_connac1x.ko \
+    $(DEVICE_PATH)/prebuilts/modules/wmt_drv.ko \
+    $(DEVICE_PATH)/prebuilts/modules/connfem.ko \
+    $(DEVICE_PATH)/prebuilts/modules/fmradio_drv_mt6631.ko \
+    $(DEVICE_PATH)/prebuilts/modules/gps_drv.ko \
+    $(DEVICE_PATH)/prebuilts/modules/wmt_chrdev_wifi.ko \
+    $(DEVICE_PATH)/prebuilts/modules/wlan_drv_gen4m.ko \
+    $(DEVICE_PATH)/prebuilts/modules/fpsgo.ko \
+    $(DEVICE_PATH)/prebuilts/modules/met.ko
+
+# Kernel toolchain
+TARGET_KERNEL_CLANG_VERSION := 6443078
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_LLVM_BINUTILS := false
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
+TARGET_KERNEL_ADDITIONAL_FLAGS += LLVM_IAS=0
+KERNEL_CC := CC="/home/ubuntu/los/prebuilts/clang/host/linux-x86/clang-6443078/bin/clang -no-integrated-as" LD="/home/ubuntu/los/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld.bfd"
+KERNEL_CLANG_TRIPLE := CLANG_TRIPLE=arm-linux-gnueabi-
 
 # Platform
 BOARD_HAS_MTK_HARDWARE := true

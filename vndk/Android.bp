@@ -1,0 +1,13 @@
+cc_prebuilt_library_shared {
+    name: "libhidlbase-v34",
+    srcs: ["lib/libhidlbase-v34.so"],
+    compile_multilib: "32",
+    vendor: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libutils-v31",
+    srcs: ["lib/libutils-v31.so"],
+    compile_multilib: "32",
+    vendor: true,
+}
