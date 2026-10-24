@@ -1,0 +1,21 @@
+
+[
+  {
+    "repository": "android_kernel_xiaomi_ice",
+    "target_path": "kernel/xiaomi/ice",
+    "remote": "github",
+    "repo_url": "https://github.com/Jagatg/android_kernel_xiaomi_ice.git"
+  },
+  {
+    "repository": "proprietary_android_device_xiaomi_ice",
+    "target_path": "vendor/xiaomi/ice",
+    "remote": "github",
+    "repo_url": "https://github.com/Jagatg/proprietary_android_device_xiaomi_ice.git"
+  },
+  {
+    "repository": "android_prebuilts_clang_host_linux-x86_clang-6443078",
+    "target_path": "prebuilts/clang/host/linux-x86/clang-6443078",
+    "remote": "github",
+    "repo_url": "https://github.com/techyminati/android_prebuilts_clang_host_linux-x86_clang-6443078.git"
+  }
+]
