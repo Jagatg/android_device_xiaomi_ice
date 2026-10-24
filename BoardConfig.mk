@@ -93,7 +93,7 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_LLVM_BINUTILS := false
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 TARGET_KERNEL_ADDITIONAL_FLAGS += LLVM_IAS=0
-KERNEL_CC := CC="/home/ubuntu/los/prebuilts/clang/host/linux-x86/clang-6443078/bin/clang -no-integrated-as" LD="/home/ubuntu/los/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld.bfd"
+KERNEL_CC := CC="prebuilts/clang/host/linux-x86/clang-6443078/bin/clang -no-integrated-as" LD="/home/ubuntu/los/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-ld.bfd"
 KERNEL_CLANG_TRIPLE := CLANG_TRIPLE=arm-linux-gnueabi-
 
 # Platform
