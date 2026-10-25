@@ -1,5 +1,4 @@
 runtime_resource_overlay {
     name: "IceFrameworkResOverlay",
-    theme: "IceFrameworkResOverlay",
     vendor: true,
 }
