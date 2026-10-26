@@ -4,13 +4,16 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+LOCAL_PATH := device/xiaomi/ice
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     $(LOCAL_PATH)/hidl/audio \
     $(LOCAL_PATH)/utils/libmtkperf_client
 
-LOCAL_PATH := device/xiaomi/ice
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1600
