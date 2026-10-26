@@ -118,3 +118,27 @@
         echo "[ice-patches] Check for conflicting tools/clean_headers.sh changes."
     fi
 )
+
+# Automatically apply the 32-bit kernel boot compatibility patch for Xiaomi ice.
+(
+    TOP="$(gettop)"
+    PATCH="$TOP/device/xiaomi/ice/patches/0006-dont-abort-on-32bit-kernel.patch"
+    TARGET="$TOP/packages/modules/Connectivity"
+
+    if [ ! -f "$PATCH" ]; then
+        echo "[ice-patches] ERROR: 32-bit kernel patch not found."
+    elif [ ! -d "$TARGET/.git" ] && [ ! -f "$TARGET/.git" ]; then
+        echo "[ice-patches] ERROR: Connectivity repository not found."
+    elif git -C "$TARGET" apply --reverse --check "$PATCH" >/dev/null 2>&1; then
+        echo "[ice-patches] 32-bit kernel patch already applied."
+    elif git -C "$TARGET" apply --check "$PATCH" >/dev/null 2>&1; then
+        if git -C "$TARGET" apply "$PATCH"; then
+            echo "[ice-patches] Successfully applied 32-bit kernel patch."
+        else
+            echo "[ice-patches] ERROR: Failed to apply 32-bit kernel patch."
+        fi
+    else
+        echo "[ice-patches] ERROR: Cannot apply 32-bit kernel patch."
+        echo "[ice-patches] Check for conflicting NetBpfLoad.cpp changes."
+    fi
+)
