@@ -96,7 +96,8 @@ PRODUCT_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-mtkimpl \
     android.hardware.boot@1.2-mtkimpl.recovery \
-    libmtk_bsg.recovery
+    libmtk_bsg.recovery \
+    libmtk_bsg
 
 # Fastbootd
 PRODUCT_PACKAGES += \
