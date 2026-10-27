@@ -466,3 +466,8 @@ PRODUCT_PACKAGES += \
     libion_mtk \
     libhidlbase-v34 \
     libutils-v31
+
+# Use the device-specific MT6761 USB init configuration.
+SOONG_CONFIG_NAMESPACES += mediatek_gadget
+SOONG_CONFIG_mediatek_gadget += use_custom_usb_gadget_rc
+SOONG_CONFIG_mediatek_gadget_use_custom_usb_gadget_rc := true
