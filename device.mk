@@ -10,7 +10,8 @@ LOCAL_PATH := device/xiaomi/ice
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     $(LOCAL_PATH)/hidl/audio \
-    $(LOCAL_PATH)/utils/libmtkperf_client
+    hardware/mediatek/libmtkperf_client \
+    hardware/mediatek
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
@@ -69,6 +70,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
 
 PRODUCT_PACKAGES += \
     otapreopt_script
+
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images_vendor
 
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 31
@@ -186,6 +191,11 @@ PRODUCT_PACKAGES += \
     libmtkperf_client_vendor \
     libpowerhalwrap_vendor \
     libperfctl_vendor
+
+# Charger
+PRODUCT_PACKAGES += \
+    libsuspend
+
 
 # RRO
 PRODUCT_PACKAGES += \
