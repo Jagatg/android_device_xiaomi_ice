@@ -485,7 +485,12 @@ SOONG_CONFIG_mediatek_gadget_use_custom_usb_gadget_rc := true
 
 # IMS
 $(call inherit-product, hardware/mediatek/frameworks/mediatek-frameworks.mk)
-$(call inherit-product, hardware/lineage/compat/frameworks/compat.mk)
 
 # Overlay
 $(call inherit-product, hardware/mediatek/overlay/mssi.mk)
+
+# vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.mediatek
+
+
