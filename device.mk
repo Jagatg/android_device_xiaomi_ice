@@ -469,3 +469,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/xiaomi/ice/prebuilts/lib/libutils-v31.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v31.so
 
+
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
