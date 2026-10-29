@@ -9,9 +9,8 @@ LOCAL_PATH := device/xiaomi/ice
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    $(LOCAL_PATH)/hidl/audio \
-    hardware/mediatek/libmtkperf_client \
-    hardware/mediatek
+    hardware/mediatek \
+    hardware/mediatek/libmtkperf_client
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
@@ -196,7 +195,6 @@ PRODUCT_PACKAGES += \
 # Charger
 PRODUCT_PACKAGES += \
     libsuspend
-
 
 # RRO
 PRODUCT_PACKAGES += \
@@ -452,8 +450,7 @@ PRODUCT_PROPERTY_OVERRIDES += ro.adb.secure=0
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.usb.config=adb
 
 PRODUCT_PACKAGES += \
-    android.hardware.power-V2-ndk_platform.vendor \
-    android.hardware.health@2.1.vendor \
+    android.hardware.power-V2-ndk.vendor \
     libnl.vendor \
     android.hardware.vibrator-V2-ndk_platform.vendor \
     libwifi-hal \
@@ -496,3 +493,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
+
+# libs
+PRODUCT_PACKAGES += \
+    vendor.mediatek.hardware.lbs@1.0
