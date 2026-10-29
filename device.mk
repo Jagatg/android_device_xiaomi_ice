@@ -473,3 +473,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
+
+# libs
+PRODUCT_PACKAGES += \
+    vendor.mediatek.hardware.lbs@1.0
+
+# log
+PRODUCT_PACKAGES += \
+    vendor.mediatek.hardware.log@1.0
+
+# libladder
+PRODUCT_PACKAGES += \
+    libladder
