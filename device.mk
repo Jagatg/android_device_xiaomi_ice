@@ -497,3 +497,7 @@ PRODUCT_PACKAGES += \
 # libs
 PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.lbs@1.0
+
+# log
+PRODUCT_PACKAGES += \
+    vendor.mediatek.hardware.log@1.0
