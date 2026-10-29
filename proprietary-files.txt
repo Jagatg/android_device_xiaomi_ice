@@ -7,7 +7,6 @@ vendor/lib/hw/audio.primary.mt6761.so
 vendor/lib/hw/audio.r_submix.mt6761.so
 vendor/lib/libaudiotoolkit_vendor.so
 vendor/lib/libbwc.so
-vendor/lib/libladder.so
 vendor/lib/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib/vendor.mediatek.hardware.audio@7.1.so
 
@@ -1175,7 +1174,6 @@ vendor/etc/vintf/manifest/power-default.xml
 vendor/lib/android.hidl.memory.block@1.0.so
 lib/libccci_util_sys.so
 lib/libhidltransport.so
-vendor/lib/hw/android.hardware.health@2.0-impl-2.1.so
 vendor/etc/sensors/hals.conf
 lib/libem_support_jni.so
 lib/libshowlogo.so
@@ -1186,6 +1184,3 @@ vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
 vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
 vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
 vendor/etc/vintf/manifest/gnss-default.xml
-vendor/bin/hw/android.hardware.health@2.1-service
-vendor/etc/init/android.hardware.health@2.1-service.rc
-vendor/etc/vintf/manifest/android.hardware.health@2.1.xml
