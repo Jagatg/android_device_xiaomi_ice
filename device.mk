@@ -501,3 +501,7 @@ PRODUCT_PACKAGES += \
 # log
 PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.log@1.0
+
+# libladder
+PRODUCT_PACKAGES += \
+    libladder
