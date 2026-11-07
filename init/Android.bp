@@ -181,3 +181,10 @@ prebuilt_etc {
     sub_dir: "init",
     system_ext_specific: true,
 }
+
+sh_binary {
+    name: "init.insmod.sh",
+    src: "init.insmod.sh",
+    filename: "init.insmod.sh",
+    vendor: true,
+}

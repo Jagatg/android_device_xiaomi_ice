@@ -143,7 +143,8 @@ PRODUCT_PACKAGES += \
     meta_init.rc \
     meta_init.vendor.rc \
     multi_init.rc \
-    init.target.rc
+    init.target.rc \
+    init.insmod.sh
 
 PRODUCT_PROPERTY_OVERRIDES += fw.max_users=1
 
