@@ -427,10 +427,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v34/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v34.so
 
-PRODUCT_PROPERTY_OVERRIDES += ro.secure=0
-PRODUCT_PROPERTY_OVERRIDES += ro.adb.secure=0
-PRODUCT_PROPERTY_OVERRIDES += persist.sys.usb.config=adb
-
 PRODUCT_PACKAGES += \
     android.hardware.power-V2-ndk_platform.vendor \
     android.hardware.health@2.1.vendor \
@@ -459,18 +455,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/xiaomi/ice/prebuilts/lib/libutils-v31.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v31.so
 
-
+# Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
-
-# libs
-PRODUCT_PACKAGES += \
-    vendor.mediatek.hardware.lbs@1.0
-
-# log
-PRODUCT_PACKAGES += \
-    vendor.mediatek.hardware.log@1.0
 
 # libladder
 PRODUCT_PACKAGES += \
