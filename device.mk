@@ -120,6 +120,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_PACKAGES += \
     fstab.enableswap \
     fstab.mt6761 \
+    fstab.mt6761.ramdisk \
     init.cgroup.rc \
     init.connectivity.common.rc \
     init.connectivity.rc \
