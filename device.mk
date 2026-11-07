@@ -464,3 +464,7 @@ PRODUCT_PACKAGES += \
 # libladder
 PRODUCT_PACKAGES += \
     libladder
+
+# Power off alarm
+PRODUCT_PACKAGES += \
+    PowerOffAlarm
