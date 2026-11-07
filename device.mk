@@ -120,12 +120,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_PACKAGES += \
     fstab.enableswap \
     fstab.mt6761 \
-    factory_init.connectivity.common.rc \
-    factory_init.connectivity.rc \
-    factory_init.project.rc \
-    factory_init.rc \
-    init.aee.rc \
-    init.ago.rc \
     init.cgroup.rc \
     init.connectivity.common.rc \
     init.connectivity.rc \
@@ -136,13 +130,6 @@ PRODUCT_PACKAGES += \
     init.sensor_1_0.rc \
     init.zram.rc \
     init_connectivity.rc \
-    meta_init.connectivity.common.rc \
-    meta_init.connectivity.rc \
-    meta_init.modem.rc \
-    meta_init.project.rc \
-    meta_init.rc \
-    meta_init.vendor.rc \
-    multi_init.rc \
     init.target.rc \
     init.insmod.sh
 
