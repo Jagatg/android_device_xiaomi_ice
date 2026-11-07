@@ -11,6 +11,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     $(LOCAL_PATH)/hidl/audio \
     $(LOCAL_PATH)/utils/libmtkperf_client
+    hardware/mediatek/
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
