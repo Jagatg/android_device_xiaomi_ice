@@ -106,13 +106,13 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl
 
 # Manifest
-DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/configs/vintf/manifest.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(LOCAL_PATH)/configs/vintf/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(LOCAL_PATH)/compatibility_matrix.xml
 
 # Properties
-TARGET_SYSTEM_PROP += device/xiaomi/ice/configs/prop/system.prop
-TARGET_VENDOR_PROP += device/xiaomi/ice/configs/prop/vendor.prop
-TARGET_PRODUCT_PROP += device/xiaomi/ice/configs/prop/product.prop
+TARGET_SYSTEM_PROP += device/xiaomi/ice/system.prop
+TARGET_VENDOR_PROP += device/xiaomi/ice/vendor.prop
+TARGET_PRODUCT_PROP += device/xiaomi/ice/product.prop
 
 # Vendor properties
 PRODUCT_VENDOR_PROPERTIES += \
