@@ -1,5 +1,6 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, build/make/target/product/go_defaults_512.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
