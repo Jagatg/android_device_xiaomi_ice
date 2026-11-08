@@ -184,9 +184,6 @@ PRODUCT_PACKAGES += \
 # RRO
 PRODUCT_PACKAGES += \
     IceFrameworkOverlay \
-    IceFrameworkTelephonyOverlay \
-    IceNetworkStackOverlay \
-    IceWifiHotsportOverlay \
     DialerOverlayIce \
     ApertureOverlayIce \
     IceFrameworkResOverlay \
