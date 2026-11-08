@@ -38,4 +38,4 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="missi-user 12 SP1A.210812.016 V13.0.18.0.SGMEUXM release-keys"
 
-BUILD_FINGERPRINT := "Redmi/ice_eea/ice:12/SP1A.210812.016/V13.0.18.0.SGMEUXM:user/release-keys"
+BUILD_FINGERPRINT := "Redmi/ice_global/ice:12/SP1A.210812.016/V13.0.18.0.SGMEUXM:user/release-keys"
