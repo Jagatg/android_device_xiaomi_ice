@@ -485,3 +485,7 @@ PRODUCT_PACKAGES += \
 # Power off alarm
 PRODUCT_PACKAGES += \
     PowerOffAlarm
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.clear_slots_with_set_layer_buffer=true
+
