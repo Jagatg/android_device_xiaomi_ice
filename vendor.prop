@@ -34,7 +34,7 @@ ro.telephony.sim.count=2
 telephony.active_modems.max_count=2
 
 # Miscellaneous
-dalvik.vm.foreground-heap-growth-multiplier=2.0
+dalvik.vm.foreground-heap-growth-multiplier=1.0
 dalvik.vm.heapgrowthlimit=128m
 dalvik.vm.heapmaxfree=8m
 dalvik.vm.heapminfree=2m
@@ -309,7 +309,7 @@ ro.hardware.gatekeeper=beanpod
 ro.hardware.hwcomposer=mtk_common
 ro.hardware.kmsetkey=beanpod
 # ro.incremental.enable=yes
-ro.lmk.kill_heaviest_task=false
+ro.lmk.kill_heaviest_task=true
 ro.lmk.kill_timeout_ms=100
 ro.lmk.medium=700
 ro.lmk.psi_complete_stall_ms=70
