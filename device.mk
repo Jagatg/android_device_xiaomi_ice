@@ -89,6 +89,21 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+PRODUCT_DEXPREOPT_SPEED_APPS += SystemUIGo \
+    Settings \
+    TeleService \
+    PhhIms \
+    Dialer \
+    Contacts \
+    messaging \
+    DocumentsUI \
+    CredentialManager \
+    Aperture \
+    Glimpse \
+    Twelve \
+    Etar \
+    StorageManager
+
 # Overlays
 $(call inherit-product, hardware/mediatek/overlay/mssi.mk)
 
