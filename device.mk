@@ -496,6 +496,5 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.clear_slots_with_set_layer_buffer=true \
-    ro.lmk.psi_partial_stall_ms=100 \
     ro.lmk.swap_free_low_percentage=35 \
 
