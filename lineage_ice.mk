@@ -2,9 +2,12 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+# Low-RAM device configuration
 $(call inherit-product, build/make/target/product/go_defaults_512.mk)
+
+# Storage and system features
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/userspace_reboot.mk)
 
 # Use the low-memory allocator on this 2 GB device, including userdebug builds.
 MALLOC_LOW_MEMORY := true
