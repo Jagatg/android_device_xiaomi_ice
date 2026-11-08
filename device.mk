@@ -9,9 +9,9 @@ LOCAL_PATH := device/xiaomi/ice
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    $(LOCAL_PATH)/hidl/audio \
-    $(LOCAL_PATH)/utils/libmtkperf_client \
-    hardware/mediatek
+    hardware/mediatek \
+    hardware/mediatek/audio \
+    hardware/mediatek/utils/libmtkperf_client
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
@@ -87,6 +87,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
+
+# Overlays
+$(call inherit-product, hardware/mediatek/overlay/mssi.mk)
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
@@ -181,9 +184,6 @@ PRODUCT_PACKAGES += \
 # RRO
 PRODUCT_PACKAGES += \
     IceFrameworkOverlay \
-    IceFrameworkTelephonyOverlay \
-    IceNetworkStackOverlay \
-    IceWifiHotsportOverlay \
     ApertureOverlayIce \
     IceFrameworkResOverlay \
     IceFrameworkResOverlayExt
