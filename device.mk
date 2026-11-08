@@ -182,9 +182,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     fw.max_users=1
 
-# Reduce GC pressure on foreground apps
+# Keep foreground heap growth bounded on low-memory devices.
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.foreground-heap-growth-multiplier=2.0
+    dalvik.vm.foreground-heap-growth-multiplier=1.0
 
 DONT_UNCOMPRESS_PRIV_APPS_DEXS := true
 
