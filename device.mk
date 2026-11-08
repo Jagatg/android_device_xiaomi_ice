@@ -486,6 +486,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     PowerOffAlarm
 
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.clear_slots_with_set_layer_buffer=true \
     ro.lmk.psi_partial_stall_ms=100 \
