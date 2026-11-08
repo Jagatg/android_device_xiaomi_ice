@@ -245,7 +245,7 @@ PRODUCT_PACKAGES += \
     libtinyalsa \
     libaudioutils \
     audio_policy.stub \
-    android.hardware.drm@1.4-service-lazy.clearkey
+    android.hardware.drm-service-lazy.clearkey
 
 PRODUCT_PACKAGES += \
     libcamera2ndk_vendor.vendor \
