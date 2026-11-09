@@ -450,6 +450,10 @@ PRODUCT_PACKAGES += \
     libbase_shim \
     libprocessgroup_shim
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.mediatek
+
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v34/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v34.so
 
@@ -501,4 +505,22 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.clear_slots_with_set_layer_buffer=true \
     ro.lmk.swap_free_low_percentage=35 \
+    ro.lmk.filecache_min_kb=153600 \
+        ro.surface_flinger.supports_background_blur=false
 
+# Low-memory optimizations
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+
+DEX2OAT_TARGET_INSTRUCTION_SET_FEATURES := div
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+
+# ART compilation resource tuning
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.boot-dex2oat-threads=2 \
+    dalvik.vm.dex2oat-threads=2
+
+# ART Service dexopt configuration
+PRODUCT_PROPERTY_OVERRIDES += \
+    pm.dexopt.bg-dexopt=speed-profile \
+    pm.dexopt.first-boot=verify \
+    pm.dexopt.boot-after-ota=verify
