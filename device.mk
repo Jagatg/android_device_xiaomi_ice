@@ -540,3 +540,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # IncrementalFS
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.incremental.enable=yes
+
+# Watchdog
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hw_timeout_multiplier=6
