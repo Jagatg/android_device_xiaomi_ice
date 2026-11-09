@@ -547,3 +547,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Watchdog
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hw_timeout_multiplier=6
+
+# Aperture Camera
+PRODUCT_PACKAGES += \
+    Aperture
