@@ -92,3 +92,10 @@ sh_binary {
     filename: "init.insmod.sh",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "init.ago.rc",
+    src: "init.ago.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
