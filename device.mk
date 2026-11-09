@@ -529,3 +529,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     pm.dexopt.bg-dexopt=speed-profile \
     pm.dexopt.first-boot=verify \
     pm.dexopt.boot-after-ota=verify
+
+# IncrementalFS
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.incremental.enable=yes
