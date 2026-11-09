@@ -149,6 +149,9 @@ VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 # Treble
 BOARD_VNDK_VERSION := current
 
+# Vibrator
+TARGET_VIBRATOR_SUPPORTS_EFFECTS := true
+
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
@@ -167,4 +170,4 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/init/fstab.mt6761
 include vendor/xiaomi/ice/BoardConfigVendor.mk
 
 # Sepolicy
--include device/mediatek/sepolicy_vndr/SEPolicy.mk
+include device/mediatek/sepolicy_vndr/SEPolicy.mk
