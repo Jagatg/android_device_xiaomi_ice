@@ -93,6 +93,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+USE_DEX2OAT_DEBUG := false
 PRODUCT_DEXPREOPT_SPEED_APPS += SystemUIGo \
     Settings \
     TeleService \
