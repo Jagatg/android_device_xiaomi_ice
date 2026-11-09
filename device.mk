@@ -170,8 +170,8 @@ PRODUCT_PACKAGES += \
     init.sensor_1_0.rc \
     init.zram.rc \
     init_connectivity.rc \
-    init.target.rc \
-    init.insmod.sh
+    init.insmod.sh \
+    init.ago.rc
 
 PRODUCT_PROPERTY_OVERRIDES += fw.max_users=1
 
