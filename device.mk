@@ -76,6 +76,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += \
     otapreopt_script
 
+# Certs
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,system/ca-certificates/files/,$(TARGET_COPY_OUT_VENDOR)/etc/security/cacerts)
+
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 31
 
