@@ -89,7 +89,6 @@ ro.kernel.zio=38,108,105,16
 ro.llk.enable=false
 ro.lmk.critical_upgrade=true
 ro.lmk.downgrade_pressure=60
-ro.lmk.kill_heaviest_task=true
 ro.lmk.upgrade_pressure=40
 ro.mediatek.version.branch=alps-mp-s0.mssi1.tc8sp3-cs1
 ro.mediatek.wlan.p2p=1
