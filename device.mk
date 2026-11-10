@@ -551,3 +551,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Aperture Camera
 PRODUCT_PACKAGES += \
     Aperture
+
+PRODUCT_PACKAGES += \
+    libexif.vendor
