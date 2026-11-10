@@ -909,7 +909,6 @@ vendor/lib/libPVRScopeServices.so
 vendor/lib/lib_iir.so
 vendor/lib/lib_speech_enh.so
 vendor/lib/libaal_cust.so
-vendor/lib/libaal_key.so
 vendor/lib/libacdk.so
 vendor/lib/libadpcmdec_mtk.so
 vendor/lib/libapmonitor_vendor.so
