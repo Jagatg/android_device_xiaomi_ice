@@ -19,3 +19,9 @@
     "repo_url": "https://github.com/techyminati/android_prebuilts_clang_host_linux-x86_clang-6443078.git"
   }
 ]
+{
+    "repository": "android_hardware_mediatek",
+    "target_path": "hardware/mediatek",
+    "remote": "github",
+    "repo_url": "https://github.com/Jagatg/android_hardware_mediatek"
+}
