@@ -553,4 +553,5 @@ PRODUCT_PACKAGES += \
     Aperture
 
 PRODUCT_PACKAGES += \
-    libexif.vendor
+    libexif.vendor \
+    libpng.vendor
