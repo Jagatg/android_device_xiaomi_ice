@@ -8,6 +8,7 @@ ro.bluetooth.emb_wp_mode=false
 ro.bluetooth.wipower=false
 
 # Display
+debug.sf.nobootanimation=1
 ro.opengles.version=196610
 
 # Media
