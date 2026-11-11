@@ -152,6 +152,9 @@ TARGET_SYSTEM_PROP += device/xiaomi/ice/system.prop
 TARGET_VENDOR_PROP += device/xiaomi/ice/vendor.prop
 TARGET_PRODUCT_PROP += device/xiaomi/ice/product.prop
 
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/sku,$(TARGET_COPY_OUT_SYSTEM)/etc/properties)
+
 # Vendor properties
 PRODUCT_VENDOR_PROPERTIES += \
     debug.renderengine.backend=gles

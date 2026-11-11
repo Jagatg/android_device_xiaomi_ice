@@ -22,6 +22,9 @@ wifi.direct.interface=p2p0
 wifi.interface=wlan0
 wifi.tethering.interface=ap0
 
+# Device-specific SKU properties
+import /system/etc/properties/${ro.boot.product.vendor.sku}.prop
+
 # eBPF
 ro.bpf.kver_override=5.4.186
 
