@@ -133,6 +133,9 @@ PRODUCT_PACKAGES += \
     libmtk_bsg.recovery \
     libmtk_bsg
 
+# Init
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_xiaomi_ice)
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
