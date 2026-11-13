@@ -467,7 +467,8 @@ PRODUCT_PACKAGES += \
     libaudioclient_shim \
     libui_shim \
     libbase_shim \
-    libprocessgroup_shim
+    libprocessgroup_shim \
+    libshim_utils
 
 # Vibrator
 PRODUCT_PACKAGES += \
