@@ -559,4 +559,5 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libexif.vendor \
-    libpng.vendor
+    libpng.vendor \
+    libcamera_metadata.vendor
