@@ -222,6 +222,7 @@ PRODUCT_PACKAGES += \
 # RRO
 PRODUCT_PACKAGES += \
     IceFrameworkOverlay \
+    IceSystemUIOverlay \
     DialerOverlayIce \
     ApertureOverlayIce \
     IceFrameworkResOverlay \
