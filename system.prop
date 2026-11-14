@@ -128,3 +128,6 @@ vendor.rild.libpath=mtk-ril.so
 
 persist.sys.usb.config=adb
 ro.debuggable=1
+
+# Zygote
+zygote.critical_window.minute=10
