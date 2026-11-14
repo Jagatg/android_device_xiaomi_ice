@@ -131,3 +131,6 @@ ro.debuggable=1
 
 # Zygote
 zygote.critical_window.minute=10
+
+# Remote keyguard animation
+persist.wm.enable_remote_keyguard_animation=0
