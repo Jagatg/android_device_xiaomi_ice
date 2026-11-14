@@ -561,7 +561,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libexif.vendor \
     libpng.vendor \
-    libcamera_metadata.vendor
+    libstagefright_softomx_plugin.vendor
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v31/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v32.so
+
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v31/arm/arch-arm-armv7-a-neon/shared/vndk-core/libcamera_metadata.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamera_metadata.so
