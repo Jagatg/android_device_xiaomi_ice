@@ -543,7 +543,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # ART Service dexopt configuration
 PRODUCT_PROPERTY_OVERRIDES += \
     pm.dexopt.bg-dexopt=speed-profile \
-    pm.dexopt.first-boot=verify \
     pm.dexopt.boot-after-ota=verify
 
 # IncrementalFS
