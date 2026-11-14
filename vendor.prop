@@ -427,3 +427,4 @@ vendor.mtk.vdec.waitkeyframeforplay=9
 vendor.mtkcamapp.cshot.platform=-1
 
 bluetooth.device_id.vendor_id=0x0046
+ro.surface_flinger.uclamp.min=130
