@@ -14,6 +14,7 @@ ro.surface_flinger.primary_display_orientation=ORIENTATION_0
 drm.service.enabled=true
 
 # Media
+debug.stagefright.ccodec=0
 debug.stagefright.omx_default_rank.sw-audio=4
 media.c2.dmabuf.padding=3072
 
