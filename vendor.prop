@@ -429,3 +429,4 @@ vendor.mtkcamapp.cshot.platform=-1
 bluetooth.device_id.vendor_id=0x0046
 ro.surface_flinger.uclamp.min=130
 ro.surface_flinger.running_without_sync_framework=true
+debug.sf.phase_offset_threshold_for_next_vsync_ns=6100000
