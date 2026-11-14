@@ -741,7 +741,6 @@ vendor/bin/netdc
 vendor/bin/nv_routing
 vendor/bin/pvrhwperfd
 vendor/bin/rt5512_calibration
-vendor/bin/rttv
 vendor/bin/sensors_test
 vendor/bin/stp_dump3
 vendor/bin/thermal
@@ -768,7 +767,6 @@ vendor/etc/apdb/APDB_MT6761_S01__W2222_ENUM
 vendor/etc/init/atci_service.rc
 vendor/etc/init/atcid.rc
 vendor/etc/init/audiocmdservice_atci.rc
-vendor/etc/init/bootperf.rc
 vendor/etc/init/chipinfo_init.rc
 vendor/etc/init/dmc_core.rc
 vendor/etc/init/em_hidl_user.rc
@@ -1033,10 +1031,6 @@ vendor/lib/vendor.mediatek.hardware.camera.ccap@1.0.so
 vendor/lib/vendor.mediatek.hardware.dmc@1.0.so
 vendor/lib/vendor.mediatek.hardware.dmc@1.1.so
 vendor/lib/vendor.mediatek.hardware.dmc@1.2.so
-vendor/lib/vendor.mediatek.hardware.engineermode@1.0.so
-vendor/lib/vendor.mediatek.hardware.engineermode@1.1.so
-vendor/lib/vendor.mediatek.hardware.engineermode@1.2.so
-vendor/lib/vendor.mediatek.hardware.engineermode@1.3.so
 vendor/lib/vendor.mediatek.hardware.lbs@1.0.so
 vendor/lib/vendor.mediatek.hardware.log@1.0.so
 vendor/lib/vendor.mediatek.hardware.mdmonitor@1.0.so
