@@ -567,3 +567,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v31/arm/arch-arm-armv7-a-neon/shared/vndk-core/libcamera_metadata.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcamera_metadata.so
+
+# Recovery
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.vendor.recovery_update=true
