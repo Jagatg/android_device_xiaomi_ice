@@ -19,4 +19,4 @@ Display | 720 x 1600 pixels, 20:9 ratio, 6.52 inches, IPS LCD
 
 ## Device picture
 
-![Xiaomi Redmi A1 / Redmi A1+ / POCO C50](https://raw.githubusercontent.com/Jagatg/build_server-SSH/main/b5e995e71c54df5498ec9f7385a21e02.webp "Xiaomi Redmi A1 / Redmi A1+ / POCO C50")
+![Xiaomi Redmi A1 / Redmi A1+ / POCO C50](https://www.eourmart.com/cdn/shop/products/BlackA1B.png?v=1665225702&width=1445&utm_source=chatgpt.com "Xiaomi Redmi A1 / Redmi A1+ / POCO C50")
