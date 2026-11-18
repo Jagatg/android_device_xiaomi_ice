@@ -97,6 +97,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
+# Audio
+TARGET_EXCLUDES_AUDIOFX := true
+
 # Do not generate libartd.
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
