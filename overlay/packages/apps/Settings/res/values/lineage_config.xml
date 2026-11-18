@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <bool name="config_show_battery_cycle_count" translatable="false">true</bool>
+    <integer name="config_vibration_supported_intensity_levels">3</integer>
 </resources>
