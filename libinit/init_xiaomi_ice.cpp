@@ -17,7 +17,7 @@ static const variant_info_t c3sfg_info = {
     .marketname = "Redmi A1+",
     .model = "220733SFG",
     .build_fingerprint =
-            "Redmi/snow_in/snow:12/SP1A.210812.016/V13.0.17.0.SGMINXM:user/release-keys",
+            "Redmi/snow_global/snow:12/SP1A.210812.016/V13.0.17.0.SGMINXM:user/release-keys",
 };
 
 static const variant_info_t c3sfin_info = {
@@ -28,7 +28,7 @@ static const variant_info_t c3sfin_info = {
     .marketname = "Redmi A1+",
     .model = "220743FI",
     .build_fingerprint =
-            "Redmi/snow_in/snow:12/SP1A.210812.016/V13.0.17.0.SGMINXM:user/release-keys",
+            "Redmi/snow_global/snow:12/SP1A.210812.016/V13.0.17.0.SGMINXM:user/release-keys",
 };
 
 static const variant_info_t c3sfinh_info = {
@@ -39,7 +39,7 @@ static const variant_info_t c3sfinh_info = {
     .marketname = "Redmi A1+",
     .model = "220733SFH",
     .build_fingerprint =
-            "Redmi/snow_in/snow:12/SP1A.210812.016/V13.0.17.0.SGMINXM:user/release-keys",
+            "Redmi/snow_global/snow:12/SP1A.210812.016/V13.0.17.0.SGMINXM:user/release-keys",
 };
 
 static const variant_info_t c3sg_info = {
@@ -50,7 +50,7 @@ static const variant_info_t c3sg_info = {
     .marketname = "Redmi A1",
     .model = "220733SG",
     .build_fingerprint =
-            "Redmi/ice_in/ice:12/SP1A.210812.016/V13.0.17.0.SGMINXM:user/release-keys",
+            "Redmi/ice_global/ice:12/SP1A.210812.016/V13.0.17.0.SGMINXM:user/release-keys",
 };
 
 static const variant_info_t c3sin_info = {
@@ -61,7 +61,7 @@ static const variant_info_t c3sin_info = {
     .marketname = "Redmi A1",
     .model = "220733SI",
     .build_fingerprint =
-            "Redmi/ice_in/ice:12/SP1A.210812.016/V13.0.17.0.SGMINXM:user/release-keys",
+            "Redmi/ice_global/ice:12/SP1A.210812.016/V13.0.17.0.SGMINXM:user/release-keys",
 };
 
 static const variant_info_t c3sinh_info = {
@@ -72,7 +72,7 @@ static const variant_info_t c3sinh_info = {
     .marketname = "Redmi A1",
     .model = "220733SH",
     .build_fingerprint =
-            "Redmi/ice_in/ice:12/SP1A.210812.016/V13.0.17.0.SGMINXM:user/release-keys",
+            "Redmi/ice_global/ice:12/SP1A.210812.016/V13.0.17.0.SGMINXM:user/release-keys",
 };
 
 static const variant_info_t c3sl_info = {
@@ -83,7 +83,7 @@ static const variant_info_t c3sl_info = {
     .marketname = "Redmi A1",
     .model = "220733SL",
     .build_fingerprint =
-            "Redmi/ice_in/ice:12/SP1A.210812.016/V13.0.17.0.SGMINXM:user/release-keys",
+            "Redmi/ice_global/ice:12/SP1A.210812.016/V13.0.17.0.SGMINXM:user/release-keys",
 };
 
 static const variant_info_t c3sp_info = {
@@ -94,7 +94,7 @@ static const variant_info_t c3sp_info = {
     .marketname = "POCO C50",
     .model = "220733SPI",
     .build_fingerprint =
-            "POCO/snow_p_in/snow:12/SP1A.210812.016/V13.0.17.0.SGMINXM:user/release-keys",
+            "POCO/snow_p_global/snow:12/SP1A.210812.016/V13.0.17.0.SGMINXM:user/release-keys",
 };
 
 static const variant_info_t c3sph_info = {
@@ -105,7 +105,7 @@ static const variant_info_t c3sph_info = {
     .marketname = "POCO C50",
     .model = "220733SPH",
     .build_fingerprint =
-            "POCO/snow_p_in/snow:12/SP1A.210812.016/V13.0.17.0.SGMINXM:user/release-keys",
+            "POCO/snow_p_global/snow:12/SP1A.210812.016/V13.0.17.0.SGMINXM:user/release-keys",
 };
 
 static const std::vector<variant_info_t> variants = {
