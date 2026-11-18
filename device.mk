@@ -95,8 +95,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/ice/proprietary/vendor/firmware/novatek_ts_truly_mp.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/novatek_ts_truly_mp.bin
 
 PRODUCT_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
-
+    $(LOCAL_PATH)/overlay-lineage
 # Audio
 TARGET_EXCLUDES_AUDIOFX := true
 
