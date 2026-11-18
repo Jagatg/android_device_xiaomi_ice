@@ -224,6 +224,7 @@ PRODUCT_PACKAGES += \
 
 # RRO
 PRODUCT_PACKAGES += \
+    CarrierConfigOverlayIce \
     IceFrameworkOverlay \
     IceSystemUIOverlay \
     DialerOverlayIce \
