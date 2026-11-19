@@ -199,9 +199,6 @@ PRODUCT_PACKAGES += \
     Launcher3QuickStepGo \
     NoNavigationBarModeGestural
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    fw.max_users=1
-
 # Keep foreground heap growth bounded on low-memory devices.
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.foreground-heap-growth-multiplier=1.0
