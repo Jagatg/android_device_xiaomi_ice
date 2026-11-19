@@ -5,4 +5,6 @@
     <!-- If true, enable the advance anti-falsing classifier on the lockscreen. -->
     <bool name="config_lockscreenAntiFalsingClassifierEnabled">false</bool>
     <bool name="config_turbulenceNoise">false</bool>
+    <!-- Limit built-in screen recorder to 30 FPS -->
+    <integer name="config_screenRecorderMaxFramerate">30</integer>
 </resources>
