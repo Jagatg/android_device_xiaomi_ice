@@ -20,4 +20,6 @@
     <integer name="config_maxNumVisibleRecentTasks_lowRam">4</integer>
     <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.8</item>
     <item name="config_lowResTaskSnapshotScale" format="float" type="dimen">0.3</item>
+    <!-- Disable bubble notifications support -->
+    <bool name="config_supportsBubble">false</bool>
 </resources>
