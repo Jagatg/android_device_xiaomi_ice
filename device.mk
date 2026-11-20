@@ -96,20 +96,19 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
+
 # Audio
 TARGET_EXCLUDES_AUDIOFX := true
 
-# Do not generate libartd.
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-
 WITH_DEXPREOPT_DEBUG_INFO := false
 PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/boot/boot-image-profile.txt
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
 
 # Reduce system server debug info
 PRODUCT_SYSTEM_SERVER_DEBUG_INFO := false
-
 USE_DEX2OAT_DEBUG := false
+
 PRODUCT_DEXPREOPT_SPEED_APPS += SystemUIGo \
     Settings \
     TeleService \
@@ -135,18 +134,13 @@ PRODUCT_PACKAGES += \
     libmtk_bsg.recovery \
     libmtk_bsg
 
-# Init
+# libInit
 $(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_xiaomi_ice)
 
 # Fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
-
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-service \
-    android.hardware.gatekeeper@1.0-impl
 
 # Manifest
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
@@ -155,12 +149,12 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(LOCAL_PATH)/compatibility_matrix
 # Properties
 TARGET_SYSTEM_PROP += device/xiaomi/ice/system.prop
 TARGET_VENDOR_PROP += device/xiaomi/ice/vendor.prop
-TARGET_PRODUCT_PROP += device/xiaomi/ice/product.prop
 
-# Vendor properties
+# This should fix crash of Surface Flinger
 PRODUCT_VENDOR_PROPERTIES += \
     debug.renderengine.backend=gles
 
+# Rootdir
 PRODUCT_PACKAGES += \
     fstab.enableswap \
     fstab.mt6761 \
@@ -180,14 +174,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES += fw.max_users=1
 
-# Display device config - fixes DisplayDeviceConfig nits spam causing watchdog kill
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
 PRODUCT_PACKAGES += \
     Dialer
 
+# BesLoudness
 PRODUCT_PACKAGES += \
     BesLoudness
 
@@ -205,14 +198,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 DONT_UNCOMPRESS_PRIV_APPS_DEXS := true
 
-PRODUCT_COPY_FILES += \
-
-# Device-specific utilities
 PRODUCT_PACKAGES += \
     chipinfo \
     wlan_assistant \
     libaedv
 
+# MTK perf
 PRODUCT_PACKAGES += \
     libmtkperf_client_vendor \
     libpowerhalwrap_vendor \
@@ -247,53 +238,93 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/modules/wmt_chrdev_wifi.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/wmt_chrdev_wifi.ko \
     $(LOCAL_PATH)/prebuilts/modules/wmt_drv.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/wmt_drv.ko
 
+# Biometrics
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1.so \
-    android.hardware.cas@1.2-service-lazy \
+    android.hardware.biometrics.fingerprint@2.1.vendor
+
+# CAS
+PRODUCT_PACKAGES += \
+    android.hardware.cas@1.2-service-lazy
+
+# Gatekeeper
+PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service \
-    android.hardware.graphics.composer@2.1-service \
+    android.hardware.gatekeeper@1.0-impl
+
+# Graphics
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.composer@2.1-service
+
+# Audio
+PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
-    android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.audio.effect@7.0-impl \
-    dmabuf_dump.vendor \
-    vndservicemanager \
-    vndservice \
+    android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.bluetooth.audio@2.1-impl \
-    android.hardware.gatekeeper@1.0-impl \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.renderscript@1.0-impl \
-    android.hardware.soundtrigger@2.3-impl \
-    android.hardware.soundtrigger@2.3-impl \
     audio.r_submix.default \
     audio.usb.default \
-    libtinyalsa \
-    libaudioutils \
     audio_policy.stub \
-    android.hardware.drm-service-lazy.clearkey
+    libtinyalsa \
+    libaudioutils
 
 PRODUCT_PACKAGES += \
-    libcamera2ndk_vendor.vendor \
+    dmabuf_dump.vendor \
+    vndservicemanager \
+    vndservice
+
+# Memtrack
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack@1.0-impl
+
+# Renderscript
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+
+# Soundtrigger
+PRODUCT_PACKAGES += \
+    android.hardware.soundtrigger@2.3-impl
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm-service-lazy.clearkey \
+    libdrm.vendor
+
+# Camera
+PRODUCT_PACKAGES += \
+    libcamera2ndk_vendor.vendor
+
+# Codec2
+PRODUCT_PACKAGES += \
     libcodec2_hidl@1.1.vendor \
     libcodec2_hidl@1.2.vendor \
     libcodec2_hidl_plugin.vendor \
     libcodec2_soft_common.vendor \
+    libsfplugin_ccodec_utils.vendor
+
+PRODUCT_PACKAGES += \
     libcppbor_external.vendor \
-    libcppcose_rkp.vendor \
+    libcppcose_rkp.vendor
+
+# Keymaster
+PRODUCT_PACKAGES += \
     libkeymaster4.vendor \
     libkeymaster41.vendor \
     libkeymaster4_1support.vendor \
     libkeystore-engine-wifi-hidl.vendor \
     libkeystore-wifi-hidl.vendor \
+    libsoft_attestation_cert.vendor
+
+PRODUCT_PACKAGES += \
     libsensorndkbridge.vendor \
-    libsfplugin_ccodec_utils.vendor \
-    libsoft_attestation_cert.vendor \
     libstagefright_bufferpool@2.0.1.vendor
 
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0.vendor \
     android.hardware.audio@7.0.vendor \
-    android.hardware.audio@7.0-util.vendor
+    android.hardware.audio@7.0-util.vendor \
+    libaudiofoundation.vendor \
+    libtinycompress
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -316,24 +347,31 @@ PRODUCT_PACKAGES += \
 # Dumpstate
 PRODUCT_PACKAGES += \
     android.hardware.dumpstate@1.0.vendor \
-    android.hardware.dumpstate@1.1.vendor
+    android.hardware.dumpstate@1.1.vendor \
+    libdumpstateutil.vendor
 
 # GNSS
 PRODUCT_PACKAGES += \
     android.hardware.gnss.measurement_corrections@1.0.vendor \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor \
+    android.hardware.gnss-V1-ndk_platform.vendor \
+    android.hardware.gnss-V2-ndk_platform.vendor \
+    android.hardware.gnss-V1-ndk.vendor \
     android.hardware.gnss@1.0.vendor \
     android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@2.0.vendor \
     android.hardware.gnss@2.1.vendor
 
-# Power
+# Lineage Health
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/power_supply/battery/charging_enabled)
 $(call soong_config_set,lineage_health,charging_control_charging_enabled,1)
 $(call soong_config_set,lineage_health,charging_control_charging_disabled,0)
 
+# Power
 PRODUCT_PACKAGES += \
+    android.hardware.power-V2-ndk_platform.vendor \
+    android.hardware.power-V2-ndk.vendor \
     android.hardware.power@1.0.vendor \
     android.hardware.power@1.1.vendor \
     android.hardware.power@1.2.vendor
@@ -353,6 +391,7 @@ PRODUCT_PACKAGES += \
 # Sensor
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-ScopedWakelock.vendor \
+    android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@2.0.vendor \
     android.hardware.sensors@2.1.vendor
 
@@ -375,15 +414,18 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant@1.1.vendor \
     android.hardware.wifi.supplicant@1.2.vendor \
     android.hardware.wifi.supplicant@1.3.vendor \
-    android.hardware.wifi.supplicant@1.4.vendor
+    android.hardware.wifi.supplicant@1.4.vendor \
+    android.hardware.wifi@1.1.vendor \
+    libwifi-hal \
+    libwifi-system-iface.vendor
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio.service.mediatek \
-    libaudiofoundation.vendor \
+    android.hardware.audio.service.mediatek
+
+PRODUCT_PACKAGES += \
     libhidltransport.vendor \
     libhwbinder.vendor \
-    libavservices_minijail_vendor.vendor \
-    libdrm.vendor
+    libavservices_minijail_vendor.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -391,7 +433,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.xml \
     frameworks/native/data/etc/android.hardware.faketouch.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.faketouch.xml \
-    hardware/interfaces/keymaster/4.1/default/android.hardware.hardware_keystore.km41.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hardware_keystore.km41.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml \
     frameworks/native/data/etc/android.hardware.microphone.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.microphone.xml \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
@@ -416,6 +457,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
+    hardware/interfaces/keymaster/4.1/default/android.hardware.hardware_keystore.km41.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hardware_keystore.km41.xml \
 
 PRODUCT_PACKAGES += disable_configstore
 
@@ -430,39 +472,34 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
 
+# IMS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-com.mediatek.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.mediatek.ims.xml
 
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1.vendor \
     libavservices_minijail_vendor \
     libmemunreachable.vendor \
     libpcap.vendor \
-    libtinycompress
 
-# Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-mediatek \
+    android.hardware.power-service-mediatek
 
 PRODUCT_COPY_FILES += \
     out/target/product/ice/system/lib/android.hardware.power-V2-ndk.so:$(TARGET_COPY_OUT_VENDOR)/lib/android.hardware.power-V2-ndk.so
 
-PRODUCT_PACKAGES += \
-    android.hardware.gnss-V1-ndk.vendor \
-    android.hardware.power-V2-ndk.vendor \
-
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v31/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v31.so
 
+# Thermal
 PRODUCT_PACKAGES += \
-    libdumpstateutil.vendor \
     android.hardware.thermal@1.0.vendor \
-    android.hardware.thermal@2.0.vendor \
-    android.frameworks.sensorservice@1.0.vendor \
-    libcurl.vendor \
-    libssl.vendor \
-    android.hardware.gnss-V1-ndk_platform.vendor
+    android.hardware.thermal@2.0.vendor
 
+PRODUCT_PACKAGES += \
+    libcurl.vendor \
+    libssl.vendor
+
+# Shims
 PRODUCT_PACKAGES += \
     libui_shim \
     libaudioclient_shim \
@@ -474,49 +511,33 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.mediatek
+    android.hardware.vibrator-service.mediatek \
+    android.hardware.vibrator-V2-ndk_platform.vendor
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v34/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v34.so
 
 PRODUCT_PACKAGES += \
-    android.hardware.power-V2-ndk_platform.vendor \
-    android.hardware.health@2.1.vendor \
     libnl.vendor \
-    android.hardware.vibrator-V2-ndk_platform.vendor \
-    libwifi-hal \
-    libwifi-system-iface.vendr \
-    android.hardware.wifi@1.1.vendor \
     libprocessgroup.vendor
 
 PRODUCT_COPY_FILES += \
-    out/target/product/ice/system_ext/lib/libui_shim.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libui_shim.so
-
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v33/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v33.so
-
-PRODUCT_COPY_FILES += \
-    device/xiaomi/ice/prebuilts/lib/libhidlbase-v34.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v34.so
-
-PRODUCT_COPY_FILES += \
-    out/target/product/ice/system/lib/libwifi-system-iface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwifi-system-iface.so
-
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v31/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v31.so
-
-PRODUCT_COPY_FILES += \
+    out/target/product/ice/system_ext/lib/libui_shim.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libui_shim.so \
+    prebuilts/vndk/v33/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v33.so \
+    device/xiaomi/ice/prebuilts/lib/libhidlbase-v34.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v34.so \
+    out/target/product/ice/system/lib/libwifi-system-iface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwifi-system-iface.so \
+    prebuilts/vndk/v31/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v31.so \
     device/xiaomi/ice/prebuilts/lib/libutils-v31.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v31.so
 
 # Health
 PRODUCT_PACKAGES += \
+    android.hardware.health@2.1.vendor \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
-# libladder
 PRODUCT_PACKAGES += \
     libladder
 
-# Power off alarm
 PRODUCT_PACKAGES += \
     PowerOffAlarm
 
@@ -528,11 +549,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.clear_slots_with_set_layer_buffer=true \
     ro.lmk.swap_free_low_percentage=35 \
     ro.lmk.filecache_min_kb=153600 \
-        ro.surface_flinger.supports_background_blur=false
+    ro.surface_flinger.supports_background_blur=false
 
 # Low-memory optimizations
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
-
 DEX2OAT_TARGET_INSTRUCTION_SET_FEATURES := div
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 
@@ -554,7 +574,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hw_timeout_multiplier=6
 
-# Aperture Camera
 PRODUCT_PACKAGES += \
     Aperture
 
