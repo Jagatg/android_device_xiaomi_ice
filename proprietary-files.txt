@@ -766,7 +766,6 @@ vendor/etc/apdb/APDB_MT6761_S01__W2222_ENUM
 vendor/etc/init/atci_service.rc
 vendor/etc/init/atcid.rc
 vendor/etc/init/audiocmdservice_atci.rc
-vendor/etc/init/chipinfo_init.rc
 vendor/etc/init/dmc_core.rc
 vendor/etc/init/em_hidl_user.rc
 vendor/etc/init/hostapd.android.rc
@@ -928,7 +927,6 @@ vendor/lib/libaudioprimarydevicehalifclient.so
 vendor/lib/libaurisysdemo.so
 vendor/lib/libbessound_hd_mtk_vendor.so
 vendor/lib/libblisrc32_vendor.so
-vendor/lib/libbluetooth_hw_test.so
 vendor/lib/libbluetooth_mtk_pure.so
 vendor/lib/libbluetooth_relayer.so
 vendor/lib/libbluetoothem_mtk.so
@@ -943,7 +941,6 @@ vendor/lib/libcodec2_soft_mtk_mp3dec.so
 vendor/lib/libcodec2_soft_mtk_msadpcmdec.so
 vendor/lib/libcurl_xcap_md.so
 vendor/lib/libcvsd_mtk.so
-vendor/lib/libdecrypt.so
 vendor/lib/libdynamiclog.so
 vendor/lib/libfft_vendor.so
 vendor/lib/libfgauge_gm30.so
@@ -1011,7 +1008,6 @@ vendor/lib/libvp9dec_sa.ca7.so
 vendor/lib/libvpu5.so
 vendor/lib/libvt_custom.so
 vendor/lib/libwapi.so
-vendor/lib/libwifitest.so
 vendor/lib/libwpa_client.so
 vendor/lib/libwpfa.so
 vendor/lib/meta_wifi_data.so
