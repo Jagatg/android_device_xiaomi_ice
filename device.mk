@@ -478,6 +478,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v31/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v31.so
 
+PRODUCT_COPY_FILES += \
+    device/xiaomi/ice/prebuilts/lib/libstagefright_foundation-v31.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_foundation-v31.so
+
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0.vendor \
@@ -510,12 +513,12 @@ PRODUCT_PACKAGES += \
     libprocessgroup.vendor
 
 PRODUCT_COPY_FILES += \
-    out/target/product/ice/system_ext/lib/libui_shim.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libui_shim.so \
     prebuilts/vndk/v33/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v33.so \
-    device/xiaomi/ice/prebuilts/lib/libhidlbase-v34.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v34.so \
-    out/target/product/ice/system/lib/libwifi-system-iface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwifi-system-iface.so \
     prebuilts/vndk/v31/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v31.so \
-    device/xiaomi/ice/prebuilts/lib/libutils-v31.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v31.so
+    device/xiaomi/ice/prebuilts/lib/libhidlbase-v34.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v34.so \
+    device/xiaomi/ice/prebuilts/lib/libutils-v31.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v31.so \
+    out/target/product/ice/system/lib/libwifi-system-iface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libwifi-system-iface.so \
+    out/target/product/ice/system_ext/lib/libui_shim.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libui_shim.so
 
 # Health
 PRODUCT_PACKAGES += \
