@@ -300,8 +300,6 @@ PRODUCT_PACKAGES += \
     libkeymaster4.vendor \
     libkeymaster41.vendor \
     libkeymaster4_1support.vendor \
-    libkeystore-engine-wifi-hidl.vendor \
-    libkeystore-wifi-hidl.vendor \
     libsoft_attestation_cert.vendor
 
 PRODUCT_PACKAGES += \
@@ -396,18 +394,16 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi.hostapd@1.0.vendor \
-    android.hardware.wifi.hostapd@1.1.vendor \
-    android.hardware.wifi.hostapd@1.2.vendor \
-    android.hardware.wifi.hostapd@1.3.vendor \
-    android.hardware.wifi.supplicant@1.0.vendor \
-    android.hardware.wifi.supplicant@1.1.vendor \
-    android.hardware.wifi.supplicant@1.2.vendor \
-    android.hardware.wifi.supplicant@1.3.vendor \
-    android.hardware.wifi.supplicant@1.4.vendor \
-    android.hardware.wifi@1.1.vendor \
-    libwifi-hal \
-    libwifi-system-iface.vendor
+    android.hardware.wifi-service \
+    libwifi-hal-wrapper \
+    libwifi-system-iface.vendor \
+    libkeystore-engine-wifi-hidl.vendor \
+    libkeystore-wifi-hidl.vendor \
+    lib_driver_cmd_mt66xx \
+    wpa_supplicant \
+    hostapd
+
+$(call soong_config_set_bool,mediatek_wifi_hal,use_pre_u_qpr2_struct,true)
 
 PRODUCT_PACKAGES += \
     android.hardware.audio.service.mediatek
