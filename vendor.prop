@@ -425,3 +425,4 @@ vendor.connsys.driver.ready=no
 vendor.mtk.vdec.waitkeyframeforplay=9
 vendor.mtkcamapp.cshot.platform=-1
 
+ro.config.media_vol_steps=25
