@@ -1167,14 +1167,10 @@ vendor/etc/vintf/manifest/gnss@2.1-service.xml
 vendor/etc/vintf/manifest/power-default.xml
 vendor/lib/android.hidl.memory.block@1.0.so
 lib/libccci_util_sys.so
-lib/libhidltransport.so
 vendor/etc/sensors/hals.conf
 lib/libem_support_jni.so
 lib/libshowlogo.so
-vendor/bin/hw/android.hardware.wifi@1.0-service-lazy
-vendor/etc/init/android.hardware.wifi@1.0-service-lazy.rc
 vendor/etc/init/android.hardware.wifi.supplicant-service.rc
-vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
 vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
 vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
 vendor/etc/vintf/manifest/gnss-default.xml
