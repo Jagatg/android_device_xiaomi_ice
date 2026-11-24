@@ -38,6 +38,8 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := cortex-a53
 
+# Bootloader
+BOARD_VENDOR := xiaomi
 TARGET_BOOTLOADER_BOARD_NAME := ice
 TARGET_NO_BOOTLOADER := true
 
@@ -78,8 +80,8 @@ BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 
-# Using prebuilt kernel - disable kernel source compilation
-# TARGET_KERNEL_SOURCE := kernel/xiaomi/ice
+# To make the build system more happy
+TARGET_KERNEL_SOURCE := kernel/xiaomi/ice
 TARGET_KERNEL_CONFIG := ice_defconfig
 TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_KERNEL_ARCH := arm
@@ -129,9 +131,6 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 # Ril
 ENABLE_VENDOR_RIL_SERVICE := true
 
-# Shipping API level
-BOARD_SHIPPING_API_LEVEL := 30
-
 # Android Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
@@ -171,8 +170,6 @@ ifeq ($(HOST_OS),linux)
       WITH_DEXPREOPT_DEBUG_INFO := false
   endif
 endif
-
-TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888

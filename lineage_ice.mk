@@ -15,6 +15,10 @@ MALLOC_LOW_MEMORY := true
 # Use profile-guided preoptimization to reduce first-boot compilation work.
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := speed-profile
 
+# BoardConfig.mk is loaded after product makefiles; set this early for inherited device makefiles.
+BOARD_SHIPPING_API_LEVEL := 30
+PRODUCT_SHIPPING_API_LEVEL := 31
+
 # Inherit from ice device
 $(call inherit-product, device/xiaomi/ice/device.mk)
 

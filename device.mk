@@ -28,6 +28,8 @@ TARGET_BOOT_ANIMATION_RES := 720
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
+include $(LOCAL_PATH)/vendor_logtag.mk
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
@@ -79,12 +81,6 @@ PRODUCT_PACKAGES += \
 # Certs
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,system/ca-certificates/files/,$(TARGET_COPY_OUT_VENDOR)/etc/security/cacerts)
-
-# API levels
-PRODUCT_SHIPPING_API_LEVEL := 31
-
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.product.first_api_level=31
 
 PRODUCT_PACKAGES += \
     init.recovery.mt6761.rc
@@ -217,7 +213,6 @@ PRODUCT_PACKAGES += \
     IceFrameworkOverlay \
     IceSystemUIOverlay \
     DialerOverlayIce \
-    ApertureOverlayIce \
     IceFrameworkResOverlay \
     IceFrameworkResOverlayExt \
     FrameworkResOverlayAnim
@@ -280,10 +275,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service-lazy.clearkey \
     libdrm.vendor
 
-# Camera
-PRODUCT_PACKAGES += \
-    libcamera2ndk_vendor.vendor
-
 # Codec2
 PRODUCT_PACKAGES += \
     libcodec2_hidl@1.1.vendor \
@@ -301,7 +292,8 @@ PRODUCT_PACKAGES += \
     libkeymaster4.vendor \
     libkeymaster41.vendor \
     libkeymaster4_1support.vendor \
-    libsoft_attestation_cert.vendor
+    libsoft_attestation_cert.vendor \
+    android.hardware.hardware_keystore.km41.xml
 
 PRODUCT_PACKAGES += \
     libsensorndkbridge.vendor \
@@ -331,7 +323,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.6.vendor \
     android.hardware.camera.provider@2.4.vendor \
     android.hardware.camera.provider@2.5.vendor \
-    android.hardware.camera.provider@2.6.vendor
+    android.hardware.camera.provider@2.6.vendor \
+    libcamera2ndk_vendor.vendor
 
 # Dumpstate
 PRODUCT_PACKAGES += \
@@ -356,6 +349,7 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/power_supply/battery/charging_enabled)
 $(call soong_config_set,lineage_health,charging_control_charging_enabled,1)
 $(call soong_config_set,lineage_health,charging_control_charging_disabled,0)
+$(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
 
 # Power
 PRODUCT_PACKAGES += \
@@ -414,6 +408,7 @@ PRODUCT_PACKAGES += \
     libhwbinder.vendor \
     libavservices_minijail_vendor.vendor
 
+# Permission
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
@@ -488,9 +483,8 @@ PRODUCT_PACKAGES += \
     libcurl.vendor \
     libssl.vendor
 
-# Shims
+# Shimss
 PRODUCT_PACKAGES += \
-    libui_shim \
     libaudioclient_shim \
     libui_shim \
     libbase_shim \
@@ -575,9 +569,6 @@ PRODUCT_COPY_FILES += \
     prebuilts/vndk/v31/arm/arch-arm-armv7-a-neon/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v32.so
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.vendor.recovery_update=true
-
-PRODUCT_PACKAGES += \
-    android.hardware.hardware_keystore.km41.xml
 
 PRODUCT_PACKAGES += \
     libwifi-hal-wrapper-lib64-link
