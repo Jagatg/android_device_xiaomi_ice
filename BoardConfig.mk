@@ -129,6 +129,9 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 # Ril
 ENABLE_VENDOR_RIL_SERVICE := true
 
+# Shipping API level
+BOARD_SHIPPING_API_LEVEL := 30
+
 # Android Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
