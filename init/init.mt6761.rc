@@ -1133,4 +1133,6 @@ service osi /system/bin/osi
     oneshot
     #seclabel u:r:osi:s0
 
-
+on property:sys.boot_completed=1
+    # reconfig lmkd props
+    setprop lmkd.reinit 1
