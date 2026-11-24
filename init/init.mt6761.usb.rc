@@ -3,6 +3,7 @@ on early-init
 
 on post-fs
     setprop vendor.usb.vid "0x0E8D"
+    setprop sys.usb.mtp.device_type 3
     mkdir /dev/usb-ffs 0775 shell shell
     mkdir /dev/usb-ffs/adb 0770 shell shell
     mkdir /config/usb_gadget/g1 0770 shell shell
