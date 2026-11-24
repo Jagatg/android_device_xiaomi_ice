@@ -230,15 +230,6 @@ on late-fs
     write /sys/kernel/tracing/trace_marker "E"
     write /proc/bootprof "INIT:Mount_END --late"
 
-#modify by HTH-211906 at 2022/5/7 begin
-   class last_start
-   user system
-   group system system wakelock
-   disabled
-   oneshot
-on property:sys.boot_completed=1
-#modify by HTH-211906 at 2022/5/7 end
-
 on post-fs-data
     write /proc/bootprof "INIT:post-fs-data"
 
