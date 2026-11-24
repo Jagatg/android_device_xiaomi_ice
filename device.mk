@@ -578,3 +578,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.vendor.recovery_update=true
 
 PRODUCT_PACKAGES += \
     android.hardware.hardware_keystore.km41.xml
+
+PRODUCT_PACKAGES += \
+    libwifi-hal-wrapper-lib64-link
