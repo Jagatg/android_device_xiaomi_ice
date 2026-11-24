@@ -5,8 +5,6 @@
 #
 
 DEVICE_PATH := device/xiaomi/ice
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):init_xiaomi_ice
-TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_ice
 
 # build-hacks
 BUILD_BROKEN_DUP_RULES := true
