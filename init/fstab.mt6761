@@ -1,7 +1,7 @@
 # Dynamic partitions
 
-system     /system     erofs ro wait,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey,slotselect
-system     /system     ext4  ro wait,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey,slotselect
+system     /system     erofs ro wait,avb=vbmeta_system,logical,first_stage_mount,slotselect
+system     /system     ext4  ro wait,avb=vbmeta_system,logical,first_stage_mount,slotselect
 vendor     /vendor     erofs ro wait,avb,logical,first_stage_mount,slotselect
 vendor     /vendor     ext4  ro wait,avb,logical,first_stage_mount,slotselect
 product    /product    erofs ro wait,avb,logical,first_stage_mount,slotselect
