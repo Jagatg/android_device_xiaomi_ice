@@ -154,8 +154,6 @@ on charger
     write /proc/bootprof "0"
 
     #modify by HTH-211906 at 2022/5/7 begin
-    mkdir /data/vendor/charge_logger 0775 system system
-    start charge_logger
     #modify by HTH-211906 at 2022/5/7 end
 
 on early-fs
@@ -246,15 +244,12 @@ on late-fs
     write /proc/bootprof "INIT:Mount_END --late"
 
 #modify by HTH-211906 at 2022/5/7 begin
-# add charge_logger service for dump charge message
-service charge_logger /vendor/bin/charge_logger
    class last_start
    user system
    group system system wakelock
    disabled
    oneshot
 on property:sys.boot_completed=1
-    start charge_logger
 #modify by HTH-211906 at 2022/5/7 end
 
 on post-fs-data
@@ -717,8 +712,6 @@ on post-fs-data
 # -----------------------
 
 #modify by HTH-211906 at 2022/5/7 begin
-#Creat charger log
-    mkdir /data/vendor/charge_logger 0775 system system
 #modify by HTH-211906 at 2022/5/7 end
 
 on zygote-start
