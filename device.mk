@@ -162,6 +162,7 @@ PRODUCT_PACKAGES += \
     init.cgroup.rc \
     init.connectivity.common.rc \
     init.connectivity.rc \
+    init.ice.power.rc \
     init.modem.rc \
     init.mt6761.rc \
     init.mt6761.usb.rc \
