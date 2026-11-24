@@ -24,6 +24,7 @@ on fs
     write /dev/memcg/apps/memory.swappiness 180
     write /dev/memcg/system/memory.swappiness 180
     write /proc/sys/vm/swappiness 180
+    write /proc/sys/vm/vfs_cache_pressure 200
 
 on post-fs
     # boot perf. tune
