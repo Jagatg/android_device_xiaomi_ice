@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/xiaomi/ice
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # build-hacks
 BUILD_BROKEN_DUP_RULES := true
