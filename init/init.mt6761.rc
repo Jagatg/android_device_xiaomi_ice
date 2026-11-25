@@ -734,6 +734,7 @@ on boot
 on property:sys.boot_completed=1
     # reconfig lmkd props
     setprop lmkd.reinit 1
+    restart android-hardware-media-c2-hal-1-2
 
 service vendor.charger /system/bin/charger
     class charger
