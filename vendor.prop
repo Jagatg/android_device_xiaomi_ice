@@ -219,6 +219,7 @@ ro.virtual_ab.compression.enabled=true
 ro.zram.first_wb_delay_mins=120
 ro.zram.mark_idle_delay_mins=30
 ro.zram.periodic_wb_delay_hours=24
+ro.fastbootd.available=true
 vendor.connsys.driver.ready=no
 vendor.mtk.vdec.waitkeyframeforplay=9
 vendor.mtkcamapp.cshot.platform=-1
