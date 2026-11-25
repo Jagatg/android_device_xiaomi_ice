@@ -219,14 +219,6 @@
         </interface>
     </hal>
     <hal format="hidl" optional="false">
-        <name>vendor.mediatek.hardware.dmc</name>
-        <version>1.2</version>
-        <interface>
-            <name>IDmcService</name>
-            <instance>dmc_hidl_service</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="false">
         <name>vendor.mediatek.hardware.engineermode</name>
         <version>1.3</version>
         <interface>
