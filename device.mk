@@ -177,7 +177,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += fw.max_users=1
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
+    $(LOCAL_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 PRODUCT_PACKAGES += \
     Dialer
@@ -379,8 +380,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-ScopedWakelock.vendor \
     android.frameworks.sensorservice@1.0.vendor \
-    android.hardware.sensors@2.0.vendor \
-    android.hardware.sensors@2.1.vendor
+    android.hardware.sensors@2.0-subhal-impl-1.0
 
 # USB
 PRODUCT_PACKAGES += \

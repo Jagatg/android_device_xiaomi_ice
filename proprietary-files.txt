@@ -1075,7 +1075,6 @@ system_ext/lib/libfmjni.so
 priv-app/MtkGbaService/MtkGbaService.apk
 
 # Sensors
-vendor/lib/hw/android.hardware.sensors@2.X-subhal-mediatek.so
 
 # Power
 vendor/lib/android.hardware.power-service-mediatek.so
@@ -1135,7 +1134,6 @@ vendor/etc/vintf/manifest/gnss@2.1-service.xml
 vendor/etc/vintf/manifest/power-default.xml
 vendor/lib/android.hidl.memory.block@1.0.so
 lib/libccci_util_sys.so
-vendor/etc/sensors/hals.conf
 lib/libem_support_jni.so
 lib/libshowlogo.so
 vendor/etc/vintf/manifest/gnss-default.xml
