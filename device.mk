@@ -150,6 +150,9 @@ TARGET_VENDOR_PROP += device/xiaomi/ice/vendor.prop
 PRODUCT_VENDOR_PROPERTIES += \
     debug.renderengine.backend=gles
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.adb.nonblocking_ffs=0
+
 # Rootdir
 PRODUCT_PACKAGES += \
     fstab.enableswap \
