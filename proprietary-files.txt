@@ -747,7 +747,6 @@ vendor/etc/apdb/APDB_MT6761_S01__W2222_ENUM
 vendor/etc/init/atci_service.rc
 vendor/etc/init/atcid.rc
 vendor/etc/init/audiocmdservice_atci.rc
-vendor/etc/init/em_hidl_user.rc
 vendor/etc/init/init.bt_drv.rc
 vendor/etc/init/init.connfem.rc
 vendor/etc/init/init.fmradio_drv.rc
