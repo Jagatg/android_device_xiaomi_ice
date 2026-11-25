@@ -924,13 +924,6 @@ on property:ro.board.platform=mt6753
 on property:sys.boot_completed=1
     write /proc/pl_lk "0"
 
-# bugreport is triggered by holding down volume down, volume up and power
-service bugreport /system/bin/dumpstate -d -p -B -z \
-        -o /data/user_de/0/com.android.shell/files/bugreports/bugreport
-    class late_start
-    disabled
-    oneshot
-    keycodes 114 115 116
 
 on property:sys.boot_completed=1
     # Stop bootprof
@@ -1033,13 +1026,6 @@ on boot
     insmod /vendor/lib/modules/fpsgo.ko
     insmod /vendor/lib/modules/mi_memory.ko
 
-# VSIM service (vendor OSI)
-service osi /system/bin/osi
-    class main
-    user root
-    disabled
-    oneshot
-    #seclabel u:r:osi:s0
 
 on property:sys.boot_completed=1
     # reconfig lmkd props
