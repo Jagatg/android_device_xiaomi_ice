@@ -406,7 +406,7 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set_bool,mediatek_wifi_hal,use_pre_u_qpr2_struct,true)
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio.service.mediatek
+    android.hardware.audio.service
 
 PRODUCT_PACKAGES += \
     libhidltransport.vendor \
