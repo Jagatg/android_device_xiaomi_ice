@@ -20,23 +20,13 @@ on early-init
     chmod 0755 /sys/kernel/debug
 
 on init
-    # create io boost group
-    mkdir /dev/stune/io
-    chown root system /dev/stune/io
-    chown root system /dev/stune/io/tasks
-    chmod 0664 /dev/stune/io/tasks
     mkdir /mnt/vendor/persist 0771 system system
     mkdir /mnt/vendor/protect_f 0771 system system
     mkdir /mnt/vendor/protect_s 0771 system system
     mkdir /mnt/vendor/nvcfg 0771 system system
 
     mkdir /mnt/vendor/nvdata 0771 system system
-    mkdir /custom
-
     mkdir /mnt/vendor/rescue 0771 system system
-
-    chown root system /proc/lk_env
-    chmod 0660 /proc/lk_env
 
 on late-init
 # enable rcu_expedited
@@ -226,9 +216,6 @@ on post-fs-data
     chmod 0440 /dev/sspm
     chown root system /dev/sspm
 
-    # radvd
-    chmod 444 /etc/radvd/radvd.conf
-
     # Mali 3D GPU driver
     chmod 666 /dev/mali0
 
@@ -245,8 +232,6 @@ on post-fs-data
     chown root diag /sys/module/tpd_setting/parameters/tpd_em_asamp
     chown root diag /sys/module/tpd_debug/parameters/tpd_em_log
     chown root diag /sys/module/tpd_debug/parameters/tpd_em_log_to_fs
-
-    chmod 0666 /dev/pmem_multimedia
 
     # set ptmx group to non-root
     chown root radio /dev/ptmx
@@ -294,10 +279,6 @@ on post-fs-data
     chmod 0660 /dev/Vcodec
     chown media system /dev/Vcodec
     mkdir /data/vendor/vcodec 0777 media system
-
-    #MJC
-    chmod 0660 /dev/MJC
-    chown media system /dev/MJC
 
     #kpd
     chown radio radio /sys/devices/platform/mtk-kpd/driver/kpd_call_state
@@ -360,9 +341,6 @@ on post-fs-data
     chown system /sys/class/input/input10/wake
     chown system /sys/class/input/input10/offsets
 
-    #EM eint
-    chown root diag /sys/bus/platform/drivers/eint/current_eint
-
     # Display
     chmod 0664 /dev/graphics/fb0
     chown system graphics /dev/graphics/fb0
@@ -400,9 +378,6 @@ on post-fs-data
     chmod 0664 /proc/cpu_ss/cpu_ss_period
     chmod 0664 /proc/cpu_ss/cpu_ss_period_mode
 
-    #EM eint
-    chown root diag /sys/bus/platform/drivers/eint/current_eint
-
     # Android SEC related device nodes
     chmod 0660 /dev/sec
     chown root system /dev/sec
@@ -423,13 +398,6 @@ on post-fs-data
     #Use uinput's default permission
     chown system net_bt_admin /dev/uinput
 
-    # UIBC
-    chown system media /dev/uibc
-    chmod 0660 /dev/uibc
-
-    #TV-out
-    chmod 0664 /dev/TV-out
-
     #HDMI
     chown media system /dev/hdmitx
     chmod 0664 /dev/hdmitx
@@ -439,15 +407,8 @@ on post-fs-data
     chown system graphics /proc/mtk_jpeg
     chmod 0660 /proc/mtk_jpeg
 
-    # almk
-    chmod 0440 /dev/mtk_almk
-
     # DISP
     chmod 0444 /dev/mtk_disp
-
-    #ANC SERVICE
-    chmod 0640 /dev/ancservice
-    chown media media /dev/ancservice
 
     #Camera
     chmod 0660 /dev/camera-sysram
@@ -492,86 +453,9 @@ on post-fs-data
     chmod 0666 /sys/class/qvga_cam/qvga_depth/light
     chown system system /sys/class/qvga_cam/qvga_depth/light
 
-    #VOW
-    chmod 0640 /dev/vow
-    chown media media /dev/vow
-
-    #MATV
-    chmod 0660 /dev/MATV
-    chown system media /dev/MATV
-
-    # otg_test
-    chown root radio /dev/mt_otg_test
-    chmod 0660 /dev/mt_otg_test
-
-    # MDP
-    chmod 0660 /dev/mt-mdp
-    chown system media /dev/mt-mdp
-
     # SMI
     chmod 0660 /dev/MTK_SMI
     chown media media /dev/MTK_SMI
-
-    # RRC
-    chmod 0660 /dev/mtk_rrc
-    chown media system /dev/mtk_rrc
-
-    # DFRC
-    chmod 0660 /dev/mtk_dfrc
-    chown system graphics /dev/mtk_dfrc
-
-   #change partition permission
-
-    chmod 0640 /mtd@sec_ro
-    chown root system /mtd@sec_ro
-
-    chmod 0640 /mtd@preloader
-    chown root system /mtd@preloader
-
-    chmod 0660 /mtd@pro_info
-    chown root system /mtd@pro_info
-
-    chmod 0640 /mtd@bootimg
-    chown root system /mtd@bootimg
-
-    chmod 0640 /mtd@recovery
-    chown root system /mtd@recovery
-
-    chmod 0660 /mtd@nvram
-    chown root system /mtd@nvram
-
-    chmod 0660 /mtd@seccfg
-    chown root system /mtd@seccfg
-
-    chmod 0660 /mtd@misc
-    chown root system /mtd@misc
-
-    chmod 0664 /sys/bus/platform/drivers/emi_ctrl/concurrency_scenario
-    chown media media /sys/bus/platform/drivers/emi_ctrl/concurrency_scenario
-
-    #mtk_sched
-    chmod 0660 /dev/mtk_sched
-    chown system media /dev/mtk_sched
-
-    #BT SCO CVSD, for MT6572 and MT6582 CVSD codec on AP
-    chmod 0660 /dev/ebc
-    chown media media /dev/ebc
-
-    chmod 0666 /dev/uio0
-
-    #otp
-    chmod 0660 /proc/driver/otp
-    chown root system /proc/driver/otp
-
-    #sn
-    chmod 0664 /sys/class/udc/musb-hdrc/device/cmode
-    chown root system /sys/class/udc/musb-hdrc/device/cmode
-
-    # secure memory
-    chown system system /proc/secmem0
-
-    chmod 0666 /dev/exm0
-
 
     # Thermal
     mkdir /data/vendor/.tp/ 0775 system system
@@ -580,8 +464,6 @@ on early-boot
     verity_update_state
 
 on boot
-    chmod 0660 /sys/power/autosleep
-
     chmod 0664 /sys/class/leds/lcd-backlight/brightness
     chown system system /sys/class/leds/lcd-backlight/brightness
     chmod 0664 /sys/class/leds/red/brightness
@@ -604,14 +486,6 @@ on boot
     chmod 0660 /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
     chown root   system /sys/kernel/debug/binder/transaction_log_enable
     chown root   system /sys/kernel/debug/binder/perf_evalue
-    chown system system /sys/devices/system/cpu/rq-stats/htasks_thresh
-    chmod 0660 /sys/devices/system/cpu/rq-stats/htasks_thresh
-    chown system system /sys/devices/system/cpu/rq-stats/avg_htasks_thresh
-    chmod 0660 /sys/devices/system/cpu/rq-stats/avg_htasks_thresh
-
-    chown system /sys/module/mlog/parameters/do_mlog
-    chown system /sys/module/mlog/parameters/timer_intval
-
     chown root   radio  /sys/class/leds/lcd-backlight/duty
     chown root   radio  /sys/class/leds/lcd-backlight/div
     chown system system /sys/class/leds/lcd-backlight/trigger
@@ -624,17 +498,6 @@ on boot
 
     # gauge symbolic
     symlink /sys/devices/platform/1000d000.pwrap/1000d000.pwrap:main_pmic/mt6357-gauge /dev/gauge
-
-    # Permission for hibernation
-    chown radio system /sys/power/tuxonice
-    chown radio system /sys/power/tuxonice/do_hibernate
-    chmod 0770 /sys/power/tuxonice
-    chmod 0220 /sys/power/tuxonice/do_hibernate
-
-
-# Smartbook Handler Framework
-    chown system system /sys/power/sb_state
-    chmod 0660 /sys/power/sb_state
 
 # HMP CPU hotplug strategy
     chown system system /proc/hps/num_base_perf_serv
@@ -713,16 +576,6 @@ on boot
     chmod 0660 /proc/cpufreq/cpufreq_power_mode
     chown system system /proc/cpufreq/enable_hw_gov
     chmod 0660 /proc/cpufreq/enable_hw_gov
-
-# BW monitor
-    chown system system /proc/fliperfs/cg_enable
-    chmod 0664 /proc/fliperfs/cg_enable
-    chown system system /proc/fliperfs/cg_threshold
-    chmod 0664 /proc/fliperfs/cg_threshold
-    chown system system /proc/fliperfs/cg_threshold_ddr3
-    chmod 0664 /proc/fliperfs/cg_threshold_ddr3
-    chown system system /proc/fliperfs/perf
-    chmod 0664 /proc/fliperfs/perf
 
 # perfmgr
     chown system system /proc/perfmgr/smart/smart_uevent_enable
@@ -842,9 +695,6 @@ on boot
     chmod 660 /dev/ttyGS1
     chown system radio /dev/ttyGS1
 
-on property:ro.board.platform=mt6753
-    setprop persist.sys.strictmode.disable 1
-
 on property:sys.boot_completed=1
     write /proc/pl_lk "0"
 
@@ -853,20 +703,6 @@ on property:sys.boot_completed=1
 
 #bluetooth property parameters
     setprop persist.bluetooth.a2dp_offload.disabled false
-
-# Battery info
-on property:persist.vendor.mediatek.fg.disable=1
-    write /sys/devices/platform/1000d000.pwrap/1000d000.pwrap:main_pmic/mt6357-gauge/FG_daemon_disable 1
-
-on property:persist.vendor.mediatek.fg.force25c=1
-    write /sys/devices/platform/1000d000.pwrap/1000d000.pwrap:main_pmic/mt6357-gauge/Battery_Temperature 25
-
-on property:persist.vendor.mediatek.fg.force25c=0
-    write /sys/devices/platform/1000d000.pwrap/1000d000.pwrap:main_pmic/mt6357-gauge/Battery_Temperature 65535
-
-on property:persist.vendor.mediatek.fg.log.enable=1
-    write /sys/devices/platform/1000d000.pwrap/1000d000.pwrap:main_pmic/mt6357-gauge/FG_daemon_log_level 7
-    write /proc/sys/kernel/printk 8
 
 # add meta_tst for ATM
 service meta_tst /vendor/bin/meta_tst
