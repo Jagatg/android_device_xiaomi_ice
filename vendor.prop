@@ -13,6 +13,16 @@ ro.surface_flinger.primary_display_orientation=ORIENTATION_0
 # DRM
 drm.service.enabled=true
 
+# Audio
+persist.vendor.audiohal.aurisys.pcm_dump_on=0
+persist.vendor.audiohal.p2w_dump_on=0
+persist.vendor.audiohal.pcm_mixer_dump_on=0
+vendor.usbsph.dl.pcm.dump=0
+vendor.usbsph.ul.pcm.dump=0
+vendor.usbsph.srcaws.pcm.dump=0
+vendor.streamout.pcm.dump=0
+vendor.streamin.pcm.dump=0
+
 # Media
 debug.stagefright.omx_default_rank.sw-audio=4
 media.c2.dmabuf.padding=3072
