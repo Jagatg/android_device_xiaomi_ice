@@ -159,6 +159,7 @@ PRODUCT_PACKAGES += \
     fstab.enableswap \
     fstab.mt6761 \
     fstab.mt6761.ramdisk \
+    ueventd.mt6761.rc \
     init.cgroup.rc \
     init.connectivity.common.rc \
     init.connectivity.rc \
