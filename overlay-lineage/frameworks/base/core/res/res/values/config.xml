@@ -19,7 +19,7 @@
     <integer name="config_num_physical_slots">2</integer>
     <integer name="config_minNumVisibleRecentTasks_lowRam">-1</integer>
     <integer name="config_maxNumVisibleRecentTasks_lowRam">4</integer>
-    <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.8</item>
+    <item name="config_highResTaskSnapshotScale" format="float" type="dimen">0.7</item>
     <item name="config_lowResTaskSnapshotScale" format="float" type="dimen">0.3</item>
     <!-- Disable bubble notifications support -->
     <bool name="config_supportsBubble">false</bool>
