@@ -1,1 +1,2 @@
 /dev/socket/bip_socket u:object_r:bip_socket:s0
+/data/per_boot(/.*)? u:object_r:per_boot_file:s0
