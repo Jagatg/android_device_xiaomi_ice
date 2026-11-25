@@ -834,6 +834,7 @@ vendor/etc/special_pws_channel.xml
 vendor/etc/spk_pb.wav
 vendor/etc/task_profiles.json
 vendor/etc/throttle.sh
+vendor/etc/ueventd.rc
 vendor/etc/usb_audio_accessory_only_policy_configuration.xml
 vendor/etc/vendor-apns-conf.xml
 vendor/etc/virtual-spn-conf-by-efgid1.xml

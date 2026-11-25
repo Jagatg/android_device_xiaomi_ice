@@ -3,13 +3,6 @@ package {
 }
 
 prebuilt_etc {
-    name: "ueventd.mt6761.rc",
-    src: "ueventd.mt6761.rc",
-    filename: "ueventd.mt6761.rc",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "fstab.enableswap",
     src: "fstab.enableswap",
     vendor: true,
