@@ -151,7 +151,8 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.renderengine.backend=gles
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.adb.nonblocking_ffs=0
+    ro.adb.nonblocking_ffs=0 \
+    persist.adb.nonblocking_ffs=0
 
 # Rootdir
 PRODUCT_PACKAGES += \
