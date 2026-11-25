@@ -3,6 +3,9 @@ camera.disable_zsl_mode=1
 vendor.camera.mdp.cz.enable=1
 vendor.camera.mdp.dre.enable=0
 
+# Bluetooth
+bluetooth.profile.asha.central.enabled=false
+
 # Display
 ro.hardware.egl=mtk
 ro.opengles.version=196610
