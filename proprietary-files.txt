@@ -543,14 +543,6 @@ vendor/lib/libformatter.so
 vendor/lib/libmp3dec_mtk.so
 vendor/lib/libstagefrighthw.so
 
-# Media configs
-vendor/etc/media_codecs.xml
-vendor/etc/media_codecs_c2.xml
-vendor/etc/media_codecs_mediatek_audio.xml
-vendor/etc/media_codecs_mediatek_video.xml
-vendor/etc/media_codecs_performance.xml
-vendor/etc/media_profiles_V1_0.xml
-
 # Neural networks
 vendor/bin/hw/vendor.mediatek.hardware.mmagent@1.1-service
 vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc
@@ -678,20 +670,13 @@ vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
 vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml
 
 # Vibrator
-vendor/bin/hw/android.hardware.vibrator-service.mediatek
 vendor/lib/hw/vibrator.mt6761.so
 
 # Wi-Fi
-vendor/bin/hw/hostapd
-vendor/bin/hw/wpa_supplicant
-vendor/bin/hostapd_cli
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
 vendor/bin/wpa_cli
-vendor/etc/init/android.hardware.wifi.supplicant-service.rc
 vendor/etc/init/init.wlan_drv.rc
-vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
-vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
 vendor/lib/libcustom_nvram.so
 
 # Wi-Fi configs
@@ -718,7 +703,6 @@ vendor/bin/cal_tool
 vendor/bin/charge_logger
 vendor/bin/dconfig
 vendor/bin/dexecutor
-vendor/bin/dmc_core
 vendor/bin/doeapp-memtester
 vendor/bin/doeapp-sat
 vendor/bin/dtc_vendor
@@ -732,8 +716,6 @@ vendor/bin/md_monitor_ctrl
 vendor/bin/meta_tst
 vendor/bin/mrdump_tool
 vendor/bin/mt6660_calibration
-vendor/bin/mtk_pkm_service
-vendor/bin/mtk_plpath_utils_ota
 vendor/bin/muxreport
 vendor/bin/netdagent
 vendor/bin/netdc
@@ -766,9 +748,7 @@ vendor/etc/apdb/APDB_MT6761_S01__W2222_ENUM
 vendor/etc/init/atci_service.rc
 vendor/etc/init/atcid.rc
 vendor/etc/init/audiocmdservice_atci.rc
-vendor/etc/init/dmc_core.rc
 vendor/etc/init/em_hidl_user.rc
-vendor/etc/init/hostapd.android.rc
 vendor/etc/init/init.bt_drv.rc
 vendor/etc/init/init.connfem.rc
 vendor/etc/init/init.fmradio_drv.rc
@@ -782,7 +762,6 @@ vendor/etc/init/init.wmt_drv.rc
 vendor/etc/init/loghidlvendorservice.rc
 vendor/etc/init/md_monitor.rc
 vendor/etc/init/merged_hal_service.rc
-vendor/etc/init/mtk_pkm_service.rc
 vendor/etc/init/mtklog.rc
 vendor/etc/init/muxreport.rc
 vendor/etc/init/netdagent.rc
@@ -791,7 +770,6 @@ vendor/etc/init/vendor.silead.hardware.fingerprintext@1.0-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.misys@1.0-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.misys@2.0-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.misys@3.0-service.rc
-vendor/etc/init/vibrator-mtk-lazy.rc
 vendor/etc/rsc/PRC/ro.prop
 vendor/etc/rsc/PRC/rw.prop
 vendor/etc/rsc/ROW/ro.prop
@@ -815,7 +793,6 @@ vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@1.0.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@2.0.xml
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@3.0.xml
-vendor/etc/vintf/manifest/vibrator-mtk-default.xml
 vendor/etc/AbnormalDisplayLog_dynamic.xml
 vendor/etc/AudioLog_dynamic.xml
 vendor/etc/MNL_Config.xml
@@ -1023,7 +1000,6 @@ vendor/lib/sc_sc800cs_ii_tuning.so
 vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so
 vendor/lib/vendor.mediatek.hardware.atci@1.0.so
 vendor/lib/vendor.mediatek.hardware.camera.ccap@1.0.so
-vendor/lib/vendor.mediatek.hardware.dmc@1.0.so
 vendor/lib/vendor.mediatek.hardware.dmc@1.1.so
 vendor/lib/vendor.mediatek.hardware.dmc@1.2.so
 vendor/lib/vendor.mediatek.hardware.lbs@1.0.so
@@ -1114,7 +1090,6 @@ vendor/lib/android.hardware.power-service-mediatek.so
 # Camera
 vendor/lib/libcamera2ndk_vendor.so
 
-vendor/lib/libkeystore-engine-wifi-hidl.so
 vendor/lib/libkeystore-wifi-hidl.so
 vendor/lib/libsensorndkbridge.so
 vendor/lib/libpixelflinger.so
@@ -1170,11 +1145,6 @@ lib/libccci_util_sys.so
 vendor/etc/sensors/hals.conf
 lib/libem_support_jni.so
 lib/libshowlogo.so
-vendor/etc/init/android.hardware.wifi.supplicant-service.rc
-vendor/etc/vintf/manifest/android.hardware.wifi.hostapd.xml
-vendor/etc/vintf/manifest/android.hardware.wifi.supplicant.xml
 vendor/etc/vintf/manifest/gnss-default.xml
-vendor/bin/hw/android.hardware.health@2.1-service
-vendor/etc/init/android.hardware.health@2.1-service.rc
-vendor/etc/vintf/manifest/android.hardware.health@2.1.xml
+vendor/xiaomi/ice/proprietary/vendor/lib/hw/android.hardware.health@2.0-impl-2.1.so
 
