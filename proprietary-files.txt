@@ -700,7 +700,6 @@ vendor/bin/atcid
 vendor/bin/audiocmdservice_atci
 vendor/bin/autobt
 vendor/bin/cal_tool
-vendor/bin/charge_logger
 vendor/bin/dconfig
 vendor/bin/dexecutor
 vendor/bin/doeapp-memtester
