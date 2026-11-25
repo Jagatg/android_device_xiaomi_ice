@@ -26,11 +26,6 @@ on init
     write /sys/block/mmcblk0/queue/nr_requests 256
 
 on fs
-    # It might be overwritten by AGO setting if needed
-    write /dev/memcg/memory.swappiness 180
-    write /dev/memcg/apps/memory.swappiness 180
-    write /dev/memcg/system/memory.swappiness 180
-    write /proc/sys/vm/swappiness 180
     write /proc/sys/vm/vfs_cache_pressure 200
 
 on post-fs
