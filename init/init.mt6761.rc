@@ -1,5 +1,3 @@
-# MTK platform .rc configure
-
 import ${ro.vendor.rc}init.cgroup.rc
 import ${ro.vendor.rc}init.connectivity.rc
 import /vendor/etc/init/hw/init.mt6761.usb.rc
@@ -11,9 +9,7 @@ import ${ro.vendor.rc}init.mal.rc
 import ${ro.vendor.rc}init.sensor_1_0.rc
 import ${ro.vendor.rc}init.ago.rc
 
-# init.modem.rc must be the LAST rc file because vold.post_fs_data_done is set in it
 import ${ro.vendor.rc}init.modem.rc
-# *** DO NOT import the new rc file after this line ***
 
 import /system/etc/init/hw/init.miui.perfinit.rc
 
@@ -30,25 +26,16 @@ on init
     chown root system /dev/stune/io
     chown root system /dev/stune/io/tasks
     chmod 0664 /dev/stune/io/tasks
-
-
-    # if primary storage is physical, set ro.vold.primary_physical to 1
-    # setprop ro.vold.primary_physical 1
-    
     mkdir /mnt/vendor/persist 0771 system system
-# Temp Backward compatibility
     mkdir /mnt/vendor/protect_f 0771 system system
     mkdir /mnt/vendor/protect_s 0771 system system
     mkdir /mnt/vendor/nvcfg 0771 system system
 
-#Create nvdata mount point
     mkdir /mnt/vendor/nvdata 0771 system system
-# Create CIP mount point
     mkdir /custom
 
     mkdir /mnt/vendor/rescue 0771 system system
 
-# change lk_env permission
     chown root system /proc/lk_env
     chmod 0660 /proc/lk_env
 
@@ -58,9 +45,6 @@ on late-init
 # enable rcu_expedited
     write /sys/kernel/rcu_expedited 1
 
-# mount different fs start
-
-#lcd feature ++ start
 on property:odm.display_hbm=0
     write /sys/display_hbm/hbm_mode 0
 
@@ -73,7 +57,6 @@ on property:odm.display_hbm=2
 
 on property:odm.display_hbm=3
     write /sys/display_hbm/hbm_mode 3
-#lcd feature ++ end
 
 on charger
     write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "-1 -1"
@@ -89,8 +72,6 @@ on charger
     write /sys/devices/system/cpu/cpu5/online 0
     write /sys/devices/system/cpu/cpu4/online 0
 
-#    exec /system/bin/e2fsck -f -p /dev/block/platform/bootdevice/by-name/cache
-#    mount ext4 /dev/block/platform/bootdevice/by-name/cache /cache rw wait
     chmod 0666 /dev/kmsg
     chmod 0775 /mnt/vendor
     mkdir /mnt/vendor/nvcfg
@@ -118,13 +99,11 @@ on charger
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "3 0"
     write /proc/perfmgr/boost_ctrl/eas_ctrl/boot_boost "4 0"
 
-    #modify by HTH-211906 at 2022/5/7 begin
     chmod 0666 /sys/class/power_supply/battery/cycle_count
     chmod 0666 /sys/class/power_supply/battery/resistance
     chmod 0666 /sys/class/power_supply/battery/charge_full_design
     chmod 0666 /sys/class/power_supply/battery/charge_full
     chmod 0666 /sys/class/power_supply/battery/typec_mode
-    #modify by HTH-211906 at 2022/5/7 end
 
     start fuelgauged
     start fuelgauged_nvram
@@ -137,9 +116,6 @@ on charger
 
     # Stop bootprof
     write /proc/bootprof "0"
-
-    #modify by HTH-211906 at 2022/5/7 begin
-    #modify by HTH-211906 at 2022/5/7 end
 
 on early-fs
     write /proc/bootprof "INIT:early-fs"
@@ -177,7 +153,6 @@ on post-fs
     chown radio system /proc/freqhopping/status
     chown radio system /proc/freqhopping/userdef
 
-# change owner
     chown system system /proc/bootprof
     chmod 0664 /proc/bootprof
     chown root system /proc/mtprof/cputime
@@ -212,7 +187,7 @@ on post-fs-data
     chown system system /mnt/vendor/nvcfg/fg/old_fg_data
     chown system system /mnt/vendor/nvcfg/fg/car_tune_value
     
-     mkdir /mnt/vendor/persist/sensor
+    mkdir /mnt/vendor/persist/sensor
     chown system system /mnt/vendor/persist/sensor
     chmod 0777 /mnt/vendor/persist/sensor
     restorecon_recursive /mnt/vendor/persist/sensor
@@ -223,29 +198,26 @@ on post-fs-data
     chown system system /mnt/vendor/persist/sensor/default_cal_data.txt
     chown system system /mnt/vendor/persist/.sn.bin
 
-    # create basic filesystem structure
-    # mkdir /mnt/vendor/nvdata 2770 root system
-    # We chown/chmod /mnt/vendor/nvdata again so because mount is run as root + defaults
     chown root system /mnt/vendor/nvdata
     chmod 0771 /mnt/vendor/nvdata
     mkdir /mnt/vendor/nvdata/media 0771 media audio
 
-    #Create cct mount point
+    # create cct mount point
     mkdir /mnt/vendor/cct
     chown root system /mnt/vendor/cct
     chmod 0771 /mnt/vendor/cct
 
-    #Create flash folder
+    # create flash folder
     mkdir /data/vendor/flash
     chown root system /data/vendor/flash
     chmod 0771 /data/vendor/flash
 
-    #Create NDD mount point
+    # create NDD mount point
     mkdir /data/vendor/camera_dump
     chown root system /data/vendor/camera_dump
     chmod 0771 /data/vendor/camera_dump
 
-    #Create flicker mount point
+    # create flicker mount point
     mkdir /data/vendor/flicker
     chown root system /data/vendor/flicker
     chmod 0771 /data/vendor/flicker
@@ -253,18 +225,14 @@ on post-fs-data
     # Set SELinux security contexts on upgrade or policy update.
     restorecon_recursive /mnt/vendor/nvdata
 
-    #give system access to rfkill device node
     chmod 0660 /dev/rfkill
 
-    # create for muxd pts device node , to operate without root
     mkdir /dev/radio 0770 radio radio
 
 # GPS
     chmod 0775 /vendor/xbin/MPED
     chmod 0660 /dev/gps_emi
 
-# -----------------------
-# Add by MTK
     # SCP log
     chmod 0220 /sys/class/misc/scp/scp_mobile_log
     chown root system /sys/class/misc/scp/scp_mobile_log
@@ -283,14 +251,9 @@ on post-fs-data
     chmod 444 /etc/radvd/radvd.conf
 
     # Mali 3D GPU driver
-    #insmod /vendor/lib/modules/mali.ko
     chmod 666 /dev/mali0
-    #chown system graphics /dev/mali
-
-
 
     # Touch Panel
-    # chmod 0664 /dev/touch
     chown root diag /sys/module/tpd_setting/parameters/tpd_calmat
     chown root diag /sys/module/tpd_setting/parameters/tpd_em_debounce_time
     chown root diag /sys/module/tpd_setting/parameters/tpd_mode
@@ -306,9 +269,6 @@ on post-fs-data
 
     chmod 0666 /dev/pmem_multimedia
 
-    # watch dog kicker
-    # write /proc/wdk "0 20 30 0 1"
-
     # set ptmx group to non-root
     chown root radio /dev/ptmx
 
@@ -317,9 +277,7 @@ on post-fs-data
     chown root system /dev/alarm
 
     # M4U
-    #insmod /vendor/lib/modules/m4u.ko
     chmod 0444 /dev/m4u
-    #chown system media /dev/M4U_device
     chmod 0640 /proc/m4u
     chown system media /proc/m4u
 
@@ -354,13 +312,11 @@ on post-fs-data
     chmod 0666 /dev/goodix_fp
 
     #VideoCodec
-    #insmod /vendor/lib/modules/vcodec_kernel_driver.ko
     chmod 0660 /dev/Vcodec
     chown media system /dev/Vcodec
     mkdir /data/vendor/vcodec 0777 media system
 
     #MJC
-    #insmod /vendor/lib/modules/mjc_kernel_driver.ko
     chmod 0660 /dev/MJC
     chown media system /dev/MJC
 
@@ -638,14 +594,8 @@ on post-fs-data
     chmod 0666 /dev/exm0
 
 
-	#Thermal
-	mkdir /data/vendor/.tp/ 0775 system system
-
-# End of adding by MTK drivers
-# -----------------------
-
-#modify by HTH-211906 at 2022/5/7 begin
-#modify by HTH-211906 at 2022/5/7 end
+    # Thermal
+    mkdir /data/vendor/.tp/ 0775 system system
 
 on zygote-start
     write /proc/bootprof "INIT:zygote-start"
@@ -945,40 +895,6 @@ service cmmb /system/bin/cmmbsp
     user root
     group system audio camera graphics inet net_bt net_bt_admin net_bw_acct media
     ioprio rt 4
-
-#service dpfd /vendor/bin/dpfd
-#	user root
-#	group system media
-
-#
-#  External Modme control related services
-#
-
-#
-#  Modem related services (Begin)
-#
-##Add by T.Zh for ppp daemon
-#service pppd /system/bin/pppd file /data/misc/ppp/ppp_options
-#    user root
-#    disabled
-#    oneshot
-#
-##
-#
-#  Modem related services (End)
-#
-
-#add for power-off alarm
-#service poad /vendor/bin/poad
-#    class main
-#    user system
-#    group system
-#    oneshot
-
-#service BGW /vendor/xbin/BGW
-#	user system
-#	group gps system radio
-#	class main
 
 # Battery info
 on property:persist.vendor.mediatek.fg.disable=1
