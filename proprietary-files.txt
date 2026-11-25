@@ -532,15 +532,12 @@ vendor/bin/hw/android.hardware.media.c2@1.2-mediatek
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc
 vendor/etc/seccomp_policy/mediacodec.policy
 vendor/lib/libMtkOmxCore.so
-vendor/lib/libMtkOmxGsmDec.so
-vendor/lib/libMtkOmxMp3Dec.so
 vendor/lib/libcodec2_mtk_c2store.so
 vendor/lib/libcodec2_mtk_vdec.so
 vendor/lib/libcodec2_mtk_venc.so
 vendor/lib/libcodec2_vpp_qt_plugin.so
 vendor/lib/libcodec2_vpp_rs_plugin.so
 vendor/lib/libformatter.so
-vendor/lib/libmp3dec_mtk.so
 vendor/lib/libstagefrighthw.so
 
 # Neural networks
@@ -815,7 +812,6 @@ vendor/etc/ecc_list_OP236.xml
 vendor/etc/ecc_list_preference.xml
 vendor/etc/factory.ini
 vendor/etc/fstb.cfg
-vendor/etc/mtk_omx_core.cfg
 vendor/etc/mtk_platform_codecs_config.xml
 vendor/etc/partition_permission.sh
 vendor/etc/power_app_cfg.xml
@@ -881,7 +877,6 @@ vendor/lib/lib_iir.so
 vendor/lib/lib_speech_enh.so
 vendor/lib/libaal_cust.so
 vendor/lib/libacdk.so
-vendor/lib/libadpcmdec_mtk.so
 vendor/lib/libapmonitor_vendor.so
 vendor/lib/libapu_mdw.so
 vendor/lib/libapusys.so
