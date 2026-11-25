@@ -60,6 +60,8 @@ on property:sys.boot_completed=1
     write /proc/sys/net/ipv4/tcp_ecn 1
     write /proc/sys/net/ipv4/tcp_fastopen 3
     setprop vendor.mediatek.powerhal.init 1
+    # Disable MTK systracker
+    write /sys/bus/platform/drivers/systracker/tracker_run 0
 
 on property:ro.board.platform=mt6753
     chown system system /sys/devices/system/cpu/cpufreq/interactive/hispeed_freq
