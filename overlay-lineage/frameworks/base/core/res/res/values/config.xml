@@ -4,6 +4,7 @@
     <bool name="config_supportsRoundedCornersOnWindows">false</bool>
     <bool name="config_deviceSupportsHighPerfTransitions">false</bool>
     <bool name="config_batterySdCardAccessibility">true</bool>
+    <bool name="config_wifi_softap_sae_supported" translatable="false">true</bool>
     <item name="config_wallpaperMaxScale" format="float" type="dimen">1.00</item>
     <bool name="config_enableAppWidgetService">true</bool>
 
