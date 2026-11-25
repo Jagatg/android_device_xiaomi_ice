@@ -1,0 +1,1 @@
+get_prop(mtk_hal_camera, vendor_mtk_camera_prop)
