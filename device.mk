@@ -10,7 +10,6 @@ LOCAL_PATH := device/xiaomi/ice
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/mediatek \
-    hardware/mediatek/audio \
     hardware/mediatek/utils/libmtkperf_client
 
 # Setup dalvik vm configs
