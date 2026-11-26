@@ -1,3 +1,4 @@
 allow hal_audio_default persist_data_file:dir search;
 
 r_dir_file(hal_audio_default, sysfs_batteryinfo)
+r_dir_file(hal_audio_default, vendor_sysfs_audio)
